@@ -15,4 +15,4 @@ git config --global user.email "kllabrador@up.edu.ph"
 git config --global user.name "kllabrador"
 ```
 
-3. Try pulling and pushing to check if you have succesfully linked the repos.
+4. Try pulling and pushing to check if you have succesfully linked the repos.
