@@ -2,7 +2,7 @@
 
 Welcome to the repo for the projects under the Coral Reef Resiliency and Ecology Studies (CRREST) Laboratory!
 
-<details>## Setting up repo
+<summary>## Setting up repo
 
 
 1. Create a new repository on GitHub.
@@ -17,4 +17,4 @@ git push -u origin main
 ```
 
 4. Try pulling and pushing to check if you have succesfully linked the repos.
-</details>
+</summary>
