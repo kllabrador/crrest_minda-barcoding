@@ -3,7 +3,7 @@
 Welcome to the repo for the projects under the Coral Reef Resiliency and Ecology Studies (CRREST) Laboratory!
 
 ## Setting up repo
-
+1. Set-up SSH key for the computer.
 
 1. Create a new repository on GitHub.
 2. Clone repo on local computer.
