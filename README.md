@@ -3,16 +3,20 @@
 Welcome to the repo for the projects under the Coral Reef Resiliency and Ecology Studies (CRREST) Laboratory! 
 <details>
   <summary>Cloning this repo</summary>
+  
 1. Set-up SSH key for the computer. Follow these [instructions](https://help.ubuntu.com/community/SSH/OpenSSH/Keys).
+
 2. Clone repo on local computer.
 ```
 # Go to preferred working directory on local computer
 git clone git@github.com:kllabrador/CRREST.git
 ```
+
 3. Associate repo with your github account
 ```
 git config --global user.email "kllabrador@up.edu.ph"
 git config --global user.name "kllabrador"
 ```
+
 4. Try pulling and pushing to check if you have succesfully linked the repos.
 </details>
