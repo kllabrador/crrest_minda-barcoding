@@ -2,7 +2,7 @@
 
 Welcome to the repo for the projects under the Coral Reef Resiliency and Ecology Studies (CRREST) Laboratory!
 
-<summary>## Setting up repo
+## Setting up repo
 
 
 1. Create a new repository on GitHub.
