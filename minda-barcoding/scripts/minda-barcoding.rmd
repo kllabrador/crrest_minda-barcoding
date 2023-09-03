@@ -57,7 +57,7 @@ list.files(scripts)
 Load the libraries needed for this pipeline.
 
 ```{r}
-pacman::p_load (ape, tidyverse, janitor)
+pacman::p_load (ape, cowplot, tidyverse, janitor)
 ```
 
 ## Load data files
@@ -113,7 +113,55 @@ aln.metadata <- data.frame (id = names(aln.fas)) %>%
 
 ```
 
-Distance Summaries
+# Qualitative Data Description
+
+## Diversity Profile
+
+```{r}
+taxo_info <- files.csv$`project-metadata_taxonomy.csv` 
+```
+
+```{r}
+family_count <- taxo_info %>% 
+  distinct (family, species) %>% 
+  group_by (family) %>% 
+  summarize (count = n() ) %>% 
+  ungroup()
+```
+
+```{r}
+plot_family_count <- 
+ggplot (family_count,
+        aes (x = reorder(family, count, decreasing = T),
+             y = count)
+        ) +
+  geom_col(fill = "gray80",
+           col = "black",
+           position = "dodge") + 
+  theme_classic()  +
+  labs (x = "Family",
+        y = "Number of species") +
+  scale_y_continuous(expand = c(0,0)) +
+  theme(axis.text.x = element_text(angle=90, 
+                                   vjust = 0.25, 
+                                   hjust = 1,
+                                   size = 7)) 
+plot_family_count
+
+ggsave(plot_family_count,
+       file = paste0(outdir,
+                     "family-count_barplot.png"),
+       height = 5,
+       width = 7,
+       units = "in",
+       dpi = 330
+)
+```
+
+
+## Distance Summaries
+
+### Data Preparation
 
 ```{r}
 species.dist <- files.csv$`divergence_within-species.csv` %>% 
@@ -132,19 +180,22 @@ dist.df <- rbind (species.dist,
 
 ```
 
+### Histogram
 ```{r}
 plot_distance_histogram <- 
     ggplot(dist.df, aes(x = distance, fill = level)) + 
-    geom_histogram(col="black", 
-                   position = "dodge") +
+    geom_histogram(position = "dodge",
+                   col = "black",
+                   size = 0.25
+                   ) +
     coord_cartesian(expand = F) +
     scale_x_continuous(breaks = seq(0, 30, by=2)) +
-    labs(x = "K2P Genetic Distance", 
+    labs(x = "K2P Genetic Distance (%)", 
          y = "Frequency",
-         fill = "Taxonomic Level"
+         fill = "Taxonomic\nLevel"
     ) + 
     theme_classic() +
-  scale_fill_brewer(palette = "Accent")
+  scale_fill_brewer(palette = "Set1") 
 plot_distance_histogram  
 
 ggsave(plot_distance_histogram,
@@ -156,16 +207,16 @@ ggsave(plot_distance_histogram,
        dpi = 330
 )
 ```
-
+### Boxplot
 ```{r}
 plot_distance_boxplot <- 
   ggplot(dist.df, aes(x = level, y = distance, fill = level)) + 
-  geom_boxplot(col="black", 
+  geom_boxplot(#col="black", 
                position = "dodge") +
   labs(x = "Taxonomic Level", 
-       y = "K2P Genetic Distance") + 
+       y = "K2P Genetic Distance (%)") + 
   guides (fill = "none") +
-  scale_fill_brewer(palette = "Accent") +
+  scale_fill_brewer(palette = "Set1") +
   theme_classic()
 plot_distance_boxplot
 
@@ -180,4 +231,140 @@ ggsave(plot_distance_boxplot,
 ```
 
 
+## Barcode Gap
+
+### Histogram
+
+```{r}
+barcode_gap <- files.csv$barcode_gap_analysis.csv %>% 
+  pivot_longer(cols = c(mean_intra_sp,max_intra_sp, distance_to_nn),
+               names_to = "comp",
+               values_to = "dist"
+  )
+
+plot_barcode_gap_histogram <- 
+ggplot (data = barcode_gap %>% filter (comp != "mean_intra_sp"), 
+        aes (x = dist, 
+             fill = comp)
+) +
+  geom_histogram(position="dodge",
+                 col = "black",
+                 size = 0.25
+                 ) +
+  coord_cartesian(expand = F) +
+  theme_classic() +
+  labs (x = "K2P Genetic Distance (%)", 
+        y = "Frequency",
+        fill = NULL) +
+  scale_fill_brewer(palette = "Set1",
+                    labels = c("interspecific\n(NN)", "intraspecific\n(max)")
+  ) +
+  theme(legend.text = element_text(size = 7)) 
+plot_barcode_gap_histogram
+
+```
+
+
+### Scatterplot
+```{r}
+barcode_gap <- files.csv$barcode_gap_analysis.csv
+
+plot_barcode_gap_scatterplot <- 
+ggplot (data = barcode_gap,
+        aes (x = max_intra_sp,
+             y = distance_to_nn)
+) +
+  geom_jitter(pch=21,
+             fill = "black",
+             alpha = 0.50,
+             col = "black",
+             size = 1.25) +
+  theme_classic() +
+  coord_cartesian(expand = F) +
+  lims (x = c(-0.5,30), 
+        y = c(-0.5,30)
+        ) +
+  labs (x = "Maximum Intra-specific Distance (%)",
+        y = "Interspecific (NN) Distance (%)") +
+  geom_abline(intercept = 0, lty = 2)
+
+plot_barcode_gap_scatterplot
+
+```
+
+## Figure 1
+```{r}
+fig1 <- 
+ggdraw() + 
+  
+  # Draw main plot
+  draw_plot(plot_family_count) +
+  
+  # Draw inset 1
+  draw_plot(plot_distance_histogram +
+              labs(fill = NULL) +
+              theme(axis.text = element_text(size = 6),
+                    axis.title = element_text(size = 7),
+                    legend.title = element_text(size = 7),
+                    legend.text = element_text(size = 7),
+                    legend.key.size = unit(0.25, "cm"),
+                    legend.position = "top"
+              ),
+            x = 0.12,
+            y = 0.65,
+            width=0.45, 
+            height=0.35) +
+  
+  # Draw inset 2
+  draw_plot(plot_barcode_gap_histogram +
+              theme(axis.text = element_text(size = 6),
+                    axis.title = element_text(size = 7),
+                    legend.title = element_text(size = 7),
+                    legend.text = element_text(size = 7),
+                    legend.key.size = unit(0.25, "cm"),
+                    legend.position = "top"
+              ),
+            x = 0.55,
+            y = 0.65,
+            width=0.45, 
+            height=0.35) +
+  
+  # Draw inset 3
+  draw_plot(plot_barcode_gap_scatterplot +
+              theme(axis.text = element_text(size = 6),
+                    axis.title = element_text(size = 7),
+                    legend.title = element_text(size = 7),
+                    legend.text = element_text(size = 7),
+                    legend.key.size = unit(0.25, "cm"),
+                    legend.position = "top"
+              ),
+            x = 0.55,
+            y = 0.35,
+            width=0.45, 
+            height=0.25
+            ) +   
+  
+  draw_plot_label(
+    c("A", "B", "C", "D"),
+    c(0,0.15, 0.55, 0.55),
+    c(1, 1, 1, 0.65),
+    size = c(11, 11, 11, 11)
+    )
+
+fig1
+
+ggsave(fig1,
+       file = paste0(outdir,
+                     "fig1_data-description.png"),
+       height = 6.5,
+       width = 7,
+       units = "in",
+       dpi = 350
+)
+
+```
+
+
+
+# Phylogenetics
 
