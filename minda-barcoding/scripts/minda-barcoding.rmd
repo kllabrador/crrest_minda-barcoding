@@ -47,229 +47,137 @@ wd <- getwd() # Do this after the working directory was set to source file locat
 # Assign directories to objects in the global environment
 indir <- paste0("../INDIR/")
 outdir <- paste0("../OUTDIR/")
-scripts <- paste-("../scripts/")
+scripts <- paste0("../scripts/")
 
 # Check content of indir using list.files()
 list.files(indir)
+list.files(scripts)
 ```
 ## Loading libraries
-Load the libraries needed for th
+Load the libraries needed for this pipeline.
 
-# Initialization
-
-## Load alignment file
-
-Load the alignment file in fasta format.
-
-```{r input-fasta}
-infile <- list.files (indir,
-                      pattern = "fasta",
-                      full.names = T)
-
-fasta_file <- read.FASTA(infile,
-                        type = "DNA")
+```{r}
+pacman::p_load (ape, tidyverse, janitor)
 ```
 
-## Load metadata file
+## Load data files
 
-Load the metadata file in csv format. This should be modified based on how you would want to design trees later.
+Identify all the infiles for this session.
+```{r}
+# Fasta file of the alignment
+## Make sure that the alignment is done outside R.
+infile_fasta <- paste0(indir, 
+                       "BOLD-output/20230902_minda-barcoding alignment.fasta")
 
-```{r input-metadata}
-infile <- list.files (indir,
-                      pattern = "csv",
-                      full.names = T)
+infile_csv <- list.files(paste0(indir, 
+                                "BOLD-output"), 
+                         pattern = "\\.csv$",
+                         full.names = T)
 
-metadata <- read.csv (infile) %>% 
-  clean_names() %>% 
-  mutate (organism = str_replace_all(string = organism,
-                                     pattern = "\\s+", 
-                                     replacement = "_"),
-          
-          tree_label = paste(organism,
-                             name, 
-                             sep=":") 
+infile_csv_filenames <- list.files(paste0(indir, 
+                                "BOLD-output"), 
+                         pattern = "\\.csv$")
+```
+
+Load the files
+```{r}
+aln.fas <- read.FASTA(infile_fasta,
+                      type = "DNA")
+
+files.csv <- lapply (infile_csv, 
+                     read.csv, 
+                     na.strings = "N/A") %>% 
+  map(., ~clean_names(.x))
+
+names(files.csv) <- infile_csv_filenames
+
+```
+
+
+Extract metadata from the alignment file
+```{r}
+aln.metadata <- data.frame (id = names(aln.fas)) %>% 
+  separate_wider_delim(id,
+                       delim = "|",
+                       names = c("process_id", "taxa_id", "sample_id", "bin", NA),
+                       cols_remove = T
   ) %>% 
-  dplyr::rename (label = name)
-```
+  separate_wider_delim(taxa_id,
+                       delim = "_",
+                       names = c("genus", "species"),
+                       too_few = "align_start",
+                       cols_remove = F
+  )
 
-Create a data back-up containing the alignment (fasta) and metadata (csv) information.
 
-```{r create-bkp}
-data_bkp <- as_tibble.DNAbin(fasta_file) %>% 
-  full_join(metadata)
-
-```
-
-## Modify labels
-
-Change the labels of the fasta file based on the information from the metadata file.
-
-```{r change_aln-label}
-# Select only the columns needed
-phylo_aln <- data_bkp %>% 
-  select (tree_label, sequence) %>% 
-  as_DNAbin (labels = tree_label,
-             sequences = sequence)
 
 ```
 
-# Collapse Haplotypes
-
-```{r collapse-haplotypes}
-haplo_list <- phylo_aln %>% 
-  as.dna %>% 
-  haplotypes::haplotype(., indels="sic")
-
-# Haplotype report
-sink (paste(outdir, "hapCollapse_report.txt"))
-print (haplo_list)
-sink()
-  
-# Set filters
-filter <- map(haplo_list@haplist,
-    ~.x[1]) %>% 
-  plyr::ldply() %>% 
-  pull (V1)
-
-# Collapse haplotypes based on filter
-phylo_haplo_aln <- phylo_aln[filter]
-
-```
-
-# Model Test
-
-Determine the best evolutionary model for the given dataset using Maximum Likelihood.
-
-```{r ML Model Selection}
-# Conver collapsed alignment into a PhyDat object
-pd<-as.phyDat(phylo_haplo_aln)
-
-##test models, select lowest AIC
-mt <- modelTest(pd, multicore = TRUE, mc.cores= 6)
-View(mt)
-```
-
-# Maximum Likelihood
-
-We now infer the phylogeny using maximum likelihood, and then visualize the resulting phylogenetic tree.
-
-## Model Initialization
-
-Initialize the model fit for the dataset.
-
-```{r Initial ModelFit}
-##initial fit, use best fit model from prev chunk
-fit <- as.pml(mt)
-fit
-```
-
-## Bootstrapping
-
-Optimize the fit of the model and perform bootstrapping.
-
-```{r Optimize Fit and Bootstrap}
-##MAKE SURE TO CHANGE OPTIONS DEPENDING ON YOUR SELECTED MODEL.  
-#?optim.pml gives guidance on how to set optBf and optQ
-#optInv and optGamma should be set depending on whether your model includes +I and/or +G parameters
-
-fit.opt <- optim.pml(fit, 
-                     optBf=TRUE, 
-                     optQ=TRUE, 
-                     optInv=TRUE, 
-                     optGamma=TRUE,
-                     rearrangement = "NNI", 
-                     control = pml.control(trace = 1)
-                     )
-fit.opt
-
-#main= sets the plot title
-plot(fit.opt, 
-     main="GTR+G(4)+I")
-
-#bootstrap model
-bs <- bootstrap.pml(fit.opt, 
-                    bs=1000, 
-                    optNni=TRUE, 
-                    multicore=TRUE, 
-                    mc.cores = 6)
-
-#Save bs in case as an R data file
-# write_rds(bs,
-#           file = paste0(outdir, "bootstrap.tre")
-#           )
-
-# In case you want to load the bs file:
-# bs <- readRDS(paste0(outdir, "bootstrap.tre"))
-          
-```
-
-## Initial Visualization
-
-Look at the initial plot of the tree.
+Distance Summaries
 
 ```{r}
-tree<-plotBS(fit.opt$tree, bs, p = 50, digits = 0, type="p", method="FBP")
+species.dist <- files.csv$`divergence_within-species.csv` %>% 
+  mutate (level = "species")
 
-#digits doesn't seem to work in plotBS, so this is a workaround
-tree$node.label<-round(tree$node.label, digits=0)
+genus.dist <- files.csv$`divergence_wthin-genus.csv` %>% 
+  mutate (level = "genus")
 
-# plotBS also saves the tree and the bootstrap values in a phylo object, which we will use for visualization using ggtree.
-```
+family.dist <- files.csv$`divergence_within-family.csv` %>% 
+  mutate (level = "family")
 
-```{r}
-# Get a basic view of the tree
-ggtree (tree,
-        ladderize = T) +
-  xlim (NA, 1) +
-  geom_tiplab(geom="text", fontface=3, size=2.5, hjust = -0.025) +
-  geom_text(aes(label=node), hjust=0.5, size = 2)
-
+dist.df <- rbind (species.dist,
+                  genus.dist,
+                  family.dist) %>% 
+  mutate (level = fct_relevel(level, "species", "genus", "family"))
 
 ```
 
 ```{r}
-# Set outgroup node
-out.node <- 45
-tree.root <- root(tree, node=out.node)
+plot_distance_histogram <- 
+    ggplot(dist.df, aes(x = distance, fill = level)) + 
+    geom_histogram(col="black", 
+                   position = "dodge") +
+    coord_cartesian(expand = F) +
+    scale_x_continuous(breaks = seq(0, 30, by=2)) +
+    labs(x = "K2P Genetic Distance", 
+         y = "Frequency",
+         fill = "Taxonomic Level"
+    ) + 
+    theme_classic() +
+  scale_fill_brewer(palette = "Accent")
+plot_distance_histogram  
 
-# Review tree after rooting
-(treeplot <- 
-ggtree (tree.root,
-        ladderize = T) +
-  xlim (NA, 1) +
-  geom_tiplab(geom="text", fontface=3, size=3.5, hjust = -0.025) +
-  geom_nodelab(size=3, hjust = 1.25, vjust=-0.2))
-
+ggsave(plot_distance_histogram,
+       file = paste0(outdir,
+                     "K2P-distances_histogram.png"),
+       height = 3.5,
+       width = 6,
+       units = "in",
+       dpi = 330
+)
 ```
 
-```{r modify and manipulate trees}
+```{r}
+plot_distance_boxplot <- 
+  ggplot(dist.df, aes(x = level, y = distance, fill = level)) + 
+  geom_boxplot(col="black", 
+               position = "dodge") +
+  labs(x = "Taxonomic Level", 
+       y = "K2P Genetic Distance") + 
+  guides (fill = "none") +
+  scale_fill_brewer(palette = "Accent") +
+  theme_classic()
+plot_distance_boxplot
 
-# Check node numbers
-treeplot + geom_text(aes(label=node), hjust=0.5, size = 2)
-
-
-#hilight nodes
-treeplot_2 <- 
-treeplot + 
-  geom_hilight(node = 1, fill="darkred", extend = 0.55, alpha=0.25) +
-  geom_treescale(width = 0.1, fontsize = 3, offset=-1)
-
-
+ggsave(plot_distance_boxplot,
+       file = paste0(outdir,
+                     "K2P-distances_boxplot.png"),
+       height = 3.5,
+       width = 3.5,
+       units = "in",
+       dpi = 330
+)
 ```
 
-## Exporting phylogeny
-
-```{r tree tools}
-##export tree in Newick format
-write.tree(tree, file=paste0(outdir, "newick.tree"))
-
-##export tree if png format
-ggsave (treeplot_2,
-        file = paste0(outdir, "phylo_tree.png"),
-        width = 5,
-        height = 7,
-        units = "in")
 
 
-
-```
