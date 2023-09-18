@@ -1,0 +1,256 @@
+Physical cores: 6
+Logical cores:  12
+Memory:         31.9GB
+Extensions:     AVX
+
+WARNING: Partition DATA: Sequences Epinephelus_areolatus|FDP_SGES_2112_032A|BOLD_AAA9821|OR524378 and Epinephelus_areolatus|MIN_1912_TORL_023B|BOLD_AAA9821|OR524379 are identical
+WARNING: Partition DATA: Sequences Thalassoma_hardwicke|FDP_IGCS_2111_003A|BOLD_AAB0061|OR524697 and Thalassoma_hardwicke|MIN_1908_STAC_009A|BOLD_AAB0061|OR524696 are identical
+WARNING: Partition DATA: Sequences Caranx_melampygus|FDP_SGES_2112_037A|BOLD_AAB0585|OR524283 and Caranx_melampygus|FDP_SGES_2112_037D|BOLD_AAB0585|OR524285 are identical
+WARNING: Partition DATA: Sequences Caranx_melampygus|FDP_SGES_2112_037A|BOLD_AAB0585|OR524283 and Caranx_melampygus|FDP_SGES_2112_037E|BOLD_AAB0585|OR524284 are identical
+WARNING: Partition DATA: Sequences Dascyllus_trimaculatus|FDP_STAC_2209_012A|BOLD_AAB2685|OR524359 and Dascyllus_trimaculatus|MIN_1910_STAM_017A|BOLD_AAB2685|OR524360 are identical
+WARNING: Partition DATA: Sequences Lutjanus_gibbus|FDP_GOVG_2202_001A|BOLD_AAB3276|OR524473 and Lutjanus_gibbus|FDP_GOVG_2208_034A|BOLD_AAB3276|OR524472 are identical
+WARNING: Partition DATA: Sequences Parupeneus_barberinus|FDP_IGCS_2111_018A|BOLD_AAB5979|OR524548 and Parupeneus_barberinus|FDP_SGES_2112_003B|BOLD_AAB5979|OR524550 are identical
+WARNING: Partition DATA: Sequences Parupeneus_barberinus|FDP_IGCS_2111_018A|BOLD_AAB5979|OR524548 and Parupeneus_barberinus|MIN_1908_STAC_023A|BOLD_AAB5979|OR524549 are identical
+WARNING: Partition DATA: Sequences Ctenochaetus_striatus|FDP_IGCS_2201_005A|BOLD_AAB9167|OR524354 and Ctenochaetus_striatus|MIN_1811_STAC_059A|BOLD_AAB9167|OR524353 are identical
+WARNING: Partition DATA: Sequences Scolopsis_affinis|FDP_IGCS_2202_023A|BOLD_AAB9722|OR524652 and Scolopsis_affinis|FDP_SGES_2112_027A|BOLD_AAB9722|OR524650 are identical
+WARNING: Partition DATA: Sequences Heniochus_chrysostomus|FDP_MATI_2202_024A|BOLD_AAC2123|OR524424 and Heniochus_chrysostomus|MIN_1912_TORL_014A|BOLD_AAC2123|OR524423 are identical
+WARNING: Partition DATA: Sequences Pygoplites_diacanthus|DNSC_2017_028A|BOLD_AAC3194|OR524611 and Pygoplites_diacanthus|FDP_MATI_2202_020A|BOLD_AAC3194|OR524609 are identical
+WARNING: Partition DATA: Sequences Pygoplites_diacanthus|DNSC_2017_028A|BOLD_AAC3194|OR524611 and Pygoplites_diacanthus|MIN_1908_GOVG_042A|BOLD_AAC3194|OR524610 are identical
+WARNING: Partition DATA: Sequences Halichoeres_chloropterus|FDP_IGCS_2111_004A|BOLD_AAC5863|OR524409 and Halichoeres_chloropterus|FDP_IGCS_2201_014A|BOLD_AAC5863|OR524408 are identical
+WARNING: Partition DATA: Sequences Myripristis_violacea|FDP_IGCS_2111_011A|BOLD_AAC6622|OR524505 and Myripristis_violacea|MIN_1908_STAC_001A|BOLD_AAC6622|OR524504 are identical
+WARNING: Partition DATA: Sequences Lethrinus_olivaceus|FDP_GOVG_2202_048A|BOLD_AAC7352|OR524452 and Lethrinus_olivaceus|MIN_1811_STAC_054A|BOLD_AAC7352|OR524450 are identical
+WARNING: Partition DATA: Sequences Canthidermis_maculata|DNSC_2017_091A|BOLD_AAC9669|OR524278 and Canthidermis_maculata|FDP_IGCS_2202_022A|BOLD_AAC9669|OR524280 are identical
+WARNING: Partition DATA: Sequences Canthidermis_maculata|DNSC_2017_091A|BOLD_AAC9669|OR524278 and Canthidermis_maculata|FDP_IGCS_2202_022B|BOLD_AAC9669|OR524279 are identical
+WARNING: Partition DATA: Sequences Variola_albimarginata|FDP_IGCS_2111_013A|BOLD_AAC9675|OR524716 and Variola_albimarginata|FDP_IGCS_2111_013C|BOLD_AAC9675|OR524718 are identical
+WARNING: Partition DATA: Sequences Variola_albimarginata|FDP_IGCS_2111_013A|BOLD_AAC9675|OR524716 and Variola_albimarginata|FDP_SGES_2112_008A|BOLD_AAC9675|OR524717 are identical
+WARNING: Partition DATA: Sequences Nemipterus_zysron|FDP_IGCS_2111_023A|BOLD_AAD1868|OR524526 and Nemipterus_zysron|MIN_1912_TORL_019A|BOLD_AAD1868|OR524525 are identical
+WARNING: Partition DATA: Sequences Dischistodus_pseudochrysopoecilus|FDP_IGCS_2202_035A|BOLD_AAD3763|OR524368 and Dischistodus_pseudochrysopoecilus|FDP_IGCS_2202_035B|BOLD_AAD3763|OR524367 are identical
+WARNING: Partition DATA: Sequences Calotomus_spinidens|FDP_IGCS_2201_019B|BOLD_AAD4765|OR524275 and Calotomus_spinidens|FDP_MATI_2202_016A|BOLD_AAD4765|OR524276 are identical
+WARNING: Partition DATA: Sequences Scolopsis_lineata|FDP_SGES_2112_026B|BOLD_AAD6276|OR524656 and Scolopsis_lineata|FDP_SGES_2112_026C|BOLD_AAD6276|OR524657 are identical
+WARNING: Partition DATA: Sequences Scolopsis_lineata|FDP_SGES_2112_026B|BOLD_AAD6276|OR524656 and Scolopsis_lineata|MIN_1910_STAM_006A|BOLD_AAD6276|OR524658 are identical
+WARNING: Partition DATA: Sequences Scarus_dimidiatus|FDP_IGCS_2111_022A|BOLD_AAD7038|OR524636 and Scarus_dimidiatus|FDP_IGCS_2202_012A|BOLD_AAD7038|OR524634 are identical
+WARNING: Partition DATA: Sequences Chaetodon_baronessa|FDP_IGCS_2202_046B|BOLD_AAD9265|OR524310 and Chaetodon_baronessa|FDP_IGCS_2202_046C|BOLD_AAD9265|OR524312 are identical
+WARNING: Partition DATA: Sequences Siganus_vulpinus|FDP_GOVG_2204_013A|BOLD_AAD9299|OR524682 and Siganus_unimaculatus|FDP_MATI_2202_013A|BOLD_AAD9299|OR524679 are identical
+WARNING: Partition DATA: Sequences Siganus_vulpinus|FDP_IGCS_2111_020A|BOLD_AAD9299|OR524683 and Siganus_vulpinus|FDP_IGCS_2111_020B|BOLD_AAD9299|OR524681 are identical
+WARNING: Partition DATA: Sequences Scolopsis_ciliata|FDP_SGES_2112_029A|BOLD_AAF0532|OR524654 and Scolopsis_ciliata|MIN_1912_TORL_007A|BOLD_AAF0532|OR524655 are identical
+WARNING: Partition DATA: Sequences Scarus_chameleon|FDP_GOVG_2207_065A|BOLD_AAF2319|OR524631 and Scarus_chameleon|FDP_GOVG_2207_066A|BOLD_AAF2319|OR524632 are identical
+WARNING: Partition DATA: Sequences Plectorhinchus_vittatus|DNSC_2017_064A|BOLD_AAF2980|OR524574 and Plectorhinchus_vittatus|DNSC_2017_066A|BOLD_AAF2980|OR524575 are identical
+WARNING: Partition DATA: Sequences Plectorhinchus_vittatus|DNSC_2017_064A|BOLD_AAF2980|OR524574 and Plectorhinchus_vittatus|FDP_MATI_2202_002A|BOLD_AAF2980|OR524573 are identical
+WARNING: Partition DATA: Sequences Plectorhinchus_polytaenia|FDP_IGCS_2202_043A|BOLD_AAF3014|OR524572 and Plectorhinchus_polytaenia|FDP_IGCS_2202_043B|BOLD_AAF3014|OR524571 are identical
+WARNING: Partition DATA: Sequences Plectorhinchus_gibbosus|FDP_IGCS_2110_001A|BOLD_AAF3072|OR524570 and Plectorhinchus_gibbosus|FDP_IGCS_2110_001B|BOLD_AAF3072|OR524569 are identical
+WARNING: Partition DATA: Sequences Myripristis_hexagona|FDP_GOVG_2204_005A|BOLD_AAF9624|OR524496 and Myripristis_hexagona|FDP_IGCS_2201_001C|BOLD_AAF9624|OR524497 are identical
+WARNING: Partition DATA: Sequences Myripristis_hexagona|FDP_GOVG_2204_005A|BOLD_AAF9624|OR524496 and Myripristis_hexagona|FDP_MATI_2202_007A|BOLD_AAF9624|OR524498 are identical
+WARNING: Partition DATA: Sequences Lethrinus_erythracanthus|FDP_GOVG_2204_003A|BOLD_AAJ2540|OR524442 and Lethrinus_erythracanthus|FDP_GOVG_2207_057A|BOLD_AAJ2540|OR524441 are identical
+WARNING: Partition DATA: Sequences Nemipterus_peronii|FDP_GOVG_2202_022B|BOLD_AAU0855|OR524522 and Nemipterus_peronii|FDP_IGCS_2111_023B|BOLD_AAU0855|OR524524 are identical
+WARNING: Partition DATA: Sequences Scolopsis_affinis|FDP_GOVG_2202_021A|BOLD_ACE0206|OR524651 and Scolopsis_affinis|FDP_SGES_2112_027B|BOLD_ACE0206|OR524649 are identical
+WARNING: Partition DATA: Sequences Xiphocheilus_typus|DNSC_2018_003A|BOLD_ACK6835|OR524721 and Xiphocheilus_typus|DNSC_2018_019A|BOLD_ACK6835|OR524720 are identical
+WARNING: Partition DATA: Sequences Abudefduf_vaigiensis|FDP_IGCS_2111_021A|BOLD_ACK8109|OR524230 and Abudefduf_vaigiensis|FDP_IGCS_2111_021B|BOLD_ACK8109|OR524229 are identical
+WARNING: Partition DATA: Sequences Stethojulis_trilineata|FDP_IGCS_2111_001A|BOLD_ADB4782|OR524689 and Stethojulis_trilineata|FDP_IGCS_2111_001B|BOLD_ADB4782|OR524687 are identical
+WARNING: Partition DATA: Sequences Stethojulis_trilineata|FDP_IGCS_2111_001A|BOLD_ADB4782|OR524689 and Stethojulis_trilineata|FDP_MATI_2202_014A|BOLD_ADB4782|OR524688 are identical
+WARNING: Partition DATA: Sequences Calotomus_carolinus|FDP_IGCS_2201_019A|BOLD_ADI4703|OR524272 and Calotomus_carolinus|FDP_SGES_2112_012A|BOLD_ADI4703|OR524274 are identical
+WARNING: Partition DATA: Sequences Calotomus_carolinus|FDP_IGCS_2201_019A|BOLD_ADI4703|OR524272 and Calotomus_carolinus|FDP_SGES_2112_013A|BOLD_ADI4703|OR524273 are identical
+WARNING: Partition DATA: Sequences Cephalopholis_aitha|DNSC_2017_126A|BOLD_ADL0078|OR524291 and Cephalopholis_spiloparaea|FDP_GOVG_2204_010A|BOLD_ADL0078|OR524306 are identical
+WARNING: Partition DATA: Sequences Cephalopholis_aitha|DNSC_2017_126A|BOLD_ADL0078|OR524291 and Cephalopholis_spiloparaea|MIN_1811_STAC_057A|BOLD_ADL0078|OR524305 are identical
+WARNING: Partition DATA: Sequences Lethrinus_semicinctus|FDP_SGES_2112_043A|BOLD_ADY9995|OR524457 and Lethrinus_semicinctus|FDP_SGES_2112_043B|BOLD_ADY9995|OR524456 are identical
+WARNING: Partition DATA: Sequences Chaetodon_oxycephalus|FDP_IGCS_2201_003A|BOLD_AFF7709|OR524318 and Chaetodon_oxycephalus|FDP_MATI_2202_022A|BOLD_AFF7709|OR524319 are identical
+WARNING: Partition DATA: Sequences Symphysanodontidae|FDP_GOVG_2207_014A|BOLD_AFG6523|OR524692 and Symphysanodontidae|FDP_GOVG_2207_014B|BOLD_AFG6523|OR524691 are identical
+Creating new checkpoint file: C:\Users\kllab\Desktop\RAxML_GUI_ModelTest_phylo_aln_modified.ckp
+--------------------------------------------------------------------------------
+ModelTest-NG v0.1.7
+
+Input data:
+  MSA:        C:\Users\kllab\Desktop\phylo_aln_modified.fasta
+  Tree:       Maximum parsimony
+    file:           -
+  #taxa:            497
+  #sites:           564
+  #patterns:        294
+  Max. thread mem:  72 MB
+
+Output:
+  Log:           C:\Users\kllab\Desktop\RAxML_GUI_ModelTest_phylo_aln_modified.log
+  Starting tree: C:\Users\kllab\Desktop\RAxML_GUI_ModelTest_phylo_aln_modified.tree
+  Results:       C:\Users\kllab\Desktop\RAxML_GUI_ModelTest_phylo_aln_modified.out
+
+Selection options:
+  # dna schemes:      11
+  # dna models:       88
+  include model parameters:
+    Uniform:         true
+    p-inv (+I):      true
+    gamma (+G):      true
+    both (+I+G):     true
+    free rates (+R): false
+    fixed freqs:     true
+    estimated freqs: true
+    #categories:     4
+  gamma rates mode:   mean
+  asc bias:           none
+  epsilon (opt):      0.01
+  epsilon (par):      0.05
+  keep branches:      false
+
+Additional options:
+  verbosity:        very low
+  threads:          8/6
+  RNG seed:         12345
+  subtree repeats:  enabled
+--------------------------------------------------------------------------------
+modeltest-ng was called as follows: 
+>> /usr/bin/modeltest-ng -d nt -i C:\Users\kllab\Desktop\phylo_aln_modified.fasta -o C:\Users\kllab\Desktop\RAxML_GUI_ModelTest_phylo_aln_modified --force -p 8 
+
+
+Partition 1/1
+
+ ----ID---  ----MODEL---- ---Time--- -Elapsed--- -------LnL------- -Alpha- -P-inv-
+
+Computation of likelihood scores completed. It took 1h:08:42
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+I+G4          10    -60696.6697    127734.7286         0.0000    0.9995
+       2  TIM3+I+G4          8    -60710.5290    127749.7772        15.0485    0.0005
+       3  TIM1+I+G4          8    -60722.8435    127774.4062        39.6776    0.0000
+       4  TrN+I+G4           7    -60731.9760    127786.3361        51.6074    0.0000
+       5  TVM+I+G4           9    -60727.9062    127790.8666        56.1380    0.0000
+       6  TPM1uf+I+G4        7    -60743.9608    127810.3058        75.5772    0.0000
+       7  HKY+I+G4           6    -60752.5463    127821.1418        86.4131    0.0000
+       8  TPM2uf+I+G4        7    -60752.1675    127826.7192        91.9906    0.0000
+       9  TPM3uf+I+G4        7    -61084.4792    128491.3426       756.6140    0.0000
+      10  TIM2+I+G4          8    -61143.8475    128616.4142       881.6856    0.0000
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              GTR+I+G4
+lnL:                -60696.6697
+Frequencies:        0.3030 0.3036 0.0911 0.3023
+Subst. Rates:       0.3827 9.5110 0.6538 0.6830 5.7243 1.0000 
+Inv. sites prop:    0.4018
+Gamma shape:        0.5307
+Score:              127734.7286
+Weight:             0.9995
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              0.3008
+Alpha-P.Inv:        0.5307
+P.Inv-Alpha:        0.4018
+Frequencies:        0.3030 0.3036 0.0911 0.3023 
+
+Commands:
+  > phyml  -i C:\Users\kllab\Desktop\phylo_aln_modified.fasta -m 012345 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s C:\Users\kllab\Desktop\phylo_aln_modified.fasta -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa C:\Users\kllab\Desktop\phylo_aln_modified.fasta --model GTR+I+G4
+  > paup -s C:\Users\kllab\Desktop\phylo_aln_modified.fasta
+  > iqtree -s C:\Users\kllab\Desktop\phylo_aln_modified.fasta -m GTR+I+G4
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+I+G4          10    -60696.6697    123395.3393         0.0000    1.0000
+       2  TIM3+I+G4          8    -60710.5290    123419.0580        23.7186    0.0000
+       3  TIM1+I+G4          8    -60722.8435    123443.6870        48.3477    0.0000
+       4  TVM+I+G4           9    -60727.9062    123455.8124        60.4731    0.0000
+       5  TrN+I+G4           7    -60731.9760    123459.9519        64.6126    0.0000
+       6  TPM1uf+I+G4        7    -60743.9608    123483.9217        88.5823    0.0000
+       7  HKY+I+G4           6    -60752.5463    123499.0927       103.7534    0.0000
+       8  TPM2uf+I+G4        7    -60752.1675    123500.3351       104.9957    0.0000
+       9  TPM3uf+I+G4        7    -61084.4792    124164.9584       769.6191    0.0000
+      10  TIM2+I+G4          8    -61143.8475    124285.6950       890.3557    0.0000
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              GTR+I+G4
+lnL:                -60696.6697
+Frequencies:        0.3030 0.3036 0.0911 0.3023
+Subst. Rates:       0.3827 9.5110 0.6538 0.6830 5.7243 1.0000 
+Inv. sites prop:    0.4018
+Gamma shape:        0.5307
+Score:              123395.3393
+Weight:             1.0000
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              0.3024
+Alpha-P.Inv:        0.5307
+P.Inv-Alpha:        0.4018
+Frequencies:        0.3030 0.3036 0.0911 0.3023 
+
+Commands:
+  > phyml  -i C:\Users\kllab\Desktop\phylo_aln_modified.fasta -m 012345 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s C:\Users\kllab\Desktop\phylo_aln_modified.fasta -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa C:\Users\kllab\Desktop\phylo_aln_modified.fasta --model GTR+I+G4
+  > paup -s C:\Users\kllab\Desktop\phylo_aln_modified.fasta
+  > iqtree -s C:\Users\kllab\Desktop\phylo_aln_modified.fasta -m GTR+I+G4
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  K80+G4             2    -62659.0336   2101388.0672         0.0000    1.0000
+       2  K80+I+G4           3    -61943.1003   2103934.2005      2546.1333    0.0000
+       3  TrNef+G4           3    -62208.4051   2104464.8101      3076.7429    0.0000
+       4  TPM2+G4            3    -62262.4033   2104572.8066      3184.7394    0.0000
+       5  TPM3+G4            3    -62644.6697   2105337.3394      3949.2722    0.0000
+       6  TPM1+G4            3    -62666.5144   2105381.0287      3992.9615    0.0000
+       7  TPM2+I+G4          4    -61501.6028   2107033.2056      5645.1384    0.0000
+       8  TrNef+I+G4         4    -61627.9170   2107285.8340      5897.7668    0.0000
+       9  TIM2ef+G4          4    -61820.9800   2107671.9600      6283.8928    0.0000
+      10  TPM3+I+G4          4    -61918.4048   2107866.8097      6478.7425    0.0000
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              K80+G4
+lnL:                -62659.0336
+Frequencies:        0.2500 0.2500 0.2500 0.2500
+Subst. Rates:       1.0000 7.3283 1.0000 1.0000 7.3283 1.0000 
+Inv. sites prop:    -
+Gamma shape:        0.3746
+Score:              2101388.0672
+Weight:             1.0000
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              1.0000
+Gamma-Inv:          -
+Frequencies:        -
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              0.3746
+Alpha-P.Inv:        -
+P.Inv-Alpha:        -
+Frequencies:        -
+
+Commands:
+  > phyml  -i C:\Users\kllab\Desktop\phylo_aln_modified.fasta -m 010010 -f 0.25,0.25,0.25,0.25 -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s C:\Users\kllab\Desktop\phylo_aln_modified.fasta -m GTRGAMMA -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa C:\Users\kllab\Desktop\phylo_aln_modified.fasta --model K80+G4
+  > paup -s C:\Users\kllab\Desktop\phylo_aln_modified.fasta
+  > iqtree -s C:\Users\kllab\Desktop\phylo_aln_modified.fasta -m K80+G4
+Summary:
+
+Partition 1/1:
+                         Model         Score        Weight
+----------------------------------------------------------
+       BIC            GTR+I+G4   127734.7286        0.9995
+       AIC            GTR+I+G4   123395.3393        1.0000
+      AICc              K80+G4  2101388.0672        1.0000
+
+Execution results written to C:\Users\kllab\Desktop\RAxML_GUI_ModelTest_phylo_aln_modified.out
+Starting tree written to C:\Users\kllab\Desktop\RAxML_GUI_ModelTest_phylo_aln_modified.tree

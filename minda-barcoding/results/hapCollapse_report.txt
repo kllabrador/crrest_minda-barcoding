@@ -1,0 +1,1475 @@
+*** S4 Object of Class Haplotype ***
+
+$haplotype1
+[1] "Paracaesio_kusakarii|DNSC_2014_001A|BOLD:ACZ3984"
+
+$haplotype2
+[1] "Paracaesio_xanthura|FDP_GOVG_2208_002A|BOLD:AAI6821"
+
+$haplotype3
+[1] "Lutjanus_johnii|DNSC_2016_001A|BOLD:AAC7492"
+
+$haplotype4
+[1] "Lutjanus_fulviflamma|DNSC_2017_110A|BOLD:ADF5681"
+
+$haplotype5
+[1] "Lutjanus_decussatus|MIN_1908_GOVG_037A|BOLD:AAF0336"
+
+$haplotype6
+[1] "Lutjanus_vitta|FDP_GOVG_2208_017A|BOLD:AAB5459"
+
+$haplotype7
+[1] "Lutjanus_lutjanus|FDP_STAC_2209_016A|BOLD:AAA8169"
+
+$haplotype8
+[1] "Lutjanus_monostigma|DNSC_2017_115A|BOLD:AAB2907"
+
+$haplotype9
+[1] "Lutjanus_ehrenbergii|FDP_SGES_2112_030A|BOLD:AAB2906"
+
+$haplotype10
+[1] "Lutjanus_ehrenbergii|FDP_SGES_2112_030B|BOLD:AAB2906"
+
+$haplotype11
+[1] "Lutjanus_argentimaculatus|FDP_GOVG_2207_040A|BOLD:AAB2440"
+
+$haplotype12
+[1] "Lutjanus_argentimaculatus|FDP_GOVG_2208_031A|BOLD:AAB2440"
+
+$haplotype13
+[1] "Lutjanus_bengalensis|FDP_GOVG_2207_058A|BOLD:AAB7901"
+
+$haplotype14
+[1] "Lutjanus_rufolineatus|FDP_GOVG_2207_059A|BOLD:AAF7731"
+
+$haplotype15
+[1] "Lutjanus_fulvus|MIN_1908_STAC_036A|BOLD:AAB4502"
+
+$haplotype16
+[1] "Lutjanus_fulvus|MIN_1912_TORL_027A|BOLD:AAB4502"
+
+$haplotype17
+[1] "Lutjanus_rivulatus|FDP_TORL_2207_007A|BOLD:AAB7684"
+
+$haplotype18
+[1] "Lutjanus_gibbus|FDP_GOVG_2202_001A|BOLD:AAB3276"
+
+$haplotype19
+[1] "Lutjanus_gibbus|FDP_GOVG_2208_034A|BOLD:AAB3276"
+
+$haplotype20
+[1] "Lutjanus_bohar|FDP_GOVG_2202_032A|BOLD:AAB4501"
+
+$haplotype21
+[1] "Pterocaesio_pisang|FDP_IGCS_2201_009A|BOLD:ABY6809"
+
+$haplotype22
+[1] "Pterocaesio_pisang|FDP_IGCS_2201_009B|BOLD:ABY6809"
+
+$haplotype23
+[1] "Pterocaesio_tessellata|FDP_IGCS_2202_001A|BOLD:AAH7943"
+
+$haplotype24
+[1] "Pterocaesio_tessellata|FDP_IGCS_2202_001B|BOLD:AAH7943"
+
+$haplotype25
+[1] "Pterocaesio_tessellata|FDP_IGCS_2202_002A|BOLD:AAH7943"
+
+$haplotype26
+[1] "Caesio_cuning|FDP_IGCS_2201_010A|BOLD:AAD1988"
+
+$haplotype27
+[1] "Macolor_macularis|MIN_1908_GOVG_036A|BOLD:AAD1795"
+
+$haplotype28
+[1] "Caesio_caerulaurea|MIN_1908_STAC_018A|BOLD:ABZ2197"
+
+$haplotype29
+[1] "Caesio_lunaris|MIN_1912_TORL_028A|BOLD:AAJ8622"
+
+$haplotype30
+[1] "Lutjanus_erythropterus|DNSC_2017_120A|BOLD:AAA7595"
+
+$haplotype31
+[1] "Lutjanus_dodecacanthoides|DNSC_2018_095A|BOLD:AAJ2147"
+
+$haplotype32
+[1] "Lutjanus_timoriensis|FDP_GOVG_2208_035A|BOLD:AAJ2671"
+
+$haplotype33
+[1] "Pinjalo_lewisi|FDP_MATI_2202_027A|BOLD:AAE4743"
+
+$haplotype34
+[1] "Lutjanus_sebae|FDP_GOVG_2208_032A|BOLD:AAB5388"
+
+$haplotype35
+[1] "Aphareus_rutilans|FDP_GOVG_2202_017A|BOLD:AAB7244"
+
+$haplotype36
+[1] "Pristipomoides_filamentosus|FDP_GOVG_2207_018A|BOLD:AAB4096"
+
+$haplotype37
+[1] "Pristipomoides_multidens|FDP_MATI_2202_010A|BOLD:AAB9721"
+
+$haplotype38
+[1] "Pristipomoides_typus|FDP_TORL_2206_010A|BOLD:AAC9513"
+
+$haplotype39
+[1] "Pristipomoides_auricilla|FDP_GOVG_2207_013A|BOLD:AAC7623"
+
+$haplotype40
+[1] "Pristipomoides_auricilla|FDP_SGES_2112_031A|BOLD:AAC7623"
+
+$haplotype41
+[1] "Pristipomoides_amoenus|FDP_TORL_2206_005A|BOLD:AAU5031"
+
+$haplotype42
+[1] "Etelis_coruscans|FDP_GOVG_2207_016A|BOLD:AAC6439"
+
+$haplotype43
+[1] "Etelis_carbunculus|FDP_GOVG_2207_020A|BOLD:AAC8839"
+
+$haplotype44
+[1] "Emmelichthys_struhsakeri|FDP_GOVG_2207_031A|BOLD:AAE9975"
+
+$haplotype45
+[1] "Aprion_virescens|FDP_GOVG_2202_018A|BOLD:AAB8692"
+
+$haplotype46
+[1] "Siganus_vermiculatus|DNSC_2017_039A|BOLD:AAB2342"
+
+$haplotype47
+[1] "Siganus_doliatus|FDP_GOVG_2204_012A|BOLD:AAC8755"
+
+$haplotype48
+[1] "Siganus_corallinus|FDP_IGCS_2202_010A|BOLD:AAC8755"
+
+$haplotype49
+[1] "Siganus_puellus|DNSC_2017_081A|BOLD:AAJ6676"
+
+$haplotype50
+[1] "Siganus_puellus|FDP_IGCS_2202_009A|BOLD:AAJ6676"
+
+$haplotype51
+[1] "Siganus_punctatus|FDP_GOVG_2202_034A|BOLD:AAB2341"
+
+$haplotype52
+[1] "Siganus_punctatus|FDP_MATI_2202_012A|BOLD:AAB2341"
+
+$haplotype53
+[1] "Siganus_vulpinus|FDP_GOVG_2204_013A|BOLD:AAD9299"
+
+$haplotype54
+[1] "Siganus_unimaculatus|FDP_MATI_2202_013A|BOLD:AAD9299"
+
+$haplotype55
+[1] "Siganus_vulpinus|FDP_IGCS_2111_020A|BOLD:AAD9299"
+
+$haplotype56
+[1] "Siganus_vulpinus|FDP_IGCS_2111_020B|BOLD:AAD9299"
+
+$haplotype57
+[1] "Siganus_punctatissimus|FDP_GOVG_2204_014A|BOLD:AAJ6675"
+
+$haplotype58
+[1] "Siganus_javus|DNSC_2017_042A|BOLD:AAF4032"
+
+$haplotype59
+[1] "Siganus_javus|MIN_1912_TORL_041A|BOLD:AAF4032"
+
+$haplotype60
+[1] "Siganus_argenteus|FDP_MATI_2202_011A|BOLD:AAC6461"
+
+$haplotype61
+[1] "Siganus_argenteus|FDP_SGES_2112_041B|BOLD:AAC6461"
+
+$haplotype62
+[1] "Siganus_spinus|FDP_SGES_2112_040A|BOLD:AAE9661"
+
+$haplotype63
+[1] "Siganus_canaliculatus|FDP_SGES_2112_042A|BOLD:AAB8846"
+
+$haplotype64
+[1] "Siganus_canaliculatus|MIN_1910_STAM_021A|BOLD:AAB8846"
+
+$haplotype65
+[1] "Naso_brevirostris|FDP_GOVG_2202_005A|BOLD:AAC1635"
+
+$haplotype66
+[1] "Naso_vlamingii|FDP_GOVG_2204_017A|BOLD:AAE3624"
+
+$haplotype67
+[1] "Naso_hexacanthus|FDP_IGCS_2111_010A|BOLD:AAE3577"
+
+$haplotype68
+[1] "Naso_hexacanthus|MIN_1908_GOVG_030A|BOLD:AAE3577"
+
+$haplotype69
+[1] "Naso_lituratus|FDP_GOVG_2207_038A|BOLD:AAA8635"
+
+$haplotype70
+[1] "Naso_unicornis|FDP_IGCS_2111_027A|BOLD:AAC8042"
+
+$haplotype71
+[1] "Naso_minor|FDP_GOVG_2202_007A|BOLD:AAZ3798"
+
+$haplotype72
+[1] "Naso_thynnoides|MIN_1809_GOVG_005A|BOLD:AAK9252"
+
+$haplotype73
+[1] "Plectorhinchus_vittatus|DNSC_2017_064A|BOLD:AAF2980"
+[2] "Plectorhinchus_vittatus|DNSC_2017_066A|BOLD:AAF2980"
+
+$haplotype74
+[1] "Plectorhinchus_vittatus|FDP_MATI_2202_002A|BOLD:AAF2980"
+
+$haplotype75
+[1] "Plectorhinchus_polytaenia|FDP_IGCS_2202_043A|BOLD:AAF3014"
+
+$haplotype76
+[1] "Plectorhinchus_polytaenia|FDP_IGCS_2202_043B|BOLD:AAF3014"
+
+$haplotype77
+[1] "Plectorhinchus_chaetodonoides|FDP_GOVG_2204_002A|BOLD:AAC4004"
+
+$haplotype78
+[1] "Plectorhinchus_vittatus|FDP_IGCS_2202_044A|BOLD:AAE2795"
+
+$haplotype79
+[1] "Diagramma_pictum|DNSC_2017_069A|BOLD:AAB9940"
+
+$haplotype80
+[1] "Diagramma_melanacrum|FDP_GOVG_2202_015A|BOLD:AAB9940"
+
+$haplotype81
+[1] "Diagramma_pictum|FDP_GOVG_2202_016A|BOLD:AAB9940"
+
+$haplotype82
+[1] "Plectorhinchus_gibbosus|FDP_IGCS_2110_001A|BOLD:AAF3072"
+
+$haplotype83
+[1] "Plectorhinchus_gibbosus|FDP_IGCS_2110_001B|BOLD:AAF3072"
+
+$haplotype84
+[1] "Zebrasoma_velifer|FDP_IGCS_2202_036A|BOLD:AAB3789"
+
+$haplotype85
+[1] "Acanthurus_olivaceus|FDP_GOVG_2207_037A|BOLD:AAC6423"
+
+$haplotype86
+[1] "Ctenochaetus_striatus|FDP_IGCS_2201_005A|BOLD:AAB9167"
+
+$haplotype87
+[1] "Ctenochaetus_striatus|MIN_1811_STAC_059A|BOLD:AAB9167"
+
+$haplotype88
+[1] "Ctenochaetus_binotatus|FDP_IGCS_2202_037A|BOLD:AAB9166"
+
+$haplotype89
+[1] "Ctenochaetus_tominiensis|FDP_STAC_2209_005A|BOLD:ACH8120"
+
+$haplotype90
+[1] "Ctenochaetus_tominiensis|MIN_1811_STAC_058E|BOLD:ACH8120"
+
+$haplotype91
+[1] "Acanthurus_pyroferus|FDP_MATI_2202_001A|BOLD:AAC4976"
+
+$haplotype92
+[1] "Acanthurus_pyroferus|MIN_1811_STAC_060A|BOLD:AAC4976"
+
+$haplotype93
+[1] "Acanthurus_mata|FDP_STAC_2209_004A|BOLD:AAE4025"
+
+$haplotype94
+[1] "Acanthurus_auranticavus|FDP_STAC_2211_019A|BOLD:AAN0222"
+
+$haplotype95
+[1] "Acanthurus_nigricauda|MIN_1908_STAC_015A|BOLD:AAB8729"
+
+$haplotype96
+[1] "Abudefduf_vaigiensis|FDP_IGCS_2111_021A|BOLD:ACK8109"
+[2] "Abudefduf_vaigiensis|FDP_IGCS_2111_021B|BOLD:ACK8109"
+
+$haplotype97
+[1] "Abudefduf_vaigiensis|MIN_1912_TORL_001A|BOLD:ACK8109"
+
+$haplotype98
+[1] "Abudefduf_septemfasciatus|FDP_STAC_2209_011A|BOLD:AFF9123"
+
+$haplotype99
+[1] "Drepane_punctata|DNSC_2017_072A|BOLD:ACE0592"
+
+$haplotype100
+[1] "Gymnocranius_elongatus|FDP_GOVG_2202_043A|BOLD:AAB5194"
+
+$haplotype101
+[1] "Gymnocranius_griseus|FDP_SGES_2112_025A|BOLD:ADL1650"
+
+$haplotype102
+[1] "Monotaxis_heterodon|FDP_GOVG_2208_027A|BOLD:AAC3268"
+
+$haplotype103
+[1] "Monotaxis_grandoculis|MIN_1902_GOVG_026A|BOLD:AAC3267"
+
+$haplotype104
+[1] "Gnathodentex_aureolineatus|FDP_MATI_2202_003A|BOLD:AAC8927"
+
+$haplotype105
+[1] "Lethrinus_olivaceus|DNSC_2017_105A|BOLD:AAC7352"
+
+$haplotype106
+[1] "Lethrinus_olivaceus|FDP_GOVG_2208_026A|BOLD:AAC7352"
+
+$haplotype107
+[1] "Lethrinus_olivaceus|FDP_GOVG_2202_048A|BOLD:AAC7352"
+
+$haplotype108
+[1] "Lethrinus_olivaceus|MIN_1811_STAC_054A|BOLD:AAC7352"
+
+$haplotype109
+[1] "Lethrinus|FDP_GOVG_2202_047A|BOLD:AAB6437"
+
+$haplotype110
+[1] "Lethrinus_microdon|FDP_SGES_2112_044A|BOLD:AAB0513"
+
+$haplotype111
+[1] "Lethrinus_atkinsoni|FDP_GOVG_2202_042A|BOLD:ABY5451"
+
+$haplotype112
+[1] "Lethrinus_atkinsoni|FDP_SGES_2112_024A|BOLD:ABY5451"
+
+$haplotype113
+[1] "Lethrinus_harak|FDP_SGES_2112_022A|BOLD:AAC1520"
+
+$haplotype114
+[1] "Lethrinus_harak|FDP_TORL_2206_025A|BOLD:AAC1520"
+
+$haplotype115
+[1] "Lethrinus_ornatus|FDP_SGES_2112_023A|BOLD:AAK9232"
+
+$haplotype116
+[1] "Lethrinus_ornatus|MIN_1910_STAM_024A|BOLD:AAK9232"
+
+$haplotype117
+[1] "Lethrinus_lentjan|FDP_SGES_2112_045A|BOLD:AAB0508"
+
+$haplotype118
+[1] "Lethrinus_obsoletus|FDP_GOVG_2202_046A|BOLD:AAC1522"
+
+$haplotype119
+[1] "Lethrinus_erythracanthus|FDP_GOVG_2204_003A|BOLD:AAJ2540"
+[2] "Lethrinus_erythracanthus|FDP_GOVG_2207_057A|BOLD:AAJ2540"
+
+$haplotype120
+[1] "Lethrinus_erythropterus|FDP_MATI_2202_026A|BOLD:AAE3751"
+
+$haplotype121
+[1] "Lethrinus_semicinctus|FDP_GOVG_2202_044A|BOLD:ADY9995"
+
+$haplotype122
+[1] "Lethrinus_semicinctus|FDP_SGES_2112_043A|BOLD:ADY9995"
+
+$haplotype123
+[1] "Lethrinus_semicinctus|FDP_SGES_2112_043B|BOLD:ADY9995"
+
+$haplotype124
+[1] "Sargocentron_rubrum|DNSC_ND_040A|BOLD:AAB9306"
+
+$haplotype125
+[1] "Sargocentron_rubrum|FDP_MATI_2202_008A|BOLD:AAB9306"
+
+$haplotype126
+[1] "Sargocentron_rubrum|FDP_SGES_2112_017A|BOLD:AAB9306"
+
+$haplotype127
+[1] "Sargocentron_cornutum|MIN_1812_STAC_066A|BOLD:ACK8401"
+
+$haplotype128
+[1] "Sargocentron_caudimaculatum|FDP_GOVG_2204_004A|BOLD:AEZ5902"
+
+$haplotype129
+[1] "Sargocentron_spiniferum|FDP_IGCS_2201_002A|BOLD:AEZ5902"
+
+$haplotype130
+[1] "Sargocentron_punctatissimum|MIN_1910_STAM_036A|BOLD:AAD3971"
+
+$haplotype131
+[1] "Neoniphon_aurolineatus|FDP_MATI_2202_004A|BOLD:AAC4648"
+
+$haplotype132
+[1] "Sargocentron_diadema|FDP_STAC_2209_023A|BOLD:AAB3425"
+
+$haplotype133
+[1] "Sargocentron_diadema|MIN_1910_STAM_035A|BOLD:AAB3425"
+
+$haplotype134
+[1] "Neoniphon_sammara|FDP_SGES_2112_016A|BOLD:AAC6632"
+
+$haplotype135
+[1] "Myripristis_adusta|FDP_GOVG_2202_009A|BOLD:AAC6633"
+
+$haplotype136
+[1] "Myripristis_adusta|FDP_GOVG_2204_007A|BOLD:AAC6633"
+
+$haplotype137
+[1] "Myripristis_violacea|FDP_GOVG_2202_010A|BOLD:AAC6622"
+
+$haplotype138
+[1] "Myripristis_violacea|FDP_IGCS_2111_011A|BOLD:AAC6622"
+
+$haplotype139
+[1] "Myripristis_violacea|MIN_1908_STAC_001A|BOLD:AAC6622"
+
+$haplotype140
+[1] "Myripristis_kuntee|FDP_GOVG_2202_023A|BOLD:AAA9763"
+
+$haplotype141
+[1] "Myripristis_kuntee|FDP_TORL_2206_029A|BOLD:AAA9763"
+
+$haplotype142
+[1] "Myripristis_berndti|FDP_GOVG_2202_011A|BOLD:AAA9765"
+
+$haplotype143
+[1] "Myripristis_berndti|FDP_MATI_2202_005A|BOLD:AAA9765"
+
+$haplotype144
+[1] "Myripristis_pralinia|FDP_MATI_2202_006A|BOLD:AAB9836"
+
+$haplotype145
+[1] "Myripristis_hexagona|FDP_GOVG_2204_005A|BOLD:AAF9624"
+[2] "Myripristis_hexagona|FDP_IGCS_2201_001C|BOLD:AAF9624"
+
+$haplotype146
+[1] "Myripristis_hexagona|FDP_MATI_2202_007A|BOLD:AAF9624"
+
+$haplotype147
+[1] "Myripristis_hexagona|FDP_IGCS_2201_001A|BOLD:AAF9624"
+
+$haplotype148
+[1] "Chlorophthalmus_nigromarginatus|FDP_TORL_2206_011A|BOLD:AAC3367"
+
+$haplotype149
+[1] "Parupeneus_crassilabris|DNSC_2018_004A|BOLD:AAF8279"
+
+$haplotype150
+[1] "Parupeneus_multifasciatus|FDP_SGES_2112_001A|BOLD:AAB3862"
+
+$haplotype151
+[1] "Parupeneus_multifasciatus|FDP_SGES_2112_001D|BOLD:AAB3862"
+
+$haplotype152
+[1] "Parupeneus_multifasciatus|FDP_SGES_2112_001F|BOLD:AAB3862"
+
+$haplotype153
+[1] "Parupeneus_barberinus|FDP_IGCS_2111_018A|BOLD:AAB5979"
+[2] "Parupeneus_barberinus|FDP_SGES_2112_003B|BOLD:AAB5979"
+
+$haplotype154
+[1] "Parupeneus_barberinus|MIN_1908_STAC_023A|BOLD:AAB5979"
+
+$haplotype155
+[1] "Parupeneus_indicus|MIN_1908_GOVG_045A|BOLD:AAB0334"
+
+$haplotype156
+[1] "Parupeneus_cyclostomus|FDP_IGCS_2112_001A|BOLD:AAD1433"
+
+$haplotype157
+[1] "Parupeneus_heptacanthus|FDP_GOVG_2202_029A|BOLD:AAB2589"
+
+$haplotype158
+[1] "Parupeneus_pleurostigma|FDP_GOVG_2207_023A|BOLD:AAD6266"
+
+$haplotype159
+[1] "Mulloidichthys_flavolineatus|FDP_GOVG_2202_026A|BOLD:AAB2592"
+
+$haplotype160
+[1] "Mulloidichthys_flavolineatus|MIN_1908_STAC_011A|BOLD:AAB2592"
+
+$haplotype161
+[1] "Mulloidichthys_flavolineatus|FDP_SGES_2112_002A|BOLD:AAB2592"
+
+$haplotype162
+[1] "Upeneus_vittatus|FDP_GOVG_2202_027A|BOLD:ACV4665"
+
+$haplotype163
+[1] "Upeneus_sulphureus|FDP_SGES_2112_018A|BOLD:AAB6466"
+
+$haplotype164
+[1] "Upeneus_moluccensis|MIN_1912_TORL_021A|BOLD:AAB6469"
+
+$haplotype165
+[1] "Upeneus_tragula|FDP_IGCS_2201_013A|BOLD:AAB9327"
+
+$haplotype166
+[1] "Upeneus_tragula|FDP_IGCS_2201_013B|BOLD:AAB9327"
+
+$haplotype167
+[1] "Upeneus_tragula|FDP_IGCS_2202_004A|BOLD:AAB9327"
+
+$haplotype168
+[1] "Upeneus_tragula|FDP_SGES_2112_039A|BOLD:AAB9327"
+
+$haplotype169
+[1] "Parupeneus_barberinoides|FDP_SGES_2112_004A|BOLD:AAC6212"
+
+$haplotype170
+[1] "Upeneus_nigromarginatus|FDP_STAC_2209_015A|BOLD:ACK7999"
+
+$haplotype171
+[1] "Planiliza_melinoptera|FDP_IGCS_2202_041A|BOLD:AAO1670"
+
+$haplotype172
+[1] "Platax_pinnatus|FDP_IGCS_2202_042A|BOLD:AAE4532"
+
+$haplotype173
+[1] "Platax_teira|FDP_STAC_2209_027A|BOLD:AAH9422"
+
+$haplotype174
+[1] "Platax_orbicularis|MIN_1908_STAC_041A|BOLD:AAC6496"
+
+$haplotype175
+[1] "Cephalopholis_miniata|DNSC_2017_084A|BOLD:AAC0216"
+
+$haplotype176
+[1] "Cephalopholis_sexmaculata|FDP_IGCS_2202_016A|BOLD:AAE4051"
+
+$haplotype177
+[1] "Cephalopholis_sexmaculata|FDP_IGCS_2202_016B|BOLD:AAE4051"
+
+$haplotype178
+[1] "Cephalopholis_sonnerati|FDP_TORL_2206_013A|BOLD:AAD4737"
+
+$haplotype179
+[1] "Cephalopholis_leopardus|FDP_SGES_2112_006A|BOLD:AAD9032"
+
+$haplotype180
+[1] "Cephalopholis_leopardus|MIN_1908_GOVG_047A|BOLD:AAD9032"
+
+$haplotype181
+[1] "Cephalopholis_aitha|DNSC_2017_126A|BOLD:ADL0078"
+
+$haplotype182
+[1] "Cephalopholis_spiloparaea|MIN_1811_STAC_057A|BOLD:ADL0078"
+
+$haplotype183
+[1] "Cephalopholis_spiloparaea|FDP_GOVG_2204_010A|BOLD:ADL0078"
+
+$haplotype184
+[1] "Cephalopholis_spiloparaea|FDP_IGCS_2202_014A|BOLD:ADL0078"
+
+$haplotype185
+[1] "Cephalopholis_cyanostigma|FDP_GOVG_2202_035A|BOLD:AAC0217"
+
+$haplotype186
+[1] "Cephalopholis_cyanostigma|MIN_1908_GOVG_049A|BOLD:AAC0217"
+
+$haplotype187
+[1] "Cephalopholis_microprion|FDP_IGCS_2111_016A|BOLD:AAF0629"
+
+$haplotype188
+[1] "Cephalopholis_microprion|MIN_1908_STAC_019A|BOLD:AAF0629"
+
+$haplotype189
+[1] "Cephalopholis_boenak|FDP_STAC_2211_029A|BOLD:AAB3684"
+
+$haplotype190
+[1] "Cephalopholis_boenak|FDP_TORL_2206_031A|BOLD:AAB3684"
+
+$haplotype191
+[1] "Aethaloperca_rogaa|FDP_GOVG_2207_060A|BOLD:AAD9665"
+
+$haplotype192
+[1] "Cephalopholis_polleni|FDP_GOVG_2207_009A|BOLD:AAK0631"
+
+$haplotype193
+[1] "Epinephelus_corallicola|DNSC_2017_125A|BOLD:AAD8682"
+
+$haplotype194
+[1] "Epinephelus_coeruleopunctatus|DNSC_2018_NN_001A|BOLD:ADL0994"
+
+$haplotype195
+[1] "Epinephelus_ongus|FDP_IGCS_2111_017A|BOLD:AAC2802"
+
+$haplotype196
+[1] "Chordata|FDP_TORL_2206_012A|BOLD:AAC1876"
+
+$haplotype197
+[1] "Epinephelus_polyphekadion|FDP_GOVG_2202_039A|BOLD:AAD8873"
+
+$haplotype198
+[1] "Anyperodon_leucogrammicus|FDP_IGCS_2111_014A|BOLD:AAC8327"
+
+$haplotype199
+[1] "Anyperodon_leucogrammicus|FDP_IGCS_2111_014B|BOLD:AAC8327"
+
+$haplotype200
+[1] "Epinephelus_lanceolatus|DNSC_2018_039A|BOLD:AAD8914"
+
+$haplotype201
+[1] "Epinephelus_coioides|FDP_TORL_2209_002A|BOLD:AAB8391"
+
+$haplotype202
+[1] "Epinephelus_hexagonatus|DNSC_2017_133A|BOLD:AAD3458"
+
+$haplotype203
+[1] "Epinephelus_sexfasciatus|FDP_TORL_2207_006A|BOLD:ACM3827"
+
+$haplotype204
+[1] "Epinephelus_bontoides|FDP_GOVG_2202_037A|BOLD:AAB8390"
+
+$haplotype205
+[1] "Epinephelus_quoyanus|MIN_1908_STAC_003A|BOLD:AAC2809"
+
+$haplotype206
+[1] "Epinephelus_maculatus|FDP_GOVG_2207_055A|BOLD:AAE1869"
+
+$haplotype207
+[1] "Epinephelus_fasciatus|FDP_SGES_2112_007A|BOLD:AAB1332"
+
+$haplotype208
+[1] "Epinephelus_areolatus|FDP_SGES_2112_032A|BOLD:AAA9821"
+
+$haplotype209
+[1] "Epinephelus_areolatus|MIN_1912_TORL_023B|BOLD:AAA9821"
+
+$haplotype210
+[1] "Epinephelus_areolatus|MIN_1912_TORL_045A|BOLD:AAA9821"
+
+$haplotype211
+[1] "Plectropomus_leopardus|DNSC_2017_124A|BOLD:AAC9348"
+
+$haplotype212
+[1] "Plectropomus_maculatus|DNSC_2017_132A|BOLD:ACK7859"
+
+$haplotype213
+[1] "Plectropomus_areolatus|DNSC_2017_127A|BOLD:AAD0971"
+
+$haplotype214
+[1] "Plectropomus_laevis|DNSC_2018_042A|BOLD:AAF8874"
+
+$haplotype215
+[1] "Plectropomus_oligacanthus|MIN_1912_TORL_026A|BOLD:AAL4434"
+
+$haplotype216
+[1] "Saloptia_powelli|FDP_GOVG_2207_051A|BOLD:AAX9247"
+
+$haplotype217
+[1] "Odontanthias_chrysostictus|FDP_GOVG_2207_010A|BOLD:AAI3520"
+
+$haplotype218
+[1] "Epibulus_brevis|DNSC_2017_012A|BOLD:ACU5795"
+
+$haplotype219
+[1] "Epibulus_brevis|FDP_IGCS_2201_016B|BOLD:ACU5795"
+
+$haplotype220
+[1] "Epibulus_brevis|FDP_IGCS_2202_019A|BOLD:ACU5795"
+
+$haplotype221
+[1] "Epibulus_brevis|FDP_IGCS_2201_016C|BOLD:ACU5795"
+
+$haplotype222
+[1] "Epibulus_brevis|MIN_1910_STAM_015A|"
+
+$haplotype223
+[1] "Cheilinus_fasciatus|FDP_IGCS_2201_015A|BOLD:AAB7821"
+
+$haplotype224
+[1] "Cheilinus_undulatus|DNSC_2018_NN_002A|BOLD:AAF3078"
+
+$haplotype225
+[1] "Cheilinus_chlorourus|FDP_GOVG_2207_064A|BOLD:AAB4185"
+
+$haplotype226
+[1] "Cheilinus_trilobatus|FDP_SGES_2112_014A|BOLD:AAB4188"
+
+$haplotype227
+[1] "Cheilinus_trilobatus|FDP_TORL_2206_019A|BOLD:AAB4531"
+
+$haplotype228
+[1] "Cheilinus_trilobatus|MIN_1908_STAC_007A|BOLD:AAB4531"
+
+$haplotype229
+[1] "Oxycheilinus_bimaculatus|FDP_GOVG_2209_003A|BOLD:AAC7530"
+
+$haplotype230
+[1] "Oxycheilinus_arenatus|FDP_GOVG_2207_003A|BOLD:AAI5462"
+
+$haplotype231
+[1] "Oxycheilinus_digramma|FDP_IGCS_2202_038A|BOLD:AAC0639"
+
+$haplotype232
+[1] "Oxycheilinus_celebicus|FDP_TORL_2206_014A|BOLD:AAN1592"
+
+$haplotype233
+[1] "Oxycheilinus_orientalis|FDP_MATI_2202_018A|BOLD:AAU2638"
+
+$haplotype234
+[1] "Symphysanodontidae|FDP_GOVG_2207_014A|BOLD:AFG6523"
+
+$haplotype235
+[1] "Symphysanodontidae|FDP_GOVG_2207_014B|BOLD:AFG6523"
+
+$haplotype236
+[1] "Symphysanodon_typus|FDP_GOVG_2208_001A|BOLD:AAV8414"
+
+$haplotype237
+[1] "Anampses_caeruleopunctatus|DNSC_2017_002A|BOLD:AAB9969"
+
+$haplotype238
+[1] "Anampses_meleagrides|DNSC_2017_018A|BOLD:AAB9954"
+
+$haplotype239
+[1] "Anampses_geographicus|DNSC_2017_022A|BOLD:AAF3922"
+
+$haplotype240
+[1] "Labropsis_manabei|DNSC_ND_006A|BOLD:ADB4781"
+
+$haplotype241
+[1] "Halichoeres_hortulanus|FDP_GOVG_2208_046A|BOLD:AAB3085"
+
+$haplotype242
+[1] "Halichoeres_scapularis|FDP_IGCS_2111_002A|BOLD:AAC0139"
+
+$haplotype243
+[1] "Halichoeres_scapularis|FDP_MATI_2202_015A|BOLD:AAC0139"
+
+$haplotype244
+[1] "Halichoeres_chloropterus|FDP_IGCS_2111_004A|BOLD:AAC5863"
+[2] "Halichoeres_chloropterus|FDP_IGCS_2201_014A|BOLD:AAC5863"
+
+$haplotype245
+[1] "Coris_batuensis|FDP_STAC_2211_012A|BOLD:AAC7502"
+
+$haplotype246
+[1] "Hemigymnus_fasciatus|FDP_GOVG_2208_047A|BOLD:AAB8144"
+
+$haplotype247
+[1] "Hemigymnus_fasciatus|MIN_1908_GOVG_033A|BOLD:AAB8144"
+
+$haplotype248
+[1] "Hemigymnus_melapterus|FDP_IGCS_2202_028A|BOLD:AAB5264"
+
+$haplotype249
+[1] "Thalassoma_trilobatum|DNSC_2017_008A|BOLD:AAC2785"
+
+$haplotype250
+[1] "Thalassoma_amblycephalum|DNSC_ND_008A|BOLD:ADI4249"
+
+$haplotype251
+[1] "Thalassoma_lunare|FDP_IGCS_2202_049A|BOLD:AAB0673"
+
+$haplotype252
+[1] "Thalassoma_lunare|FDP_IGCS_2202_049B|BOLD:AAB0673"
+
+$haplotype253
+[1] "Thalassoma_lunare|FDP_IGCS_2202_049C|BOLD:AAB0673"
+
+$haplotype254
+[1] "Gomphosus_varius|DNSC_2018_088A|BOLD:AAB5841"
+
+$haplotype255
+[1] "Thalassoma_jansenii|DNSC_ND_012A|BOLD:AAB2327"
+
+$haplotype256
+[1] "Thalassoma_hardwicke|FDP_IGCS_2111_003A|BOLD:AAB0061"
+
+$haplotype257
+[1] "Thalassoma_hardwicke|MIN_1908_STAC_009A|BOLD:AAB0061"
+
+$haplotype258
+[1] "Halichoeres_melanurus|FDP_IGCS_2202_039A|BOLD:AAB9379"
+
+$haplotype259
+[1] "Halichoeres_marginatus|FDP_MATI_2202_017A|BOLD:AAC3830"
+
+$haplotype260
+[1] "Leptojulis_lambdastigma|FDP_GOVG_2209_004A|BOLD:ADT2166"
+
+$haplotype261
+[1] "Halichoeres_hartzfeldii|DNSC_2017_010A|BOLD:AAF7735"
+
+$haplotype262
+[1] "Macropharyngodon_meleagris|DNSC_ND_005A|BOLD:AAB4278"
+
+$haplotype263
+[1] "Stethojulis_strigiventer|DNSC_2017_021A|BOLD:AAE2186"
+
+$haplotype264
+[1] "Stethojulis_bandanensis|DNSC_2017_023A|BOLD:ACE9209"
+
+$haplotype265
+[1] "Stethojulis_trilineata|FDP_IGCS_2111_001A|BOLD:ADB4782"
+[2] "Stethojulis_trilineata|FDP_IGCS_2111_001B|BOLD:ADB4782"
+[3] "Stethojulis_trilineata|FDP_MATI_2202_014A|BOLD:ADB4782"
+
+$haplotype266
+[1] "Canthidermis_maculata|DNSC_2017_091A|BOLD:AAC9669"
+
+$haplotype267
+[1] "Canthidermis_maculata|FDP_IGCS_2202_022A|BOLD:AAC9669"
+[2] "Canthidermis_maculata|FDP_IGCS_2202_022B|BOLD:AAC9669"
+
+$haplotype268
+[1] "Abalistes_filamentosus|DNSC_2017_195A|BOLD:AAD4738"
+
+$haplotype269
+[1] "Abalistes_stellatus|MIN_1912_TORL_003A|BOLD:ACK7828"
+
+$haplotype270
+[1] "Balistoides_conspicillum|DNSC_2018_038A|BOLD:AAC6874"
+
+$haplotype271
+[1] "Balistapus_undulatus|FDP_GOVG_2207_025A|BOLD:AAC2755"
+
+$haplotype272
+[1] "Balistapus_undulatus|MIN_1908_STAC_004A|BOLD:AAC2755"
+
+$haplotype273
+[1] "Odonus_niger|FDP_GOVG_2207_043A|BOLD:AAB5804"
+
+$haplotype274
+[1] "Odonus_niger|FDP_MATI_2202_019A|BOLD:AAB5804"
+
+$haplotype275
+[1] "Sufflamen_chrysopterum|FDP_GOVG_2208_024A|BOLD:AAB1339"
+
+$haplotype276
+[1] "Pseudobalistes_fuscus|DNSC_2018_055B|"
+
+$haplotype277
+[1] "Balistoides_viridescens|FDP_GOVG_2202_040A|BOLD:AAD0474"
+
+$haplotype278
+[1] "Pseudobalistes_flavimarginatus|FDP_STAC_2211_021A|BOLD:AAD0474"
+
+$haplotype279
+[1] "Pygoplites_diacanthus|DNSC_2017_028A|BOLD:AAC3194"
+
+$haplotype280
+[1] "Pygoplites_diacanthus|MIN_1908_GOVG_042A|BOLD:AAC3194"
+
+$haplotype281
+[1] "Pygoplites_diacanthus|FDP_MATI_2202_020A|BOLD:AAC3194"
+
+$haplotype282
+[1] "Centropyge_bicolor|DNSC_2018_072A|BOLD:AAC0137"
+
+$haplotype283
+[1] "Centropyge_vrolikii|DNSC_2018_120A|BOLD:AAD2580"
+
+$haplotype284
+[1] "Centropyge_vrolikii|FDP_STAC_2211_009A|BOLD:AAD2580"
+
+$haplotype285
+[1] "Pomacanthus_imperator|DNSC_2018_023A|BOLD:AAC6186"
+
+$haplotype286
+[1] "Alectis_ciliaris|FDP_GOVG_2207_006A|BOLD:AAB7827"
+
+$haplotype287
+[1] "Caranginae|FDP_GOVG_2208_011A|BOLD:AAE7644"
+
+$haplotype288
+[1] "Atropus|FDP_TORL_2207_003A|BOLD:AAD6118"
+
+$haplotype289
+[1] "Caranx_sexfasciatus|FDP_GOVG_2207_036A|BOLD:AAB0584"
+
+$haplotype290
+[1] "Caranx_melampygus|FDP_SGES_2112_037A|BOLD:AAB0585"
+
+$haplotype291
+[1] "Caranx_melampygus|FDP_SGES_2112_037E|BOLD:AAB0585"
+
+$haplotype292
+[1] "Caranx_melampygus|FDP_SGES_2112_037B|BOLD:AAB0585"
+
+$haplotype293
+[1] "Caranx_melampygus|FDP_SGES_2112_037D|BOLD:AAB0585"
+
+$haplotype294
+[1] "Atule_mate|FDP_GOVG_2208_003A|BOLD:AAI7885"
+
+$haplotype295
+[1] "Caranginae|FDP_GOVG_2208_010A|BOLD:AAE7640"
+
+$haplotype296
+[1] "Trachinotus_baillonii|FDP_GOVG_2209_007A|BOLD:AAC0922"
+
+$haplotype297
+[1] "Dischistodus_perspicillatus|DNSC_2018_101A|BOLD:ACM4359"
+
+$haplotype298
+[1] "Dischistodus_pseudochrysopoecilus|FDP_IGCS_2202_035A|BOLD:AAD3763"
+
+$haplotype299
+[1] "Dischistodus_pseudochrysopoecilus|FDP_IGCS_2202_035B|BOLD:AAD3763"
+
+$haplotype300
+[1] "Amphiprion_clarkii|FDP_GOVG_2209_011A|BOLD:AAC1383"
+
+$haplotype301
+[1] "Amphiprion_perideraion|FDP_STAC_2211_008A|BOLD:ABZ2019"
+
+$haplotype302
+[1] "Acanthochromis_polyacanthus|FDP_STAC_2211_005A|BOLD:ACU7256"
+
+$haplotype303
+[1] "Amblyglyphidodon_curacao|FDP_STAC_2211_006A|BOLD:ADA9668"
+
+$haplotype304
+[1] "Amblyglyphidodon_aureus|FDP_STAC_2211_010A|BOLD:ACU6263"
+
+$haplotype305
+[1] "Hemiglyphidodon_plagiometopon|FDP_STAC_2211_011A|BOLD:AAE5290"
+
+$haplotype306
+[1] "Hemiglyphidodon_plagiometopon|MIN_1912_TORL_039A|BOLD:AAE5290"
+
+$haplotype307
+[1] "Pomacentrus_reidi|DNSC_2018_055A|"
+
+$haplotype308
+[1] "Dascyllus_trimaculatus|FDP_STAC_2209_012A|BOLD:AAB2685"
+
+$haplotype309
+[1] "Dascyllus_trimaculatus|FDP_STAC_2211_024A|BOLD:AAB2685"
+
+$haplotype310
+[1] "Dascyllus_trimaculatus|MIN_1910_STAM_017A|BOLD:AAB2685"
+
+$haplotype311
+[1] "Chromis_ternatensis|MIN_1910_STAM_018A|BOLD:AAC6972"
+
+$haplotype312
+[1] "Chromis_xanthura|FDP_STAC_2211_007A|BOLD:AAL8218"
+
+$haplotype313
+[1] "Pomadasys_argenteus|DNSC_2018_115A|BOLD:AAE3165"
+
+$haplotype314
+[1] "Pomadasys_maculatus|FDP_TORL_2207_001A|BOLD:AFF7666"
+
+$haplotype315
+[1] "Gymnosarda_unicolor|FDP_GOVG_2207_005A|BOLD:AAD6592"
+
+$haplotype316
+[1] "Ariomma_brevimanum|FDP_GOVG_2207_017A|BOLD:AAJ8182"
+
+$haplotype317
+[1] "Cubiceps_pauciradiatus|FDP_GOVG_2208_039A|BOLD:AAC6698"
+
+$haplotype318
+[1] "Cubiceps_pauciradiatus|MIN_1912_TORL_031A|BOLD:AAC6698"
+
+$haplotype319
+[1] "Psenes_cyanophrys|MIN_2002_MATI_001A|BOLD:AAE0701"
+
+$haplotype320
+[1] "Rastrelliger_kanagurta|FDP_IGCS_2201_011A|BOLD:AAA9666"
+
+$haplotype321
+[1] "Rastrelliger_kanagurta|FDP_IGCS_2201_011B|BOLD:AAA9666"
+
+$haplotype322
+[1] "Saurida_micropectoralis|FDP_TORL_2207_008A|BOLD:ADC8274"
+
+$haplotype323
+[1] "Brama_orcini|MIN_1910_STAM_029C|BOLD:AAD2228"
+
+$haplotype324
+[1] "Brama_dussumieri|MIN_1912_TORL_004A|BOLD:AAD2228"
+
+$haplotype325
+[1] "Novaculichthys|DNSC_ND_003A|BOLD:AAD8577"
+
+$haplotype326
+[1] "Iniistius_bimaculatus|FDP_GOVG_2209_002A|BOLD:ACT0048"
+
+$haplotype327
+[1] "Novaculichthys_taeniourus|MIN_1910_STAM_014A|BOLD:AAB3259"
+
+$haplotype328
+[1] "Pseudodax_moluccanus|DNSC_2017_013A|BOLD:AAE8025"
+
+$haplotype329
+[1] "Choerodon_robustus|DNSC_2017_003A|BOLD:AAE8972"
+
+$haplotype330
+[1] "Choerodon_zamboangae|DNSC_2017_020A|BOLD:AAE8971"
+
+$haplotype331
+[1] "Choerodon_zosterophorus|FDP_IGCS_2111_025A|BOLD:AAF3587"
+
+$haplotype332
+[1] "Choerodon_schoenleinii|DNSC_2017_030A|BOLD:AAB7710"
+
+$haplotype333
+[1] "Choerodon_anchorago|FDP_TORL_2206_018A|BOLD:AAB8121"
+
+$haplotype334
+[1] "Bodianus_dictynna|DNSC_2018_103A|BOLD:AAF8866"
+
+$haplotype335
+[1] "Bodianus_mesothorax|FDP_IGCS_2202_050A|BOLD:AAF0043"
+
+$haplotype336
+[1] "Sphaeramia_nematoptera|DNSC_2018_100A|BOLD:AAE2471"
+
+$haplotype337
+[1] "Cheilodipterus_macrodon|FDP_MATI_2202_025A|BOLD:AAB7877"
+
+$haplotype338
+[1] "Cheilodipterus_macrodon|FDP_STAC_2211_026A|BOLD:ACE0347"
+
+$haplotype339
+[1] "Ostorhinchus_doederleini|MIN_1912_TORL_035A|BOLD:AAC5895"
+
+$haplotype340
+[1] "Scarus_tricolor|FDP_GOVG_2204_023A|BOLD:ACY5251"
+
+$haplotype341
+[1] "Scarus_forsteni|FDP_GOVG_2207_049A|BOLD:AAE4369"
+
+$haplotype342
+[1] "Scarus_niger|FDP_SGES_2112_009B|BOLD:AAD0816"
+
+$haplotype343
+[1] "Scarus_dimidiatus|FDP_IGCS_2110_003A|BOLD:AAD7038"
+
+$haplotype344
+[1] "Scarus_dimidiatus|FDP_IGCS_2111_022A|BOLD:AAD7038"
+[2] "Scarus_dimidiatus|FDP_IGCS_2202_012A|BOLD:AAD7038"
+
+$haplotype345
+[1] "Scarus_dimidiatus|FDP_IGCS_2111_022B|BOLD:AAD7038"
+
+$haplotype346
+[1] "Scarus_dimidiatus|FDP_SGES_2112_010B|BOLD:AAD7038"
+
+$haplotype347
+[1] "Scarus_ghobban|FDP_IGCS_2202_011A|BOLD:AAB3544"
+
+$haplotype348
+[1] "Scarus_chameleon|FDP_GOVG_2207_065A|BOLD:AAF2319"
+
+$haplotype349
+[1] "Scarus_chameleon|FDP_GOVG_2207_066A|BOLD:AAF2319"
+
+$haplotype350
+[1] "Scarus_rivulatus|FDP_GOVG_2208_051A|BOLD:AAD0850"
+
+$haplotype351
+[1] "Scarus_quoyi|MIN_1811_STAC_045A|BOLD:AAD0850"
+
+$haplotype352
+[1] "Scarus_spinus|FDP_SGES_2112_011A|BOLD:AAI0686"
+
+$haplotype353
+[1] "Scarus_flavipectoralis|FDP_GOVG_2208_048A|BOLD:AAE9521"
+
+$haplotype354
+[1] "Scarus_hypselopterus|MIN_1902_GOVG_022A|BOLD:AAJ6092"
+
+$haplotype355
+[1] "Scarus_psittacus|MIN_1811_STAC_049A|BOLD:AAB8901"
+
+$haplotype356
+[1] "Chlorurus_japanensis|FDP_GOVG_2208_049A|BOLD:ACK7947"
+
+$haplotype357
+[1] "Scarus_altipinnis|FDP_GOVG_2208_050A|BOLD:AAB6670"
+
+$haplotype358
+[1] "Cetoscarus_ocellatus|MIN_1902_GOVG_023A|BOLD:AAE9711"
+
+$haplotype359
+[1] "Calotomus_carolinus|FDP_IGCS_2201_019A|BOLD:ADI4703"
+[2] "Calotomus_carolinus|FDP_SGES_2112_013A|BOLD:ADI4703"
+
+$haplotype360
+[1] "Calotomus_carolinus|FDP_SGES_2112_012A|BOLD:ADI4703"
+
+$haplotype361
+[1] "Calotomus_spinidens|FDP_IGCS_2201_019B|BOLD:AAD4765"
+[2] "Calotomus_spinidens|FDP_MATI_2202_016A|BOLD:AAD4765"
+
+$haplotype362
+[1] "Leptoscarus_vaigiensis|FDP_IGCS_2202_031A|BOLD:AAD0896"
+
+$haplotype363
+[1] "Cheilio_inermis|FDP_IGCS_2202_008A|BOLD:AAA6101"
+
+$haplotype364
+[1] "Cheilio_inermis|MIN_1908_STAC_012A|BOLD:AAA6101"
+
+$haplotype365
+[1] "Cantherhines_pardalis|FDP_IGCS_2111_012A|BOLD:AAB9564"
+
+$haplotype366
+[1] "Aluterus_scriptus|FDP_IGCS_2202_020A|BOLD:AAD0081"
+
+$haplotype367
+[1] "Pseudomonacanthus_macrurus|FDP_STAC_2211_022A|BOLD:ACK7603"
+
+$haplotype368
+[1] "Salarias_fasciatus|FDP_IGCS_2201_017A|BOLD:AAB7189"
+
+$haplotype369
+[1] "Salarias_fasciatus|FDP_IGCS_2201_017B|BOLD:AAB7189"
+
+$haplotype370
+[1] "Scolopsis_taenioptera|FDP_GOVG_2202_020A|BOLD:AAB7415"
+
+$haplotype371
+[1] "Scolopsis_affinis|FDP_GOVG_2202_021A|BOLD:ACE0206"
+
+$haplotype372
+[1] "Scolopsis_affinis|FDP_SGES_2112_027B|BOLD:ACE0206"
+
+$haplotype373
+[1] "Scolopsis_affinis|FDP_IGCS_2202_023A|BOLD:AAB9722"
+
+$haplotype374
+[1] "Scolopsis_affinis|FDP_SGES_2112_027A|BOLD:AAB9722"
+
+$haplotype375
+[1] "Scolopsis_margaritifera|FDP_IGCS_2111_019A|BOLD:AAI0755"
+
+$haplotype376
+[1] "Scolopsis_margaritifera|FDP_IGCS_2111_019C|BOLD:AAI0755"
+
+$haplotype377
+[1] "Scolopsis_margaritifera|FDP_IGCS_2201_007A|BOLD:AAI0755"
+
+$haplotype378
+[1] "Scolopsis_ciliata|FDP_SGES_2112_029A|BOLD:AAF0532"
+
+$haplotype379
+[1] "Scolopsis_ciliata|MIN_1912_TORL_007A|BOLD:AAF0532"
+
+$haplotype380
+[1] "Scolopsis_lineata|FDP_SGES_2112_026B|BOLD:AAD6276"
+
+$haplotype381
+[1] "Scolopsis_lineata|FDP_SGES_2112_026C|BOLD:AAD6276"
+
+$haplotype382
+[1] "Scolopsis_lineata|MIN_1910_STAM_006A|BOLD:AAD6276"
+
+$haplotype383
+[1] "Parascolopsis_eriomma|FDP_GOVG_2207_004A|BOLD:AAU4592"
+
+$haplotype384
+[1] "Parascolopsis_melanophrys|FDP_GOVG_2207_039A|BOLD:ADL4308"
+
+$haplotype385
+[1] "Parascolopsis_inermis|FDP_TORL_2206_004A|BOLD:AAI5833"
+
+$haplotype386
+[1] "Nemipterus_peronii|FDP_GOVG_2202_022A|BOLD:AAB4692"
+
+$haplotype387
+[1] "Nemipterus_peronii|FDP_GOVG_2202_022B|BOLD:AAU0855"
+
+$haplotype388
+[1] "Nemipterus_peronii|FDP_IGCS_2111_023B|BOLD:AAU0855"
+
+$haplotype389
+[1] "Nemipterus_furcosus|FDP_GOVG_2207_015A|BOLD:AAF2306"
+
+$haplotype390
+[1] "Nemipterus_zysron|FDP_IGCS_2111_023A|BOLD:AAD1868"
+
+$haplotype391
+[1] "Nemipterus_zysron|MIN_1912_TORL_019A|BOLD:AAD1868"
+
+$haplotype392
+[1] "Nemipterus_balinensoides|FDP_GOVG_2207_033A|BOLD:AEH7012"
+
+$haplotype393
+[1] "Nemipterus_bathybius|FDP_MATI_2202_009A|BOLD:AAC6765"
+
+$haplotype394
+[1] "Nemipterus_bathybius|MIN_1912_TORL_015A|BOLD:AAC6765"
+
+$haplotype395
+[1] "Nemipterus_nematophorus|MIN_1912_TORL_016A|BOLD:ACB4285"
+
+$haplotype396
+[1] "Nemipterus_nematopus|FDP_TORL_2206_008A|BOLD:ADP2492"
+
+$haplotype397
+[1] "Nemipterus_hexodon|FDP_TORL_2206_009A|BOLD:AAF2300"
+
+$haplotype398
+[1] "Scolopsis_bilineata|FDP_SGES_2112_028A|BOLD:AAC2480"
+
+$haplotype399
+[1] "Chelidoperca_santosi|FDP_GOVG_2207_012A|BOLD:AFF2935"
+
+$haplotype400
+[1] "Liopropoma|FDP_GOVG_2207_041A|BOLD:AFG4011"
+
+$haplotype401
+[1] "Parachaetodon_ocellatus|DNSC_2017_026A|BOLD:AAI6223"
+
+$haplotype402
+[1] "Chaetodon_meyeri|DNSC_2018_061A|BOLD:AAC8622"
+
+$haplotype403
+[1] "Chaetodon_trifascialis|DNSC_2018_062A|BOLD:AAB9257"
+
+$haplotype404
+[1] "Chaetodon_melannotus|DNSC_2018_074A|BOLD:AAC2848"
+
+$haplotype405
+[1] "Chaetodon_vagabundus|FDP_IGCS_2111_006A|BOLD:AAB3198"
+
+$haplotype406
+[1] "Chaetodon_rafflesii|FDP_STAC_2211_004A|BOLD:AAD3884"
+
+$haplotype407
+[1] "Chaetodon_auriga|MIN_1908_GOVG_041A|BOLD:AAB1540"
+
+$haplotype408
+[1] "Chaetodon_oxycephalus|FDP_IGCS_2201_003A|BOLD:AFF7709"
+
+$haplotype409
+[1] "Chaetodon_oxycephalus|FDP_MATI_2202_022A|BOLD:AFF7709"
+
+$haplotype410
+[1] "Chaetodon_lunulatus|DNSC_2018_064A|BOLD:AAB7103"
+
+$haplotype411
+[1] "Chaetodon_punctatofasciatus|MIN_1910_STAM_016A|BOLD:AAD3872"
+
+$haplotype412
+[1] "Chaetodon_baronessa|FDP_IGCS_2202_046A|BOLD:AAD9265"
+
+$haplotype413
+[1] "Chaetodon_baronessa|FDP_IGCS_2202_046B|BOLD:AAD9265"
+[2] "Chaetodon_baronessa|FDP_IGCS_2202_046C|BOLD:AAD9265"
+
+$haplotype414
+[1] "Chaetodon_unimaculatus|FDP_GOVG_2202_004A|BOLD:AAB3547"
+
+$haplotype415
+[1] "Chaetodon_kleinii|FDP_IGCS_2202_047A|BOLD:AAC2841"
+
+$haplotype416
+[1] "Chaetodon_kleinii|FDP_IGCS_2202_047B|BOLD:AAC2841"
+
+$haplotype417
+[1] "Heniochus_acuminatus|DNSC_2017_032A|BOLD:AAB5717"
+
+$haplotype418
+[1] "Heniochus_chrysostomus|DNSC_2018_065A|BOLD:AAC2123"
+
+$haplotype419
+[1] "Heniochus_chrysostomus|FDP_MATI_2202_024A|BOLD:AAC2123"
+
+$haplotype420
+[1] "Heniochus_chrysostomus|MIN_1912_TORL_014A|BOLD:AAC2123"
+
+$haplotype421
+[1] "Heniochus_varius|FDP_GOVG_2202_002A|BOLD:ACK7853"
+
+$haplotype422
+[1] "Heniochus_varius|FDP_IGCS_2111_024A|BOLD:ACK7853"
+
+$haplotype423
+[1] "Heniochus_varius|FDP_IGCS_2201_004A|BOLD:ACK7853"
+
+$haplotype424
+[1] "Heniochus_varius|FDP_MATI_2202_021A|BOLD:ACK7853"
+
+$haplotype425
+[1] "Hemitaurichthys_polylepis|DNSC_2018_059A|BOLD:AAE4340"
+
+$haplotype426
+[1] "Chelmon_rostratus|DNSC_2018_116A|BOLD:AAC1139"
+
+$haplotype427
+[1] "Coradion_chrysozonus|FDP_GOVG_2202_003A|BOLD:AAI9398"
+
+$haplotype428
+[1] "Coradion_chrysozonus|FDP_MATI_2202_023A|BOLD:AAI9398"
+
+$haplotype429
+[1] "Branchiostegus_saitoi|DNSC_2017_077A|BOLD:AFG2565"
+
+$haplotype430
+[1] "Malacanthus_brevirostris|DNSC_2018_081A|BOLD:AAC4965"
+
+$haplotype431
+[1] "Malacanthus_latovittatus|FDP_GOVG_2207_019A|BOLD:AAF8867"
+
+$haplotype432
+[1] "Saurida_gracilis|FDP_STAC_2211_036A|BOLD:AAE4190"
+
+$haplotype433
+[1] "Saurida_gracilis|MIN_1912_TORL_029A|BOLD:AAE4190"
+
+$haplotype434
+[1] "Beryx_mollis|FDP_TORL_2206_015A|BOLD:ACR9750"
+
+$haplotype435
+[1] "Zanclus_cornutus|MIN_1912_TORL_013A|BOLD:ADI3027"
+
+$haplotype436
+[1] "Variola_louti|FDP_GOVG_2202_038A|BOLD:AAC5719"
+
+$haplotype437
+[1] "Variola_albimarginata|FDP_IGCS_2111_013A|BOLD:AAC9675"
+
+$haplotype438
+[1] "Variola_albimarginata|FDP_IGCS_2111_013C|BOLD:AAC9675"
+
+$haplotype439
+[1] "Variola_albimarginata|FDP_SGES_2112_008A|BOLD:AAC9675"
+
+$haplotype440
+[1] "Gerres_filamentosus|FDP_SGES_2112_035A|BOLD:AFF8295"
+
+$haplotype441
+[1] "Gerres_filamentosus|MIN_1912_TORL_042A|BOLD:AFF8295"
+
+$haplotype442
+[1] "Gerres_erythrourus|FDP_SGES_2112_036A|BOLD:AAF5833"
+
+$haplotype443
+[1] "Gerres_oyena|FDP_SGES_2112_038A|BOLD:AAC1290"
+
+$haplotype444
+[1] "Gerres_oyena|FDP_SGES_2112_038C|BOLD:AAC1290"
+
+$haplotype445
+[1] "Gerres_oyena|FDP_SGES_2112_038B|BOLD:AAC1290"
+
+$haplotype446
+[1] "Hologymnosus_annulatus|DNSC_ND_014A|BOLD:AAD1381"
+
+$haplotype447
+[1] "Pelates_quadrilineatus|FDP_SGES_2112_015A|BOLD:AAA9700"
+
+$haplotype448
+[1] "Monodactylus_argenteus|FDP_SGES_2112_034A|BOLD:AAA9697"
+
+$haplotype449
+[1] "Exyrias_puntang|MIN_1912_TORL_032A|BOLD:AAD1235"
+
+$haplotype450
+[1] "Promethichthys_prometheus|FDP_GOVG_2207_053A|BOLD:ACC0334"
+
+$haplotype451
+[1] "Diploprion_bifasciatum|FDP_IGCS_2111_015A|BOLD:AAC9922"
+
+$haplotype452
+[1] "Tylosurus_crocodilus|FDP_GOVG_2209_010A|BOLD:AAH7713"
+
+$haplotype453
+[1] "Tylosurus_crocodilus|MIN_1910_STAM_039A|BOLD:AAC4148"
+
+$haplotype454
+[1] "Brotula_multibarbata|MIN_1908_GOVG_035A|BOLD:ACK7987"
+
+$haplotype455
+[1] "Gymnothorax_zonipectis|MIN_1908_STAC_044A|BOLD:ACK7703"
+
+$haplotype456
+[1] "Scorpaenopsis_oxycephala|FDP_IGCS_2202_032A|BOLD:AAJ5778"
+
+$haplotype457
+[1] "Scorpaenopsis_venosa|MIN_1908_STAC_042A|BOLD:AAD9168"
+
+$haplotype458
+[1] "Pentapodus_caninus|MIN_1908_GOVG_051A|BOLD:AAE6343"
+
+$haplotype459
+[1] "Pentapodus_trivittatus|MIN_1912_TORL_005A|BOLD:AAM4604"
+
+$haplotype460
+[1] "Lobotes_surinamensis|FDP_GOVG_2208_040A|BOLD:AAC1878"
+
+$haplotype461
+[1] "Rexea_prometheoides|MIN_1912_TORL_046B|BOLD:AAC9592"
+
+$haplotype462
+[1] "Gempylus_serpens|MIN_1910_STAM_037A|BOLD:AAC5492"
+
+$haplotype463
+[1] "Aurigequula_fasciata|FDP_GOVG_2209_006A|BOLD:AAB2489"
+
+$haplotype464
+[1] "Leiognathus_equula|FDP_TORL_2207_002A|BOLD:AAB2488"
+
+$haplotype465
+[1] "Xiphocheilus_typus|DNSC_2018_003A|BOLD:ACK6835"
+
+$haplotype466
+[1] "Xiphocheilus_typus|DNSC_2018_019A|BOLD:ACK6835"
+
+$haplotype467
+[1] "Nematalosa_nasus|DNSC_2017_096A|BOLD:AAB2978"
+
+$haplotype468
+[1] "Heteropriacanthus_cruentatus|FDP_GOVG_2202_024A|BOLD:AAB1874"
+
+$haplotype469
+[1] "Heteropriacanthus_cruentatus|FDP_GOVG_2202_031A|BOLD:AAB1874"
+
+$haplotype470
+[1] "Priacanthus_blochii|FDP_GOVG_2202_025A|BOLD:ADB4901"
+
+$haplotype471
+[1] "Priacanthus_blochii|FDP_GOVG_2202_030A|BOLD:ADB4901"
+
+$haplotype472
+[1] "Priacanthus_blochii|FDP_GOVG_2204_016A|BOLD:ADB4901"
+
+$haplotype473
+[1] "Priacanthus_blochii|FDP_GOVG_2207_001A|BOLD:ADB4901"
+
+$haplotype474
+[1] "Priacanthus_tayenus|FDP_GOVG_2207_034A|BOLD:ACF1742"
+
+$haplotype475
+[1] "Toxotes_jaculatrix|FDP_IGCS_2202_021A|BOLD:AAI0481"
+
+$haplotype476
+[1] "Toxotes_jaculatrix|FDP_IGCS_2202_021B|BOLD:AAI0481"
+
+$haplotype477
+[1] "Elates_ransonnettii|FDP_SGES_2112_020A|BOLD:ACK4730"
+
+$haplotype478
+[1] "Scatophagus_argus|FDP_SGES_2112_033A|BOLD:ACF2262"
+
+$haplotype479
+[1] "Pempheris_vanicolensis|FDP_STAC_2211_028A|BOLD:ACE0426"
+
+$haplotype480
+[1] "Coryphaena_hippurus|MIN_1910_STAM_028A|BOLD:AAA5277"
+
+$haplotype481
+[1] "Polydactylus_plebeius|MIN_1912_TORL_043A|BOLD:AAC6244"
+
+$haplotype482
+[1] "Conger_cinereus|MIN_1912_TORL_048A|BOLD:AAD1242"
+
+$haplotype483
+[1] "Synodus_variegatus|FDP_STAC_2211_035A|BOLD:AAB5069"
+
+$haplotype484
+[1] "Neotrygon_kuhlii|FDP_STAC_2211_037A|BOLD:ABZ6131"
+
+$haplotype485
+[1] "Bothus_pantherinus|FDP_SGES_2112_019A|BOLD:AAC9155"
+
+
+Number of haplotypes :  485
+
+slots of an object Haplotype:
+haplist hapind uniquehapind sequence d freq nhap 

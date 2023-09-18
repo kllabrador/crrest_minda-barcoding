@@ -57,7 +57,7 @@ list.files(scripts)
 Load the libraries needed for this pipeline.
 
 ```{r}
-pacman::p_load (ape, cowplot, tidyverse, janitor)
+pacman::p_load (ape, bioseq, cowplot, tidyverse, janitor, phangorn, rstatix)
 ```
 
 ## Load data files
@@ -67,7 +67,7 @@ Identify all the infiles for this session.
 # Fasta file of the alignment
 ## Make sure that the alignment is done outside R.
 infile_fasta <- paste0(indir, 
-                       "BOLD-output/20230902_minda-barcoding alignment.fasta")
+                       "BOLD-output/20230909_minda-barcoding alignment.fasta")
 
 infile_csv <- list.files(paste0(indir, 
                                 "BOLD-output"), 
@@ -99,7 +99,7 @@ Extract metadata from the alignment file
 aln.metadata <- data.frame (label = names(aln.fas)) %>% 
   separate_wider_delim(label,
                        delim = "|",
-                       names = c("process_id", "taxa_id", "sample_id", "bin", NA),
+                       names = c("process_id", "taxa_id", "sample_id", "bin", "accession_no"),
                        cols_remove = F
   ) %>% 
   separate_wider_delim(taxa_id,
@@ -122,6 +122,24 @@ data.bkp <- as_tibble.DNAbin(aln.fas) %>%
 
 ```
 
+## Modify labels
+Do this if you want to modify the sample id in the fasta file.
+
+```{r change_aln-label}
+# # Select only the columns needed
+#  aln.fas <- data.bkp %>%
+#    mutate (mod_label = paste (taxa_id, sample_id, bin, accession_no, sep = "|")) %>%
+#    select (mod_label, sequence) %>%
+#    as_DNAbin (labels = mod_label,
+#               sequences = sequence) %>%
+#    as.matrix
+# 
+#  write.FASTA( aln.fas,
+#              file = paste0(outdir, "phylo_aln.fas"),
+#              header = NULL,
+#              append = FALSE)
+```
+
 # Qualitative Data Description
 
 ## Diversity Profile
@@ -132,7 +150,7 @@ taxo_info <- files.csv$`project-metadata_taxonomy.csv`
 
 ```{r}
 family_count <- taxo_info %>% 
-  distinct (family, species) %>% 
+  distinct (family, genus, species) %>% 
   group_by (family) %>% 
   summarize (count = n() ) %>% 
   ungroup()
@@ -189,6 +207,18 @@ dist.df <- rbind (species.dist,
 
 ```
 
+### Stats
+
+```{r}
+
+dist.stats <- dist.df %>% 
+  group_by(level) %>% 
+  get_summary_stats(distance)
+
+
+```
+
+
 ### Histogram
 ```{r}
 plot_distance_histogram <- 
@@ -239,18 +269,26 @@ ggsave(plot_distance_boxplot,
 )
 ```
 
-
 ## Barcode Gap
 
-### Histogram
 
 ```{r}
 barcode_gap <- files.csv$barcode_gap_analysis.csv %>% 
   pivot_longer(cols = c(mean_intra_sp,max_intra_sp, distance_to_nn),
                names_to = "comp",
                values_to = "dist"
-  )
+  ) %>% 
+  na.omit()
 
+barcode_gap.stats <- barcode_gap %>% 
+  group_by(comp) %>% 
+  get_summary_stats(dist)
+```
+
+
+### Histogram
+
+```{r}
 plot_barcode_gap_histogram <- 
 ggplot (data = barcode_gap %>% filter (comp != "mean_intra_sp"), 
         aes (x = dist, 
@@ -268,7 +306,7 @@ ggplot (data = barcode_gap %>% filter (comp != "mean_intra_sp"),
   scale_fill_brewer(palette = "Set1",
                     labels = c("interspecific\n(NN)", "intraspecific\n(max)")
   ) +
-  theme(legend.text = element_text(size = 7)) 
+  theme(legend.text = element_text(size = 7))  
 plot_barcode_gap_histogram
 
 ```
@@ -373,247 +411,12 @@ ggsave(fig1,
 
 ```
 
-
-
-# Phylogenetics
-Phylogenetic analysis based on R. Follows after the analysis pipeline on [Ph-IRES](https://github.com/Ph-IRES/workshop_data-analysis/tree/main/tutorial_phylogeny_analysis).
-
-## Before you start
-
-This pipeline assumes that the sequence has already been aligned. As much as possible, gaps/indels are removed from the alignment so as to avoid errors downstream. Furthermore, ambiguous sequences should have been resolved prior to uploading the data in R.
-
-There are freely-available software that can guide in the upstream processes (e.g., sequence truncation and clean-up, alignment). @Hall2018 is a good reference for sequence alignment, as well as other topics involving phylogenetics.
-
-## Libraries
-```{r library}
-library(pacman)
-
-# Load packages
-pacman::p_load(
-  
-  # Wrangling, Miscellaneous
-  tidyverse,
-  janitor,
-
-  # Plotting
-  ggpubr, 
-  ggtree, 
-  paletteer, 
-  patchwork, 
-  scales, 
-  
-  # Phylogenetics and Population Genetics Packages
-  ade4, 
-  adegenet, 
-  ape, 
-  bioseq,
-  haplotypes, 
-  pegas, 
-  phangorn, 
-  msa
-)
-
-```
-
-## Modify labels
-
-Change the labels of the fasta file based on the information from the metadata file.
-
-```{r change_aln-label}
-# Select only the columns needed
-phylo_aln <- data_bkp %>% 
-  mutate (mod_label = paste (taxa_id, sample_id, bin, sep = "|")) %>% 
-  select (mod_label, sequence) %>% 
-  as_DNAbin (labels = mod_label,
-             sequences = sequence) %>% 
-  as.matrix
-```
-
-
-# Collapse Haplotypes
-
-```{r collapse-haplotypes}
-haplo_list <- phylo_aln %>% 
-  as.dna %>% 
-  haplotypes::haplotype(., indels="sic")
-
-# Haplotype report
-sink (paste(outdir, "hapCollapse_report.txt"))
-print (haplo_list)
-sink()
-  
-# Set filters
-filter <- map(haplo_list@haplist,
-    ~.x[1]) %>% 
-  plyr::ldply() %>% 
-  pull (V1)
-
-# Collapse haplotypes based on filter
-phylo_haplo_aln <- phylo_aln[filter]
-
-```
-
-# Model Test
-
-Determine the best evolutionary model for the given dataset using Maximum Likelihood.
-
-```{r ML Model Selection}
-# Conver collapsed alignment into a PhyDat object
-pd<-as.phyDat(phylo_haplo_aln)
-
-##test models, select lowest AIC
-mt <- modelTest(pd, multicore = TRUE, mc.cores= 6)
-View(mt)
-
-# Best model: GTR + G(4) + I
-```
-
-# NJ Tree
+# BIN Discordance
 ```{r}
-pd < -as.phyDat(phylo_aln)
-
-nj.fun <- function (x) {
-  x %>%   
-    
-  # Calculate genetic distance
-  dist.dna(model = "K80",
-           pairwise.deletion = T) %>% 
-  
-  # Draw NJ Tree
-  NJ()
-}
-
-treeNJ <- nj.fun(phylo_aln)
-  
-bootstrap.pml (pd, bs=100)
-
+bin_concordant <- files.csv$`binDiscordance-CONCORDANT-BINS.csv`
+bin_discordant <- files.csv$`binDiscordance-DISCORDANT-BINS.csv`
+bin_singleton <- files.csv$`binDiscordance-SINGLETON-BINS.csv`
 ```
 
 
-
-
-# Maximum Likelihood
-
-We now infer the phylogeny using maximum likelihood, and then visualize the resulting phylogenetic tree.
-
-## Model Initialization
-
-Initialize the model fit for the dataset.
-
-```{r Initial ModelFit}
-##initial fit, use best fit model from prev chunk
-fit <- as.pml(mt)
-fit
-```
-
-## Bootstrapping
-
-Optimize the fit of the model and perform bootstrapping.
-
-```{r Optimize Fit and Bootstrap}
-##MAKE SURE TO CHANGE OPTIONS DEPENDING ON YOUR SELECTED MODEL.  
-#?optim.pml gives guidance on how to set optBf and optQ
-#optInv and optGamma should be set depending on whether your model includes +I and/or +G parameters
-
-fit.opt <- optim.pml(fit, 
-                     optBf=TRUE, 
-                     optQ=TRUE, 
-                     optInv=TRUE, 
-                     optGamma=TRUE,
-                     rearrangement = "NNI", 
-                     control = pml.control(trace = 1)
-                     )
-fit.opt
-
-#main= sets the plot title
-plot(fit.opt, 
-     main="GTR+G(4)+I")
-
-#bootstrap model
-bs <- bootstrap.pml(fit.opt, 
-                    bs=1000, 
-                    optNni=TRUE, 
-                    multicore=TRUE, 
-                    mc.cores = 6)
-
-#Save bs in case as an R data file
-# write_rds(bs,
-#           file = paste0(outdir, "bootstrap.tre")
-#           )
-
-# In case you want to load the bs file:
-# bs <- readRDS(paste0(outdir, "bootstrap.tre"))
-          
-```
-
-## Initial Visualization
-
-Look at the initial plot of the tree.
-
-```{r}
-tree<-plotBS(fit.opt$tree, bs, p = 50, digits = 0, type="p", method="FBP")
-
-#digits doesn't seem to work in plotBS, so this is a workaround
-tree$node.label<-round(tree$node.label, digits=0)
-
-# plotBS also saves the tree and the bootstrap values in a phylo object, which we will use for visualization using ggtree.
-```
-
-```{r}
-# Get a basic view of the tree
-ggtree (tree,
-        ladderize = T) +
-  xlim (NA, 1) +
-  geom_tiplab(geom="text", fontface=3, size=2.5, hjust = -0.025) +
-  geom_text(aes(label=node), hjust=0.5, size = 2)
-
-
-```
-
-```{r}
-# Set outgroup node
-out.node <- 45
-tree.root <- root(tree, node=out.node)
-
-# Review tree after rooting
-(treeplot <- 
-ggtree (tree.root,
-        ladderize = T) +
-  xlim (NA, 1) +
-  geom_tiplab(geom="text", fontface=3, size=3.5, hjust = -0.025) +
-  geom_nodelab(size=3, hjust = 1.25, vjust=-0.2))
-
-```
-
-```{r modify and manipulate trees}
-
-# Check node numbers
-treeplot + geom_text(aes(label=node), hjust=0.5, size = 2)
-
-
-#hilight nodes
-treeplot_2 <- 
-treeplot + 
-  geom_hilight(node = 1, fill="darkred", extend = 0.55, alpha=0.25) +
-  geom_treescale(width = 0.1, fontsize = 3, offset=-1)
-
-
-```
-
-## Exporting phylogeny
-
-```{r tree tools}
-##export tree in Newick format
-write.tree(tree, file=paste0(outdir, "newick.tree"))
-
-##export tree if png format
-ggsave (treeplot_2,
-        file = paste0(outdir, "phylo_tree.png"),
-        width = 5,
-        height = 7,
-        units = "in")
-
-
-
-```
 
