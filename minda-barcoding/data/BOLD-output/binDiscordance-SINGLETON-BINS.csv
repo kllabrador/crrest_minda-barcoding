@@ -13,10 +13,10 @@ MINDA391-23,BOLD:ACE0426,1,Chordata:1,Actinopterygii:1,Perciformes:1,Pempheridae
 MINDA008-23,BOLD:AAE8025,1,Chordata:1,Actinopterygii:1,Labriformes:1,Labridae:1,,,Pseudodax:1,Pseudodax moluccanus:1
 MINDA428-23,BOLD:AAC3267,1,Chordata:1,Actinopterygii:1,Spariformes:1,Lethrinidae:1,,,Monotaxis:1,Monotaxis grandoculis:1
 MINDA493-23,BOLD:AAC6244,1,Chordata:1,Actinopterygii:1,Perciformes:1,Polynemidae:1,,,Polydactylus:1,Polydactylus plebeius:1
-MINDA032-23,BOLD:AAA7595,1,Chordata:1,Actinopterygii:1,Perciformes:1,Lutjanidae:1,Lutjaninae:1,,Lutjanus:1,Lutjanus erythropterus:1
+MINDA032-23,BOLD:AAA7595,1,Chordata:1,Actinopterygii:1,Perciformes:1,Lutjanidae:1,Lutjaninae:1,,Lutjanus:1,Lutjanus malabaricus:1
 MINDA393-23,BOLD:AAB5069,1,Chordata:1,Actinopterygii:1,Aulopiformes:1,Synodontidae:1,Synodontinae:1,,Synodus:1,Synodus variegatus:1
 MINDA063-23,BOLD:ADL0994,1,Chordata:1,Actinopterygii:1,Perciformes:1,Serranidae:1,Epinephelinae:1,,Epinephelus:1,Epinephelus coeruleopunctatus:1
-MINDA165-23,BOLD:AAE7640,1,Chordata:1,Actinopterygii:1,Carangiformes:1,Carangidae:1,Caranginae:1,,,
+MINDA165-23,BOLD:AAE7640,1,Chordata:1,Actinopterygii:1,Carangiformes:1,Carangidae:1,Caranginae:1,,Ferdauia:1,Ferdauia ferdau:1
 MINDA351-23,BOLD:AAA9697,1,Chordata:1,Actinopterygii:1,Perciformes:1,Monodactylidae:1,,,Monodactylus:1,Monodactylus argenteus:1
 MINDA368-23,BOLD:AAB0508,1,Chordata:1,Actinopterygii:1,Spariformes:1,Lethrinidae:1,,,Lethrinus:1,Lethrinus lentjan:1
 MINDA059-23,BOLD:AAF8866,1,Chordata:1,Actinopterygii:1,Labriformes:1,Labridae:1,,,Bodianus:1,Bodianus dictynna:1
@@ -36,7 +36,7 @@ MINDA047-23,BOLD:AAE4340,1,Chordata:1,Actinopterygii:1,Perciformes:1,Chaetodonti
 MINDA052-23,BOLD:AAC0137,1,Chordata:1,Actinopterygii:1,Perciformes:1,Pomacanthidae:1,,,Centropyge:1,Centropyge bicolor:1
 MINDA274-23,BOLD:AAO1670,1,Chordata:1,Actinopterygii:1,Mugiliformes:1,Mugilidae:1,,,Planiliza:1,Planiliza melinoptera:1
 MINDA452-23,BOLD:AAC6496,1,Chordata:1,Actinopterygii:1,Moroniformes:1,Ephippidae:1,,,Platax:1,Platax orbicularis:1
-MINDA166-23,BOLD:AAE7644,1,Chordata:1,Actinopterygii:1,Carangiformes:1,Carangidae:1,Caranginae:1,,,
+MINDA166-23,BOLD:AAE7644,1,Chordata:1,Actinopterygii:1,Carangiformes:1,Carangidae:1,Caranginae:1,,Craterognathus:1,Craterognathus plagiotaenia:1
 MINDA174-23,BOLD:AAJ2671,1,Chordata:1,Actinopterygii:1,Perciformes:1,Lutjanidae:1,Lutjaninae:1,,Lutjanus:1,Lutjanus timoriensis:1
 MINDA426-23,BOLD:AAD9168,1,Chordata:1,Actinopterygii:1,Scorpaeniformes:1,Scorpaenidae:1,Scorpaeninae:1,,Scorpaenopsis:1,Scorpaenopsis venosa:1
 MINDA415-23,BOLD:AAB7684,1,Chordata:1,Actinopterygii:1,Perciformes:1,Lutjanidae:1,Lutjaninae:1,,Lutjanus:1,Lutjanus rivulatus:1
@@ -62,7 +62,9 @@ MINDA412-23,BOLD:AAB2488,1,Chordata:1,Actinopterygii:1,Perciformes:1,Leiognathid
 MINDA123-23,BOLD:AAI5462,1,Chordata:1,Actinopterygii:1,Labriformes:1,Labridae:1,,,Oxycheilinus:1,Oxycheilinus arenatus:1
 MINDA158-23,BOLD:AAD9665,1,Chordata:1,Actinopterygii:1,Perciformes:1,Serranidae:1,Epinephelinae:1,,Aethaloperca:1,Aethaloperca rogaa:1
 MINDA488-23,BOLD:AAD1235,1,Chordata:1,Actinopterygii:1,Gobiiformes:1,Gobiidae:1,Gobiinae:1,,Exyrias:1,Exyrias puntang:1
+MINDA376-23,BOLD:AAH9422,1,Chordata:1,Actinopterygii:1,Moroniformes:1,Ephippidae:1,,,Platax:1,Platax teira:1
 MINDA495-23,BOLD:AAD1242,1,Chordata:1,Actinopterygii:1,Anguilliformes:1,Congridae:1,Congrinae:1,,Conger:1,Conger cinereus:1
+MINDA483-23,BOLD:AAL4434,1,Chordata:1,Actinopterygii:1,Perciformes:1,Serranidae:1,Epinephelinae:1,,Plectropomus:1,Plectropomus oligacanthus:1
 MINDA038-23,BOLD:AAD3458,1,Chordata:1,Actinopterygii:1,Perciformes:1,Serranidae:1,Epinephelinae:1,,Epinephelus:1,Epinephelus hexagonatus:1
 MINDA271-23,BOLD:AAB9166,1,Chordata:1,Actinopterygii:1,Acanthuriformes:1,Acanthuridae:1,Acanthurinae:1,,Ctenochaetus:1,Ctenochaetus binotatus:1
 MINDA266-23,BOLD:AAD0896,1,Chordata:1,Actinopterygii:1,Labriformes:1,Scaridae:1,,,Leptoscarus:1,Leptoscarus vaigiensis:1
@@ -82,11 +84,11 @@ MINDA291-23,BOLD:AAC4648,1,Chordata:1,Actinopterygii:1,Holocentriformes:1,Holoce
 MINDA049-23,BOLD:AAB9257,1,Chordata:1,Actinopterygii:1,Perciformes:1,Chaetodontidae:1,,,Chaetodon:1,Chaetodon trifascialis:1
 MINDA473-23,BOLD:ACK7828,1,Chordata:1,Actinopterygii:1,Tetraodontiformes:1,Balistidae:1,,,Abalistes:1,Abalistes stellatus:1
 MINDA067-23,BOLD:ADB4781,1,Chordata:1,Actinopterygii:1,Labriformes:1,Labridae:1,,,Labropsis:1,Labropsis manabei:1
-MINDA149-23,BOLD:AFG4011,1,Chordata:1,Actinopterygii:1,Perciformes:1,Serranidae:1,Epinephelinae:1,,Liopropoma:1,
+MINDA149-23,BOLD:AFG4011,1,Chordata:1,Actinopterygii:1,Perciformes:1,Serranidae:1,Epinephelinae:1,,Liopropoma:1,Liopropoma sp.:1
 MINDA440-23,BOLD:AAC2809,1,Chordata:1,Actinopterygii:1,Perciformes:1,Serranidae:1,Epinephelinae:1,,Epinephelus:1,Epinephelus quoyanus:1
 MINDA333-23,BOLD:AAB6466,1,Chordata:1,Actinopterygii:1,Perciformes:1,Mullidae:1,,,Upeneus:1,Upeneus sulphureus:1
 MINDA404-23,BOLD:AAN1592,1,Chordata:1,Actinopterygii:1,Labriformes:1,Labridae:1,,,Oxycheilinus:1,Oxycheilinus celebicus:1
-MINDA483-23,BOLD:AAL4434,1,Chordata:1,Actinopterygii:1,Perciformes:1,Serranidae:1,Epinephelinae:1,,Plectropomus:1,Plectropomus oligacanthus:1
+MINDA009-23,BOLD:AAB9954,1,Chordata:1,Actinopterygii:1,Labriformes:1,Labridae:1,,,Anampses:1,Anampses meleagrides:1
 MINDA320-23,BOLD:AAC6212,1,Chordata:1,Actinopterygii:1,Perciformes:1,Mullidae:1,,,Parupeneus:1,Parupeneus barberinoides:1
 MINDA313-23,BOLD:AAE3751,1,Chordata:1,Actinopterygii:1,Spariformes:1,Lethrinidae:1,,,Lethrinus:1,Lethrinus erythropterus:1
 MINDA374-23,BOLD:AAA8169,1,Chordata:1,Actinopterygii:1,Perciformes:1,Lutjanidae:1,Lutjaninae:1,,Lutjanus:1,Lutjanus lutjanus:1
@@ -103,9 +105,9 @@ MINDA176-23,BOLD:AAC1878,1,Chordata:1,Actinopterygii:1,Spariformes:1,Lobotidae:1
 MINDA124-23,BOLD:AAU4592,1,Chordata:1,Actinopterygii:1,Spariformes:1,Nemipteridae:1,,,Parascolopsis:1,Parascolopsis eriomma:1
 MINDA110-23,BOLD:AAC4004,1,Chordata:1,Actinopterygii:1,Perciformes:1,Haemulidae:1,Plectorhinchinae:1,,Plectorhinchus:1,Plectorhinchus chaetodonoides:1
 MINDA068-23,BOLD:ADI4249,1,Chordata:1,Actinopterygii:1,Labriformes:1,Labridae:1,,,Thalassoma:1,Thalassoma amblycephalum:1
-MINDA009-23,BOLD:AAB9954,1,Chordata:1,Actinopterygii:1,Labriformes:1,Labridae:1,,,Anampses:1,Anampses meleagrides:1
+MINDA498-23,BOLD:ACZ6203,1,Chordata:1,Actinopterygii:1,Tetraodontiformes:1,Balistidae:1,,,Pseudobalistes:1,Pseudobalistes fuscus:1
 MINDA050-23,BOLD:AAB7103,1,Chordata:1,Actinopterygii:1,Perciformes:1,Chaetodontidae:1,,,Chaetodon:1,Chaetodon lunulatus:1
-MINDA402-23,BOLD:AAC1876,1,Chordata:1,,,,,,,
+MINDA402-23,BOLD:AAC1876,1,Chordata:1,Actinopterygii:1,Perciformes:1,Serranidae:1,Epinephelinae:1,,Cromileptes:1,Cromileptes altivelis:1
 MINDA432-23,BOLD:AAD1795,1,Chordata:1,Actinopterygii:1,Perciformes:1,Lutjanidae:1,Lutjaninae:1,,Macolor:1,Macolor macularis:1
 MINDA036-23,BOLD:AAD0971,1,Chordata:1,Actinopterygii:1,Perciformes:1,Serranidae:1,Epinephelinae:1,,Plectropomus:1,Plectropomus areolatus:1
 MINDA044-23,BOLD:AAC6874,1,Chordata:1,Actinopterygii:1,Tetraodontiformes:1,Balistidae:1,,,Balistoides:1,Balistoides conspicillum:1
@@ -133,7 +135,7 @@ MINDA010-23,BOLD:AAE8971,1,Chordata:1,Actinopterygii:1,Labriformes:1,Labridae:1,
 MINDA004-23,BOLD:AAE8972,1,Chordata:1,Actinopterygii:1,Labriformes:1,Labridae:1,,,Choerodon:1,Choerodon robustus:1
 MINDA143-23,BOLD:ACF1742,1,Chordata:1,Actinopterygii:1,Perciformes:1,Priacanthidae:1,,,Priacanthus:1,Priacanthus tayenus:1
 MINDA330-23,BOLD:AAA9700,1,Chordata:1,Actinopterygii:1,Perciformes:1,Terapontidae:1,,,Pelates:1,Pelates quadrilineatus:1
-MINDA413-23,BOLD:AAD6118,1,Chordata:1,Actinopterygii:1,Carangiformes:1,Carangidae:1,Caranginae:1,,Atropus:1,
+MINDA413-23,BOLD:AAD6118,1,Chordata:1,Actinopterygii:1,Carangiformes:1,Carangidae:1,Caranginae:1,,Atropus:1,Atropus mentalis:1
 MINDA436-23,BOLD:AAB0334,1,Chordata:1,Actinopterygii:1,Perciformes:1,Mullidae:1,,,Parupeneus:1,Parupeneus indicus:1
 MINDA273-23,BOLD:AAB9379,1,Chordata:1,Actinopterygii:1,Labriformes:1,Labridae:1,,,Halichoeres:1,Halichoeres melanurus:1
 MINDA477-23,BOLD:ADI3027,1,Chordata:1,Actinopterygii:1,Acanthuriformes:1,Zanclidae:1,,,Zanclus:1,Zanclus cornutus:1
@@ -161,7 +163,7 @@ MINDA180-23,BOLD:ACK7947,1,Chordata:1,Actinopterygii:1,Labriformes:1,Scaridae:1,
 MINDA083-23,BOLD:AAB7244,1,Chordata:1,Actinopterygii:1,Perciformes:1,Lutjanidae:1,Etelinae:1,,Aphareus:1,Aphareus rutilans:1
 MINDA304-23,BOLD:AAC3830,1,Chordata:1,Actinopterygii:1,Labriformes:1,Labridae:1,,,Halichoeres:1,Halichoeres marginatus:1
 MINDA184-23,BOLD:AAC7530,1,Chordata:1,Actinopterygii:1,Labriformes:1,Labridae:1,,,Oxycheilinus:1,Oxycheilinus bimaculatus:1
-MINDA376-23,BOLD:AAH9422,1,Chordata:1,Actinopterygii:1,Moroniformes:1,Ephippidae:1,,,Platax:1,Platax teira:1
+MINDA497-23,BOLD:AAY3555,1,Chordata:1,Actinopterygii:1,Ovalentaria:1,Pomacentridae:1,Pomacentrinae:1,,Pomacentrus:1,Pomacentrus reidi:1
 MINDA395-23,BOLD:ABZ6131,1,Chordata:1,Elasmobranchii:1,Myliobatiformes:1,Dasyatidae:1,,,Neotrygon:1,Neotrygon kuhlii:1
 MINDA154-23,BOLD:AAE1869,1,Chordata:1,Actinopterygii:1,Perciformes:1,Serranidae:1,Epinephelinae:1,,Epinephelus:1,Epinephelus maculatus:1
 MINDA129-23,BOLD:AFF2935,1,Chordata:1,Actinopterygii:1,Perciformes:1,Serranidae:1,Serraninae:1,,Chelidoperca:1,Chelidoperca santosi:1
@@ -175,7 +177,7 @@ MINDA101-23,BOLD:AAC5719,1,Chordata:1,Actinopterygii:1,Perciformes:1,Serranidae:
 MINDA380-23,BOLD:AAL8218,1,Chordata:1,Actinopterygii:1,Ovalentaria:1,Pomacentridae:1,Chrominae:1,,Chromis:1,Chromis xanthura:1
 MINDA275-23,BOLD:AAE4532,1,Chordata:1,Actinopterygii:1,Moroniformes:1,Ephippidae:1,,,Platax:1,Platax pinnatus:1
 MINDA396-23,BOLD:AAI5833,1,Chordata:1,Actinopterygii:1,Spariformes:1,Nemipteridae:1,,,Parascolopsis:1,Parascolopsis inermis:1
-MINDA108-23,BOLD:AAB6437,1,Chordata:1,Actinopterygii:1,Spariformes:1,Lethrinidae:1,,,Lethrinus:1,
+MINDA108-23,BOLD:AAB6437,1,Chordata:1,Actinopterygii:1,Spariformes:1,Lethrinidae:1,,,Lethrinus:1,Lethrinus obsoletus:1
 MINDA028-23,BOLD:AAB2978,1,Chordata:1,Actinopterygii:1,Clupeiformes:1,Clupeidae:1,Dorosomatinae:1,,Nematalosa:1,Nematalosa nasus:1
 MINDA362-23,BOLD:AAE9661,1,Chordata:1,Actinopterygii:1,Perciformes:1,Siganidae:1,,,Siganus:1,Siganus spinus:1
 MINDA464-23,BOLD:AAA5277,1,Chordata:1,Actinopterygii:1,Carangiformes:1,Coryphaenidae:1,,,Coryphaena:1,Coryphaena hippurus:1
@@ -221,7 +223,7 @@ MINDA126-23,BOLD:AAB7827,1,Chordata:1,Actinopterygii:1,Carangiformes:1,Carangida
 MINDA239-23,BOLD:AAB7821,1,Chordata:1,Actinopterygii:1,Labriformes:1,Labridae:1,,,Cheilinus:1,Cheilinus fasciatus:1
 MINDA335-23,BOLD:ACK4730,1,Chordata:1,Actinopterygii:1,Scorpaeniformes:1,Platycephalidae:1,,,Elates:1,Elates ransonnettii:1
 MINDA164-23,BOLD:AAI7885,1,Chordata:1,Actinopterygii:1,Carangiformes:1,Carangidae:1,Caranginae:1,,Atule:1,Atule mate:1
-MINDA065-23,BOLD:AAD8577,1,Chordata:1,Actinopterygii:1,Labriformes:1,Labridae:1,,,Novaculichthys:1,
+MINDA065-23,BOLD:AAD8577,1,Chordata:1,Actinopterygii:1,Labriformes:1,Labridae:1,,,Novaculoides:1,Novaculoides macrolepidotus:1
 MINDA253-23,BOLD:AAB3544,1,Chordata:1,Actinopterygii:1,Labriformes:1,Scaridae:1,,,Scarus:1,Scarus ghobban:1
 MINDA057-23,BOLD:AAE2471,1,Chordata:1,Actinopterygii:1,Kurtiformes:1,Apogonidae:1,Apogoninae:1,,Sphaeramia:1,Sphaeramia nematoptera:1
 MINDA037-23,BOLD:ACK7859,1,Chordata:1,Actinopterygii:1,Perciformes:1,Serranidae:1,Epinephelinae:1,,Plectropomus:1,Plectropomus maculatus:1

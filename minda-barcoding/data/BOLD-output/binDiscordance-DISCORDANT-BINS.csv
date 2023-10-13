@@ -1,9 +1,9 @@
 Process ID,URI,Rank,Count,Phylum,Class,Order,Family,Subfamily,Tribe,Genus,Species
 "MINDA103-23,MINDA387-23",BOLD:AAD0474,genus,2,Chordata:2,Actinopterygii:2,Tetraodontiformes:2,Balistidae:2,,,"Pseudobalistes:1, Balistoides:1","Pseudobalistes flavimarginatus:1, Balistoides viridescens:1"
-"MINDA022-23,MINDA081-23,MINDA082-23",BOLD:AAB9940,species,3,Chordata:3,Actinopterygii:3,Perciformes:3,Haemulidae:3,Plectorhinchinae:3,,Diagramma:3,"Diagramma pictum:2, Diagramma melanacrum:1"
+"MINDA071-23,MINDA295-23,MINDA332-23",BOLD:AAB9306,species,3,Chordata:3,Actinopterygii:3,Holocentriformes:3,Holocentridae:3,Holocentrinae:3,,Sargocentron:3,"Sargocentron melanospilos:1, Sargocentron rubrum:2"
 "MINDA467-23,MINDA474-23",BOLD:AAD2228,species,2,Chordata:2,Actinopterygii:2,Perciformes:2,Bramidae:2,,,Brama:2,"Brama orcini:1, Brama dussumieri:1"
-"MINDA035-23,MINDA115-23,MINDA255-23,MINDA466-23",BOLD:ADL0078,species,4,Chordata:4,Actinopterygii:4,Perciformes:4,Serranidae:4,Epinephelinae:4,,Cephalopholis:4,"Cephalopholis aitha:1, Cephalopholis spiloparaea:3"
-"MINDA182-23,MINDA465-23",BOLD:AAD0850,species,2,Chordata:2,Actinopterygii:2,Labriformes:2,Scaridae:2,,,Scarus:2,"Scarus rivulatus:1, Scarus quoyi:1"
+"MINDA022-23,MINDA081-23,MINDA082-23",BOLD:AAB9940,species,3,Chordata:3,Actinopterygii:3,Perciformes:3,Haemulidae:3,Plectorhinchinae:3,,Diagramma:3,"Diagramma pictum:2, Diagramma melanacrum:1"
 "MINDA116-23,MINDA252-23",BOLD:AAC8755,species,2,Chordata:2,Actinopterygii:2,Perciformes:2,Siganidae:2,,,Siganus:2,"Siganus doliatus:1, Siganus corallinus:1"
-"MINDA112-23,MINDA226-23",BOLD:AEZ5902,species,2,Chordata:2,Actinopterygii:2,Holocentriformes:2,Holocentridae:2,Holocentrinae:2,,Sargocentron:2,"Sargocentron spiniferum:1, Sargocentron caudimaculatum:1"
+"MINDA020-23,MINDA021-23,MINDA289-23",BOLD:AAF2980,species,3,Chordata:3,Actinopterygii:3,Perciformes:3,Haemulidae:3,Plectorhinchinae:3,,Plectorhinchus:3,"Plectorhinchus vittatus:2, Plectorhinchus lineatus:1"
 "MINDA117-23,MINDA212-23,MINDA213-23,MINDA300-23",BOLD:AAD9299,species,4,Chordata:4,Actinopterygii:4,Perciformes:4,Siganidae:4,,,Siganus:4,"Siganus vulpinus:3, Siganus unimaculatus:1"
+"MINDA112-23,MINDA226-23",BOLD:AEZ5902,species,2,Chordata:2,Actinopterygii:2,Holocentriformes:2,Holocentridae:2,Holocentrinae:2,,Sargocentron:2,"Sargocentron spiniferum:1, Sargocentron caudimaculatum:1"

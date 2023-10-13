@@ -1,6 +1,0 @@
-The analysis was run using raxmlGUI 2.0 (version 2.0.10) as follows:
-Analysis: ML + rapid bootstrap
-Binary: raxmlHPC-PTHREADS-SSE3.exe version 8.2.12
-Results saved to: C:\Users\kllab\Desktop\modelTest\Run01
-RAxML was called with these arguments:
-1.) -T 10 -f a -x 770483 -p 770483 -N 1000 -m GTRGAMMAI -O -o Neotrygon_kuhlii_FDP_STAC_2211_037A_BOLD_ABZ6131_OR524529 -n phylo_aln_modified.tre -s "C:\Users\kllab\Desktop\modelTest\Run01\phylo_aln_modified.fas" -w "C:\Users\kllab\Desktop\modelTest\Run01"

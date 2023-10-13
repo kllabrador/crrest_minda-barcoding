@@ -1,11 +1,11 @@
 ---
-title: "Minda Barcoding"
+title: "Checklist and DNA barcode reference library of marine fishes from southern Mindanao, Philippines"
 subtitle: '**---Analysis Documentation---**'
 author: |
   | Kevin L. Labrador
   |
   | CRREST Laboratory
-  | Texas A&M University - Corpus Christi
+  | University of the Philippines Mindanao
 date: "`r Sys.Date()`"
 output: 
   bookdown::html_document2:
@@ -13,7 +13,6 @@ output:
     number_sections: true
     df_print: tibble
     fig_caption: true
-csl: https://gist.githubusercontent.com/dangxdong/1861117/raw/9f12c6ae6b1ffdc94d3132934ed6edc6893f5a98/molecular-ecology.csl
 link-citations: yes
 linkcolor: blue
 ---
@@ -45,8 +44,8 @@ setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 wd <- getwd() # Do this after the working directory was set to source file location
 
 # Assign directories to objects in the global environment
-indir <- paste0("../INDIR/")
-outdir <- paste0("../OUTDIR/")
+indir <- paste0("../data/")
+outdir <- paste0("../results/")
 scripts <- paste0("../scripts/")
 
 # Check content of indir using list.files()
@@ -57,7 +56,18 @@ list.files(scripts)
 Load the libraries needed for this pipeline.
 
 ```{r}
-pacman::p_load (ape, bioseq, cowplot, tidyverse, janitor, phangorn, rstatix)
+pacman::p_load (
+  # Data wrangling
+  tidyverse, janitor,
+  
+  # Plotting 
+  cowplot,
+  
+  # Interfacing with sequence data 
+  ape, bold, bioseq, haplotypes, phangorn, 
+  
+  # Statistical calculations
+  rstatix)
 ```
 
 ## Load data files
@@ -67,7 +77,7 @@ Identify all the infiles for this session.
 # Fasta file of the alignment
 ## Make sure that the alignment is done outside R.
 infile_fasta <- paste0(indir, 
-                       "BOLD-output/20230909_minda-barcoding alignment.fasta")
+                       "20231007_minda alignment.fasta")
 
 infile_csv <- list.files(paste0(indir, 
                                 "BOLD-output"), 
@@ -93,102 +103,281 @@ names(files.csv) <- infile_csv_filenames
 
 ```
 
+Prepare species master list (MAF + BOLD)
+```{r}
+# MAF's appendix table 3
+MAF.species.list <- readxl::read_xlsx(paste0(indir, "MAF_species-list.xlsx"),
+                                      sheet = "species-list") %>% 
+  clean_names() %>% 
+  select (family, scientific_name, data, barcode) %>% 
+  distinct() %>% 
+  separate_wider_delim(cols = scientific_name, 
+                       names = c("genus", "species"), 
+                       delim = " ", 
+                       cols_remove = F, 
+                       too_many="merge") %>% 
+  mutate (source1 = "MAF")
+
+# BOLD dataset
+BOLD.species.list <- files.csv$`project-metadata_taxonomy.csv` %>% 
+  clean_names() %>% 
+  select (species) %>% 
+  
+  # Change genus names as appropriate (these cases are when BOLD Systems has not been updated yet)
+  mutate (species = str_replace(species, "Cromileptes", "Chromileptes"),
+          species = str_replace(species, "Xiphocheilus", "Choerodon"),
+          species = str_replace(species, "Ariomma brevimanum", "Ariomma brevimanus"),
+          species = str_replace(species, "Liopropoma sp.", "Liopropoma sp.1") 
+          ) %>% 
+  mutate (barcode = "Y",
+          source2 = "BOLD") %>% 
+  rename (scientific_name = species) %>% 
+  distinct()
+
+# Check unique species count
+species_list_full <- c(MAF.species.list$scientific_name, BOLD.species.list$scientific_name) %>% 
+  unique() %>% sort ()
+
+species_list_unidentified <- species_list_full[which (grepl("sp.", species_list_full, fixed=T))]
+
+species_list_identified_count <- length (species_list_full) - length (species_list_unidentified)
+species_list_identified_count 
+
+```
+
+```{r}
+# Join the two datasheets
+master_list <- full_join (MAF.species.list, BOLD.species.list, by = c("scientific_name", "barcode")) %>% 
+  mutate (data = case_when (barcode %in% "Y" ~ "with barcodes",
+                            grepl ("MSD", data) ~ "MSD",
+                            T ~ "FVC"))
+
+# Check for discrepancies between the two datasets.
+t <- master_list %>% filter (barcode == "Y") 
+write.csv(t, paste0(outdir, "master_list.csv"))
+
+```
+
 
 Extract metadata from the alignment file
 ```{r}
+genus.list <- master_list %>% 
+  select (family, genus) %>% 
+  distinct  
+
 aln.metadata <- data.frame (label = names(aln.fas)) %>% 
+  
+  # Separate labels into their respective fields.
   separate_wider_delim(label,
                        delim = "|",
                        names = c("process_id", "taxa_id", "sample_id", "bin", "accession_no"),
                        cols_remove = F
   ) %>% 
+  
+  # Change genus names as appropriate (these cases are when BOLD Systems has not been updated yet)
+  mutate (taxa_id = str_replace(taxa_id, "Cromileptes", "Chromileptes"),
+          taxa_id = str_replace(taxa_id, "Xiphocheilus", "Choerodon"),
+          taxa_id = str_replace(taxa_id, "Xiphocheilus", "Choerodon"),
+          taxa_id = str_replace(taxa_id, "Ariomma brevimanum", "Ariomma brevimanus"),
+          taxa_id = str_replace(taxa_id, "Liopropoma sp.", "Liopropoma sp.1") 
+  
+  ) %>% 
+  
+  # Separate "taxa_id" into genus and species"
   separate_wider_delim(taxa_id,
                        delim = "_",
                        names = c("genus", "species"),
                        too_few = "align_start",
                        cols_remove = F
-  )
-
-
-
+  ) %>% 
+  
+  # Remove underscores
+  mutate (scientific_name = str_replace(taxa_id, "_", " ")
+  ) %>% 
+  
+  left_join(genus.list, by = "genus")
 ```
+
 
 Create a data back-up containing the alignment (fasta) and metadata (csv) information.
 
 ```{r create-bkp}
-
 data.bkp <- as_tibble.DNAbin(aln.fas) %>% 
   full_join(aln.metadata)
-
 ```
 
-## Modify labels
-Do this if you want to modify the sample id in the fasta file.
-
-```{r change_aln-label}
-# # Select only the columns needed
-#  aln.fas <- data.bkp %>%
-#    mutate (mod_label = paste (taxa_id, sample_id, bin, accession_no, sep = "|")) %>%
-#    select (mod_label, sequence) %>%
-#    as_DNAbin (labels = mod_label,
-#               sequences = sequence) %>%
-#    as.matrix
-# 
-#  write.FASTA( aln.fas,
-#              file = paste0(outdir, "phylo_aln.fas"),
-#              header = NULL,
-#              append = FALSE)
-```
-
-# Qualitative Data Description
-
-## Diversity Profile
+# Query sequences to BOLD
+This section queries the alignment file to the [Barcode of Life Database (BOLD) Systems](https://www.boldsystems.org/). We can query the sequences to BOLD using the [`bold` package](https://cran.r-project.org/web/packages/bold/index.html).
 
 ```{r}
-taxo_info <- files.csv$`project-metadata_taxonomy.csv` 
+# Create the sequence list.
+querySeq <- aln.fas%>% 
+  as.dna %>% 
+  as.list %>% 
+  map(~.x %>% 
+        toupper %>% 
+        str_flatten(collapse="")
+      )
+
+# Change names of querySeq
+new.names <- sapply (str_split(names(querySeq), "\\|"), function (x) x[3])
+names(querySeq) <- new.names
+
+# Query the sequences to BOLD. Runtime depends on the data size (no. of sequences, sequence length).
+BOLD.ID <- map(querySeq[1:5], 
+               ~bold_identify(sequences=.x
+                              , db='COX1_SPECIES')
+)
+
+# Determine the sequences that were not identified
+no.ID <- map(BOLD.ID
+             , ~.x[[1]]) %>% 
+  keep(is.null) %>% names()
+
+# Coerce the list into a data frame.
+BOLD.ID.df <- map(BOLD.ID
+                  , ~.x[[1]]) %>% 
+                    plyr::ldply(.id="SampleID")
+
+# Save the data.frame for future reference.
+write.csv(BOLD.ID.df, paste0(outdir, "BOLD-ID.csv"))
+
 ```
 
+Do note that BOLD will only return results with the barcoding marker, Cytochrome Oxidase I (COI). If a different marker is used, then NCBI-BLAST is the best alternative.
+
+# Species Richness
+This section calculates the species richness from the species list.
+
+
+## Barcode data only
+
 ```{r}
-family_count <- taxo_info %>% 
-  distinct (family, genus, species) %>% 
-  group_by (family) %>% 
-  summarize (count = n() ) %>% 
+species.count_barcodes <- data.bkp %>% 
+  select (scientific_name) %>% 
+  distinct %>% 
+  nrow()
+
+genus.count_barcodes <- data.bkp %>% 
+  select (genus) %>% 
+  distinct %>% 
+  nrow()
+
+family.count_barcodes <- data.bkp %>% 
+  select (family) %>% 
+  distinct %>% 
+  nrow()
+  
+```
+
+
+## Full dataset
+```{r}
+species.count_full <- master_list %>% 
+  select (scientific_name) %>% 
+  distinct %>% 
+  nrow()
+
+genus.count_full <- master_list %>% 
+  select (genus) %>% 
+  distinct %>% 
+  nrow()
+
+family.count_full <- master_list %>% 
+  select (family) %>% 
+  distinct %>% 
+  nrow()
+```
+
+Prepare dataset for plotting
+```{r}
+family_count <- master_list %>% 
+  group_by (family, data) %>% 
+  summarize (count = n()) %>% 
+  mutate (sum = cumsum(count),
+          max_sum = max (sum)) %>% 
+  arrange (desc(max_sum)) %>% 
   ungroup()
+
+# Create a character vector to relevel the family based on counts.
+family_relevel <- family_count$family %>% 
+  unique()
+
+# Relevel family.
+family_count <- family_count %>% 
+  mutate (family_relevel = factor(family, levels = family_relevel))
+
+# Split data frame into three:
+partition1 <- family_count[family_count$max_sum >= 10, ]
+partition2 <- family_count[family_count$max_sum >= 2 & family_count$max_sum < 10, ]
+partition3 <- family_count[family_count$max_sum == 1, ]
+
 ```
 
-```{r}
-plot_family_count <- 
-ggplot (family_count,
-        aes (x = reorder(family, count, decreasing = T),
-             y = count)
+```{r plot_family_count}
+plot_family_count <- function(family_count_df_parition) {
+  plot <- 
+  ggplot (family_count_df_parition,
+        aes (x = family_relevel,
+             y = count,
+             fill = data)
         ) +
-  geom_col(fill = "gray80",
-           col = "black",
-           position = "dodge") + 
+  geom_col(col = "black",
+           position = "stack") + 
   theme_classic()  +
   labs (x = "Family",
         y = "Number of species") +
   scale_y_continuous(expand = c(0,0)) +
-  theme(axis.text.x = element_text(angle=90, 
-                                   vjust = 0.25, 
+  theme(axis.text.x = element_text(angle=45, 
+                                   vjust = 1, 
                                    hjust = 1,
-                                   size = 7)) 
-plot_family_count
+                                   size = 8.5)) +
+  #scale_fill_brewer(palette = "Set3") +
+  scale_fill_brewer (palette = "Set2") +
+  theme(legend.position = "top",
+        legend.title = element_blank())
+  
+  return(plot)
+}
 
-ggsave(plot_family_count,
-       file = paste0(outdir,
-                     "family-count_barplot.png"),
-       height = 5,
-       width = 7,
-       units = "in",
-       dpi = 330
+plot_family_count_partition1 <- plot_family_count(partition1) +
+  scale_y_continuous(breaks = seq(0, 100, 10))
+
+plot_family_count_partition2 <- plot_family_count(partition2)
+
+plot_family_count_partition3 <- plot_family_count(partition3)
+
+
+require(ggpubr)
+plot_family_count_total <- 
+ggpubr::ggarrange(plot_family_count_partition1 +
+                    theme(axis.title.x = element_blank(),
+                          axis.title.y = element_blank()),
+                  plot_family_count_partition2 +
+                    theme (axis.title.x = element_blank(),
+                           axis.title.y = element_blank()),
+                  plot_family_count_partition3 +
+                    theme (axis.title.y = element_blank()) + 
+                    scale_y_continuous(breaks = c(0,1)),
+                  nrow = 3,
+                  heights = c(2,1,0.75),
+                  common.legend = T) %>% 
+  annotate_figure(left = text_grob("Number of species", rot = 90))
+
+
+ggexport(plot_family_count_total,
+       filename = paste0(outdir,
+                     "fig2.family-count_barplot.png"),
+       height = 2500,
+       width = 2100,
+       res = 300
 )
 ```
 
 
-## Distance Summaries
+# Distance Summaries
 
-### Data Preparation
+## Data Preparation
 
 ```{r}
 species.dist <- files.csv$`divergence_within-species.csv` %>% 
@@ -203,23 +392,19 @@ family.dist <- files.csv$`divergence_within-family.csv` %>%
 dist.df <- rbind (species.dist,
                   genus.dist,
                   family.dist) %>% 
-  mutate (level = fct_relevel(level, "species", "genus", "family"))
+  mutate (level = fct_relevel(level, "species", "genus", "fanily"))
 
 ```
 
-### Stats
-
+## Summarize dataset
 ```{r}
-
 dist.stats <- dist.df %>% 
   group_by(level) %>% 
   get_summary_stats(distance)
-
-
 ```
 
 
-### Histogram
+## Histogram
 ```{r}
 plot_distance_histogram <- 
     ggplot(dist.df, aes(x = distance, fill = level)) + 
@@ -231,7 +416,7 @@ plot_distance_histogram <-
     scale_x_continuous(breaks = seq(0, 30, by=2)) +
     labs(x = "K2P Genetic Distance (%)", 
          y = "Frequency",
-         fill = "Taxonomic\nLevel"
+         fill = "Taxonomic\nRank"
     ) + 
     theme_classic() +
   scale_fill_brewer(palette = "Set1") 
@@ -245,48 +430,29 @@ ggsave(plot_distance_histogram,
        units = "in",
        dpi = 330
 )
-```
-### Boxplot
-```{r}
-plot_distance_boxplot <- 
-  ggplot(dist.df, aes(x = level, y = distance, fill = level)) + 
-  geom_boxplot(#col="black", 
-               position = "dodge") +
-  labs(x = "Taxonomic Level", 
-       y = "K2P Genetic Distance (%)") + 
-  guides (fill = "none") +
-  scale_fill_brewer(palette = "Set1") +
-  theme_classic()
-plot_distance_boxplot
 
-ggsave(plot_distance_boxplot,
-       file = paste0(outdir,
-                     "K2P-distances_boxplot.png"),
-       height = 3.5,
-       width = 3.5,
-       units = "in",
-       dpi = 330
-)
 ```
 
-## Barcode Gap
-
+# Barcode Gap
 
 ```{r}
-barcode_gap <- files.csv$barcode_gap_analysis.csv %>% 
+barcode_gap <- files.csv$barcode_gap_analysis.csv %>%
   pivot_longer(cols = c(mean_intra_sp,max_intra_sp, distance_to_nn),
                names_to = "comp",
                values_to = "dist"
-  ) %>% 
-  na.omit()
+  ) %>%
+  na.omit() %>%
+  mutate (comp = case_when (grepl("max_intra_sp", comp) ~ "intraspecific (max)",
+                            grepl("distance_to_nn", comp) ~ "interspecific (NN)",
+                            T ~ comp))
 
-barcode_gap.stats <- barcode_gap %>% 
-  group_by(comp) %>% 
+barcode_gap.stats <- barcode_gap %>%
+  group_by(comp) %>%
   get_summary_stats(dist)
 ```
 
 
-### Histogram
+## Histogram
 
 ```{r}
 plot_barcode_gap_histogram <- 
@@ -304,15 +470,15 @@ ggplot (data = barcode_gap %>% filter (comp != "mean_intra_sp"),
         y = "Frequency",
         fill = NULL) +
   scale_fill_brewer(palette = "Set1",
+                    direction = -1,
                     labels = c("interspecific\n(NN)", "intraspecific\n(max)")
   ) +
-  theme(legend.text = element_text(size = 7))  
+  theme(legend.text = element_text(size = 7)) 
+
 plot_barcode_gap_histogram
 
 ```
-
-
-### Scatterplot
+## Scatterplot
 ```{r}
 barcode_gap <- files.csv$barcode_gap_analysis.csv
 
@@ -332,12 +498,67 @@ ggplot (data = barcode_gap,
         y = c(-0.5,30)
         ) +
   labs (x = "Maximum Intra-specific Distance (%)",
-        y = "Interspecific (NN) Distance (%)") +
+        y = "Interspecific (NN)\nDistance (%)") +
   geom_abline(intercept = 0, lty = 2)
 
 plot_barcode_gap_scatterplot
 
 ```
+Combine Plots
+```{r, fig.width=7, fig.height=7}
+fig3 <- 
+plot_grid(
+  plot_distance_histogram +
+    theme (legend.position = "top"),
+  plot_grid (plot_barcode_gap_histogram +
+               theme (legend.position = "top"),
+             plot_barcode_gap_scatterplot,
+               labels = c("B", "C")),
+  nrow = 2,
+  labels = c("A", NA)
+)
+fig3
+
+ggsave(fig3,
+       file = paste0(outdir,
+                     "fig3.png"),
+       height = 5,
+       width = 7,
+       units = "in",
+       dpi = 330
+)
+```
+
+
+# BIN Discordance
+```{r}
+bin_concordant <- files.csv$`binDiscordance-CONCORDANT-BINS.csv`
+bin_discordant <- files.csv$`binDiscordance-DISCORDANT-BINS.csv`
+bin_singleton <- files.csv$`binDiscordance-SINGLETON-BINS.csv`
+```
+
+# OTU clusters
+```{r}
+OTU_cluster <- files.csv$cluster_sequence.csv 
+
+# Identify different species that were binned in the same OTU.
+discordance_case1 <- OTU_cluster %>% 
+  group_by(otu) %>% 
+  filter (length (unique (taxon)) > 1 ) %>% 
+  ungroup() %>% 
+  select (otu, taxon) %>% 
+  distinct
+
+# Identify same species that were binned in separate OTUs.
+discordance_case2 <- OTU_cluster %>% 
+  group_by(taxon) %>% 
+  filter (length (unique (otu)) > 1 ) %>% 
+  ungroup() %>% 
+  select (otu, taxon) %>% 
+  distinct %>% 
+  arrange (taxon)
+```
+
 
 ## Figure 1
 ```{r}
@@ -411,12 +632,6 @@ ggsave(fig1,
 
 ```
 
-# BIN Discordance
-```{r}
-bin_concordant <- files.csv$`binDiscordance-CONCORDANT-BINS.csv`
-bin_discordant <- files.csv$`binDiscordance-DISCORDANT-BINS.csv`
-bin_singleton <- files.csv$`binDiscordance-SINGLETON-BINS.csv`
-```
 
 
 

@@ -2,6 +2,7 @@ Process ID,URI,Count,Phylum,Class,Order,Family,Subfamily,Tribe,Genus,Species
 "MINDA276-23,MINDA277-23",BOLD:AAF3014,2,Chordata:2,Actinopterygii:2,Perciformes:2,Haemulidae:2,Plectorhinchinae:2,,Plectorhinchus:2,Plectorhinchus polytaenia:2
 "MINDA250-23,MINDA446-23",BOLD:AAA6101,2,Chordata:2,Actinopterygii:2,Labriformes:2,Labridae:2,,,Cheilio:2,Cheilio inermis:2
 "MINDA104-23,MINDA338-23",BOLD:ABY5451,2,Chordata:2,Actinopterygii:2,Spariformes:2,Lethrinidae:2,,,Lethrinus:2,Lethrinus atkinsoni:2
+"MINDA236-23,MINDA237-23,MINDA249-23,MINDA361-23",BOLD:AAB9327,4,Chordata:4,Actinopterygii:4,Perciformes:4,Mullidae:4,,,Upeneus:4,Upeneus tragula:4
 "MINDA364-23,MINDA461-23",BOLD:AAB8846,2,Chordata:2,Actinopterygii:2,Perciformes:2,Siganidae:2,,,Siganus:2,Siganus canaliculatus:2
 "MINDA354-23,MINDA355-23,MINDA356-23,MINDA357-23",BOLD:AAB0585,4,Chordata:4,Actinopterygii:4,Carangiformes:4,Carangidae:4,Caranginae:4,,Caranx:4,Caranx melampygus:4
 "MINDA296-23,MINDA479-23",BOLD:AAC6765,2,Chordata:2,Actinopterygii:2,Spariformes:2,Nemipteridae:2,,,Nemipterus:2,Nemipterus bathybius:2
@@ -28,7 +29,7 @@ Process ID,URI,Count,Phylum,Class,Order,Family,Subfamily,Tribe,Genus,Species
 "MINDA062-23,MINDA382-23",BOLD:AAD2580,2,Chordata:2,Actinopterygii:2,Perciformes:2,Pomacanthidae:2,,,Centropyge:2,Centropyge vrolikii:2
 "MINDA210-23,MINDA211-23,MINDA230-23",BOLD:AAI0755,3,Chordata:3,Actinopterygii:3,Spariformes:3,Nemipteridae:3,,,Scolopsis:3,Scolopsis margaritifera:3
 "MINDA384-23,MINDA490-23",BOLD:AAE5290,2,Chordata:2,Actinopterygii:2,Ovalentaria:2,Pomacentridae:2,Pomacentrinae:2,,Hemiglyphidodon:2,Hemiglyphidodon plagiometopon:2
-"MINDA190-23,MINDA191-23",BOLD:AAF3072,2,Chordata:2,Actinopterygii:2,Perciformes:2,Haemulidae:2,Plectorhinchinae:2,,Plectorhinchus:2,Plectorhinchus gibbosus:2
+"MINDA190-23,MINDA191-23",BOLD:AAF3072,2,Chordata:2,Actinopterygii:2,Perciformes:2,Haemulidae:2,Plectorhinchinae:2,,Plectorhinchus:2,Plectorhinchus albovittatus:2
 "MINDA282-23,MINDA283-23",BOLD:AAC2841,2,Chordata:2,Actinopterygii:2,Perciformes:2,Chaetodontidae:2,,,Chaetodon:2,Chaetodon kleinii:2
 "MINDA150-23,MINDA306-23",BOLD:AAB5804,2,Chordata:2,Actinopterygii:2,Tetraodontiformes:2,Balistidae:2,,,Odonus:2,Odonus niger:2
 "MINDA111-23,MINDA155-23",BOLD:AAJ2540,2,Chordata:2,Actinopterygii:2,Spariformes:2,Lethrinidae:2,,,Lethrinus:2,Lethrinus erythracanthus:2
@@ -43,11 +44,11 @@ Process ID,URI,Count,Phylum,Class,Order,Family,Subfamily,Tribe,Genus,Species
 "MINDA025-23,MINDA251-23",BOLD:AAJ6676,2,Chordata:2,Actinopterygii:2,Perciformes:2,Siganidae:2,,,Siganus:2,Siganus puellus:2
 "MINDA244-23,MINDA327-23,MINDA328-23",BOLD:ADI4703,3,Chordata:3,Actinopterygii:3,Labriformes:3,Scaridae:3,,,Calotomus:3,Calotomus carolinus:3
 "MINDA392-23,MINDA410-23",BOLD:AAB3684,2,Chordata:2,Actinopterygii:2,Perciformes:2,Serranidae:2,Epinephelinae:2,,Cephalopholis:2,Cephalopholis boenak:2
-"MINDA007-23,MINDA240-23,MINDA241-23,MINDA258-23",BOLD:ACU5795,4,Chordata:4,Actinopterygii:4,Labriformes:4,Labridae:4,,,Epibulus:4,Epibulus brevis:4
+"MINDA007-23,MINDA240-23,MINDA241-23,MINDA258-23,MINDA489-23",BOLD:ACU5795,5,Chordata:5,Actinopterygii:5,Labriformes:5,Labridae:5,,,Epibulus:5,Epibulus brevis:5
 "MINDA375-23,MINDA442-23",BOLD:AAB3425,2,Chordata:2,Actinopterygii:2,Holocentriformes:2,Holocentridae:2,Holocentrinae:2,,Sargocentron:2,Sargocentron diadema:2
 "MINDA131-23,MINDA132-23",BOLD:AFG6523,2,Chordata:2,Actinopterygii:2,Perciformes:2,Symphysanodontidae:2,,,,
 "MINDA407-23,MINDA443-23",BOLD:AAB4531,2,Chordata:2,Actinopterygii:2,Labriformes:2,Labridae:2,,,Cheilinus:2,Cheilinus trilobatus:2
-"MINDA071-23,MINDA295-23,MINDA332-23",BOLD:AAB9306,3,Chordata:3,Actinopterygii:3,Holocentriformes:3,Holocentridae:3,Holocentrinae:3,,Sargocentron:3,Sargocentron rubrum:3
+"MINDA321-23,MINDA437-23",BOLD:AAD9032,2,Chordata:2,Actinopterygii:2,Perciformes:2,Serranidae:2,Epinephelinae:2,,Cephalopholis:2,Cephalopholis leopardus:2
 "MINDA051-23,MINDA311-23,MINDA478-23",BOLD:AAC2123,3,Chordata:3,Actinopterygii:3,Perciformes:3,Chaetodontidae:3,,,Heniochus:3,Heniochus chrysostomus:3
 "MINDA242-23,MINDA243-23",BOLD:AAB7189,2,Chordata:2,Actinopterygii:2,Blenniiformes:2,Blenniidae:2,Salariinae:2,,Salarias:2,Salarias fasciatus:2
 "MINDA078-23,MINDA114-23",BOLD:AAC6633,2,Chordata:2,Actinopterygii:2,Holocentriformes:2,Holocentridae:2,Myripristinae:2,,Myripristis:2,Myripristis adusta:2
@@ -57,18 +58,17 @@ Process ID,URI,Count,Phylum,Class,Order,Family,Subfamily,Tribe,Genus,Species
 "MINDA315-23,MINDA316-23,MINDA317-23",BOLD:AAB3862,3,Chordata:3,Actinopterygii:3,Perciformes:3,Mullidae:3,,,Parupeneus:3,Parupeneus multifasciatus:3
 "MINDA372-23,MINDA389-23,MINDA459-23",BOLD:AAB2685,3,Chordata:3,Actinopterygii:3,Ovalentaria:3,Pomacentridae:3,Chrominae:3,,Dascyllus:3,Dascyllus trimaculatus:3
 "MINDA218-23,MINDA445-23",BOLD:AAD1868,2,Chordata:2,Actinopterygii:2,Spariformes:2,Nemipteridae:2,,,Nemipterus:2,Nemipterus zysron:2
+"MINDA279-23,MINDA280-23,MINDA281-23",BOLD:AAD9265,3,Chordata:3,Actinopterygii:3,Perciformes:3,Chaetodontidae:3,,,Chaetodon:3,Chaetodon baronessa:3
 "MINDA451-23,MINDA484-23",BOLD:AAB4502,2,Chordata:2,Actinopterygii:2,Perciformes:2,Lutjanidae:2,Lutjaninae:2,,Lutjanus:2,Lutjanus fulvus:2
 "MINDA268-23,MINDA269-23",BOLD:AAD3763,2,Chordata:2,Actinopterygii:2,Ovalentaria:2,Pomacentridae:2,Pomacentrinae:2,,Dischistodus:2,Dischistodus pseudochrysopoecilus:2
 "MINDA202-23,MINDA203-23,MINDA323-23",BOLD:AAC9675,3,Chordata:3,Actinopterygii:3,Perciformes:3,Serranidae:3,Epinephelinae:3,,Variola:3,Variola albimarginata:3
 "MINDA092-23,MINDA318-23,MINDA422-23",BOLD:AAB2592,3,Chordata:3,Actinopterygii:3,Perciformes:3,Mullidae:3,,,Mulloidichthys:3,Mulloidichthys flavolineatus:3
-"MINDA321-23,MINDA437-23",BOLD:AAD9032,2,Chordata:2,Actinopterygii:2,Perciformes:2,Serranidae:2,Epinephelinae:2,,Cephalopholis:2,Cephalopholis leopardus:2
 "MINDA349-23,MINDA482-23,MINDA494-23",BOLD:AAA9821,3,Chordata:3,Actinopterygii:3,Perciformes:3,Serranidae:3,Epinephelinae:3,,Epinephelus:3,Epinephelus areolatus:3
 "MINDA148-23,MINDA171-23",BOLD:AAB2440,2,Chordata:2,Actinopterygii:2,Perciformes:2,Lutjanidae:2,Lutjaninae:2,,Lutjanus:2,Lutjanus argentimaculatus:2
-"MINDA020-23,MINDA021-23,MINDA289-23",BOLD:AAF2980,3,Chordata:3,Actinopterygii:3,Perciformes:3,Haemulidae:3,Plectorhinchinae:3,,Plectorhinchus:3,Plectorhinchus vittatus:3
 "MINDA345-23,MINDA476-23",BOLD:AAF0532,2,Chordata:2,Actinopterygii:2,Spariformes:2,Nemipteridae:2,,,Scolopsis:2,Scolopsis ciliata:2
 "MINDA113-23,MINDA224-23,MINDA225-23,MINDA294-23",BOLD:AAF9624,4,Chordata:4,Actinopterygii:4,Holocentriformes:4,Holocentridae:4,Myripristinae:4,,Myripristis:4,Myripristis hexagona:4
 "MINDA027-23,MINDA262-23,MINDA263-23",BOLD:AAC9669,3,Chordata:3,Actinopterygii:3,Tetraodontiformes:3,Balistidae:3,,,Canthidermis:3,Canthidermis maculata:3
-"MINDA236-23,MINDA237-23,MINDA249-23,MINDA361-23",BOLD:AAB9327,4,Chordata:4,Actinopterygii:4,Perciformes:4,Mullidae:4,,,Upeneus:4,Upeneus tragula:4
+"MINDA182-23,MINDA465-23",BOLD:AAD0850,2,Chordata:2,Actinopterygii:2,Labriformes:2,Scaridae:2,,,Scarus:2,Scarus rivulatus:2
 "MINDA197-23,MINDA238-23",BOLD:AAC5863,2,Chordata:2,Actinopterygii:2,Labriformes:2,Labridae:2,,,Halichoeres:2,Halichoeres chloropterus:2
 "MINDA231-23,MINDA232-23",BOLD:ABY6809,2,Chordata:2,Actinopterygii:2,Perciformes:2,Caesionidae:2,,,Pterocaesio:2,Pterocaesio pisang:2
 "MINDA015-23,MINDA307-23,MINDA435-23",BOLD:AAC3194,3,Chordata:3,Actinopterygii:3,Perciformes:3,Pomacanthidae:3,,,Pygoplites:3,Pygoplites diacanthus:3
@@ -86,7 +86,7 @@ Process ID,URI,Count,Phylum,Class,Order,Family,Subfamily,Tribe,Genus,Species
 "MINDA340-23,MINDA341-23,MINDA455-23",BOLD:AAD6276,3,Chordata:3,Actinopterygii:3,Spariformes:3,Nemipteridae:3,,,Scolopsis:3,Scolopsis lineata:3
 "MINDA352-23,MINDA458-23",BOLD:AFF8295,2,Chordata:2,Actinopterygii:2,Perciformes:2,Gerreidae:2,,,Gerres:2,Gerres filamentosus:2
 "MINDA073-23,MINDA220-23,MINDA228-23,MINDA308-23",BOLD:ACK7853,4,Chordata:4,Actinopterygii:4,Perciformes:4,Chaetodontidae:4,,,Heniochus:4,Heniochus varius:4
-"MINDA279-23,MINDA280-23,MINDA281-23",BOLD:AAD9265,3,Chordata:3,Actinopterygii:3,Perciformes:3,Chaetodontidae:3,,,Chaetodon:3,Chaetodon baronessa:3
+"MINDA035-23,MINDA115-23,MINDA255-23,MINDA466-23",BOLD:ADL0078,4,Chordata:4,Actinopterygii:4,Perciformes:4,Serranidae:4,Epinephelinae:4,,Cephalopholis:4,Cephalopholis aitha:4
 "MINDA040-23,MINDA042-23",BOLD:ACK6835,2,Chordata:2,Actinopterygii:2,Labriformes:2,Labridae:2,,,Xiphocheilus:2,Xiphocheilus typus:2
 "MINDA099-23,MINDA419-23",BOLD:AAC0217,2,Chordata:2,Actinopterygii:2,Perciformes:2,Serranidae:2,Epinephelinae:2,,Cephalopholis:2,Cephalopholis cyanostigma:2
 "MINDA086-23,MINDA343-23",BOLD:ACE0206,2,Chordata:2,Actinopterygii:2,Spariformes:2,Nemipteridae:2,,,Scolopsis:2,Scolopsis affinis:2
