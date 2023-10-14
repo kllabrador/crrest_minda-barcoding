@@ -153,8 +153,8 @@ master_list <- full_join (MAF.species.list, BOLD.species.list, by = c("scientifi
                             T ~ "FVC"))
 
 # Check for discrepancies between the two datasets.
-t <- master_list %>% filter (barcode == "Y") 
-write.csv(t, paste0(outdir, "master_list.csv"))
+validate_list <- master_list %>% filter (barcode == "Y") 
+write.csv(validate_list, paste0(outdir, "validate_species_list.csv"))
 
 ```
 
@@ -176,7 +176,6 @@ aln.metadata <- data.frame (label = names(aln.fas)) %>%
   
   # Change genus names as appropriate (these cases are when BOLD Systems has not been updated yet)
   mutate (taxa_id = str_replace(taxa_id, "Cromileptes", "Chromileptes"),
-          taxa_id = str_replace(taxa_id, "Xiphocheilus", "Choerodon"),
           taxa_id = str_replace(taxa_id, "Xiphocheilus", "Choerodon"),
           taxa_id = str_replace(taxa_id, "Ariomma brevimanum", "Ariomma brevimanus"),
           taxa_id = str_replace(taxa_id, "Liopropoma sp.", "Liopropoma sp.1") 
@@ -367,7 +366,7 @@ ggpubr::ggarrange(plot_family_count_partition1 +
 
 ggexport(plot_family_count_total,
        filename = paste0(outdir,
-                     "fig2.family-count_barplot.png"),
+                     "fig2_family-count_barplot.png"),
        height = 2500,
        width = 2100,
        res = 300
@@ -392,7 +391,7 @@ family.dist <- files.csv$`divergence_within-family.csv` %>%
 dist.df <- rbind (species.dist,
                   genus.dist,
                   family.dist) %>% 
-  mutate (level = fct_relevel(level, "species", "genus", "fanily"))
+  mutate (level = fct_relevel(level, "species", "genus", "family"))
 
 ```
 
@@ -421,15 +420,6 @@ plot_distance_histogram <-
     theme_classic() +
   scale_fill_brewer(palette = "Set1") 
 plot_distance_histogram  
-
-ggsave(plot_distance_histogram,
-       file = paste0(outdir,
-                     "K2P-distances_histogram.png"),
-       height = 3.5,
-       width = 6,
-       units = "in",
-       dpi = 330
-)
 
 ```
 
@@ -521,7 +511,7 @@ fig3
 
 ggsave(fig3,
        file = paste0(outdir,
-                     "fig3.png"),
+                     "fig3_genetic-distances.png"),
        height = 5,
        width = 7,
        units = "in",
@@ -560,77 +550,6 @@ discordance_case2 <- OTU_cluster %>%
 ```
 
 
-## Figure 1
-```{r}
-fig1 <- 
-ggdraw() + 
-  
-  # Draw main plot
-  draw_plot(plot_family_count) +
-  
-  # Draw inset 1
-  draw_plot(plot_distance_histogram +
-              labs(fill = NULL) +
-              theme(axis.text = element_text(size = 6),
-                    axis.title = element_text(size = 7),
-                    legend.title = element_text(size = 7),
-                    legend.text = element_text(size = 7),
-                    legend.key.size = unit(0.25, "cm"),
-                    legend.position = "top"
-              ),
-            x = 0.12,
-            y = 0.65,
-            width=0.45, 
-            height=0.35) +
-  
-  # Draw inset 2
-  draw_plot(plot_barcode_gap_histogram +
-              theme(axis.text = element_text(size = 6),
-                    axis.title = element_text(size = 7),
-                    legend.title = element_text(size = 7),
-                    legend.text = element_text(size = 7),
-                    legend.key.size = unit(0.25, "cm"),
-                    legend.position = "top"
-              ),
-            x = 0.55,
-            y = 0.65,
-            width=0.45, 
-            height=0.35) +
-  
-  # Draw inset 3
-  draw_plot(plot_barcode_gap_scatterplot +
-              theme(axis.text = element_text(size = 6),
-                    axis.title = element_text(size = 7),
-                    legend.title = element_text(size = 7),
-                    legend.text = element_text(size = 7),
-                    legend.key.size = unit(0.25, "cm"),
-                    legend.position = "top"
-              ),
-            x = 0.55,
-            y = 0.35,
-            width=0.45, 
-            height=0.25
-            ) +   
-  
-  draw_plot_label(
-    c("A", "B", "C", "D"),
-    c(0,0.15, 0.55, 0.55),
-    c(1, 1, 1, 0.65),
-    size = c(11, 11, 11, 11)
-    )
-
-fig1
-
-ggsave(fig1,
-       file = paste0(outdir,
-                     "fig1_data-description.png"),
-       height = 6.5,
-       width = 7,
-       units = "in",
-       dpi = 350
-)
-
-```
 
 
 
