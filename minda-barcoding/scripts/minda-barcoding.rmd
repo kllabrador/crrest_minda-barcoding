@@ -77,7 +77,7 @@ Identify all the infiles for this session.
 # Fasta file of the alignment
 ## Make sure that the alignment is done outside R.
 infile_fasta <- paste0(indir, 
-                       "20231007_minda alignment.fasta")
+                       "20231229_bold-aln.fas")
 
 infile_csv <- list.files(paste0(indir, 
                                 "BOLD-output"), 
@@ -148,6 +148,11 @@ species_list_identified_count
 ```{r}
 # Join the two datasheets
 master_list <- full_join (MAF.species.list, BOLD.species.list, by = c("scientific_name", "barcode")) %>% 
+  
+  # Change Scaridae to Labridae
+  mutate (family = str_replace (family, "Scaridae", "Labridae")) %>% 
+  
+  # Modify "data" field 
   mutate (data = case_when (barcode %in% "Y" ~ "with barcodes",
                             grepl ("MSD", data) ~ "MSD",
                             T ~ "FVC"))
@@ -340,7 +345,7 @@ plot_family_count <- function(family_count_df_parition) {
 }
 
 plot_family_count_partition1 <- plot_family_count(partition1) +
-  scale_y_continuous(breaks = seq(0, 100, 10))
+  scale_y_continuous(breaks = seq(0, 150, 10))
 
 plot_family_count_partition2 <- plot_family_count(partition2)
 
@@ -373,27 +378,32 @@ ggexport(plot_family_count_total,
 )
 ```
 
-
 # Distance Summaries
 
 ## Data Preparation
 
 ```{r}
-species.dist <- files.csv$`divergence_within-species.csv` %>% 
-  mutate (level = "species")
+source ("calculate-K2P.R")
+```
 
-genus.dist <- files.csv$`divergence_wthin-genus.csv` %>% 
-  mutate (level = "genus")
 
-family.dist <- files.csv$`divergence_within-family.csv` %>% 
-  mutate (level = "family")
-
-dist.df <- rbind (species.dist,
-                  genus.dist,
-                  family.dist) %>% 
-  mutate (level = fct_relevel(level, "species", "genus", "family"))
+```{r}
+# species.dist <- files.csv$`divergence_within-species.csv` %>% 
+#   mutate (level = "species")
+# 
+# genus.dist <- files.csv$`divergence_wthin-genus.csv` %>% 
+#   mutate (level = "genus")
+# 
+# family.dist <- files.csv$`divergence_within-family.csv` %>% 
+#   mutate (level = "family")
+# 
+# dist.df <- rbind (k80.species.df,
+#                   k80.family.df,
+#                   k80.genus.df) %>% 
+#   mutate (level = fct_relevel(level, "species", "genus", "family"))
 
 ```
+
 
 ## Summarize dataset
 ```{r}
@@ -408,17 +418,22 @@ dist.stats <- dist.df %>%
 plot_distance_histogram <- 
     ggplot(dist.df, aes(x = distance, fill = level)) + 
     geom_histogram(position = "dodge",
-                   col = "black",
-                   size = 0.25
+                   col = "white",
+                   size = 0.30,
+                   aes (y = ..density..)
                    ) +
-    coord_cartesian(expand = F) +
     scale_x_continuous(breaks = seq(0, 30, by=2)) +
+    scale_y_continuous(breaks = seq(0, 1, by=0.1),
+                       labels = scales::percent) + 
+    coord_cartesian(expand = F) +  
     labs(x = "K2P Genetic Distance (%)", 
-         y = "Frequency",
+         y = "Percentage (%)",
          fill = "Taxonomic\nRank"
     ) + 
     theme_classic() +
   scale_fill_brewer(palette = "Set1") 
+
+
 plot_distance_histogram  
 
 ```
@@ -434,7 +449,8 @@ barcode_gap <- files.csv$barcode_gap_analysis.csv %>%
   na.omit() %>%
   mutate (comp = case_when (grepl("max_intra_sp", comp) ~ "intraspecific (max)",
                             grepl("distance_to_nn", comp) ~ "interspecific (NN)",
-                            T ~ comp))
+                            T ~ comp)) %>% 
+  group_by (comp)
 
 barcode_gap.stats <- barcode_gap %>%
   group_by(comp) %>%
@@ -451,13 +467,13 @@ ggplot (data = barcode_gap %>% filter (comp != "mean_intra_sp"),
              fill = comp)
 ) +
   geom_histogram(position="dodge",
-                 col = "black",
-                 size = 0.25
+                 col = "white",
+                 size = 0.25,
                  ) +
   coord_cartesian(expand = F) +
   theme_classic() +
   labs (x = "K2P Genetic Distance (%)", 
-        y = "Frequency",
+        y = "No. of Pairwise Comparison",
         fill = NULL) +
   scale_fill_brewer(palette = "Set1",
                     direction = -1,
