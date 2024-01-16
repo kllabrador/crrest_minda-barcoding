@@ -61,7 +61,7 @@ pacman::p_load (
   tidyverse, janitor,
   
   # Plotting 
-  cowplot,
+  cowplot, ggtree,
   
   # Interfacing with sequence data 
   ape, bold, bioseq, haplotypes, phangorn, 
@@ -77,7 +77,7 @@ Identify all the infiles for this session.
 # Fasta file of the alignment
 ## Make sure that the alignment is done outside R.
 infile_fasta <- paste0(indir, 
-                       "20231229_bold-aln.fas")
+                       "20240115_bold-aln.fas")
 
 infile_csv <- list.files(paste0(indir, 
                                 "BOLD-output"), 
@@ -127,7 +127,7 @@ BOLD.species.list <- files.csv$`project-metadata_taxonomy.csv` %>%
   mutate (species = str_replace(species, "Cromileptes", "Chromileptes"),
           species = str_replace(species, "Xiphocheilus", "Choerodon"),
           species = str_replace(species, "Ariomma brevimanum", "Ariomma brevimanus"),
-          species = str_replace(species, "Liopropoma sp.", "Liopropoma sp.1") 
+          species = str_replace(species, "Liopropoma sp.", "Liopropoma sp.1"),
           ) %>% 
   mutate (barcode = "Y",
           source2 = "BOLD") %>% 
@@ -183,7 +183,7 @@ aln.metadata <- data.frame (label = names(aln.fas)) %>%
   mutate (taxa_id = str_replace(taxa_id, "Cromileptes", "Chromileptes"),
           taxa_id = str_replace(taxa_id, "Xiphocheilus", "Choerodon"),
           taxa_id = str_replace(taxa_id, "Ariomma brevimanum", "Ariomma brevimanus"),
-          taxa_id = str_replace(taxa_id, "Liopropoma sp.", "Liopropoma sp.1") 
+          taxa_id = str_replace(taxa_id, "Liopropoma sp.", "Liopropoma sp.1")
   
   ) %>% 
   
@@ -427,7 +427,7 @@ plot_distance_histogram <-
                        labels = scales::percent) + 
     coord_cartesian(expand = F) +  
     labs(x = "K2P Genetic Distance (%)", 
-         y = "Percentage (%)",
+         y = "Frequency",
          fill = "Taxonomic\nRank"
     ) + 
     theme_classic() +
@@ -486,15 +486,19 @@ plot_barcode_gap_histogram
 ```
 ## Scatterplot
 ```{r}
-barcode_gap <- files.csv$barcode_gap_analysis.csv
+barcode_gap <- files.csv$barcode_gap_analysis.csv %>% 
+  mutate (barcode_gap = ifelse (max_intra_sp <= 2.2 & distance_to_nn > 2.2,
+                                "T", 
+                                "F")
+  )
 
 plot_barcode_gap_scatterplot <- 
 ggplot (data = barcode_gap,
         aes (x = max_intra_sp,
-             y = distance_to_nn)
+             y = distance_to_nn,
+             fill = barcode_gap)
 ) +
   geom_jitter(pch=21,
-             fill = "black",
              alpha = 0.50,
              col = "black",
              size = 1.25) +
@@ -505,7 +509,9 @@ ggplot (data = barcode_gap,
         ) +
   labs (x = "Maximum Intra-specific Distance (%)",
         y = "Interspecific (NN)\nDistance (%)") +
-  geom_abline(intercept = 0, lty = 2)
+  geom_abline(intercept = 0, lty = 2) +
+  scale_fill_brewer (palette = "Set1")+
+  guides (fill = "none")
 
 plot_barcode_gap_scatterplot
 
@@ -561,8 +567,7 @@ discordance_case2 <- OTU_cluster %>%
   filter (length (unique (otu)) > 1 ) %>% 
   ungroup() %>% 
   select (otu, taxon) %>% 
-  distinct %>% 
-  arrange (taxon)
+  distinct 
 ```
 
 

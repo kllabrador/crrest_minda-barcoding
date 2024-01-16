@@ -22,7 +22,7 @@ indir <- paste0("../data/")
 outdir <- paste0("../results/")
 scripts <- paste0("../scripts/")
 
-#### SCRIPTS ####
+#### FUNCTIONS ####
 
 # Coerce upper triangle and diagonal to NA
 coerce_upper_triangle_to_na <- function(mat) {
@@ -105,6 +105,11 @@ k80.genus.df <- calculate_pairwise_k80(seq_list_genus, model = "K80", level = "g
   separate (col = taxa_2, into = c("species_2", "process_id_2"), remove = T, sep ="\\|") %>% 
   filter (species_1 != species_2)
 
+# Count unique species across all comparisons
+species_in_genus <- c(k80.genus.df$species_1, k80.genus.df$species_2) %>% 
+  unique %>% 
+  sort 
+
                                              
 # WITHIN FAMILY
 seq_list_family <- df %>% 
@@ -128,6 +133,15 @@ k80.family.df <- calculate_pairwise_k80(seq_list_family, model = "K80", level = 
   filter (genus_1 != genus_2) %>% 
   select (-c(genus_1, genus_2))
 
+# Count unique genera across all comparisons
+genus_in_family <- c(k80.family.df$species_1, k80.family.df$species_2) %>% 
+  str_replace(pattern = "\\s.*", 
+              replacement = "") %>% 
+  unique %>% 
+  sort
+
+
+# Combine and save dataset
 dist.df <- rbind (k80.species.df,
                   k80.genus.df,
                   k80.family.df) %>% 

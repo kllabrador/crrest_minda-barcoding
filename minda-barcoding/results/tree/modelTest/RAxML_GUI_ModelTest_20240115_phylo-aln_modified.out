@@ -1,0 +1,180 @@
+--------------------------------------------------------------------------------
+ModelTest-NG v0.1.7
+
+Input data:
+  MSA:        \\wsl.localhost\Ubuntu\home\user\Documents_Ubuntu\CRREST\minda-barcoding\results\tree\modelTest\20230115_phylo-aln_modified.fas
+  Tree:       Maximum parsimony
+    file:           -
+  #taxa:            497
+  #sites:           534
+  #patterns:        269
+  Max. thread mem:  66 MB
+
+Output:
+  Log:           \\wsl.localhost\Ubuntu\home\user\Documents_Ubuntu\CRREST\minda-barcoding\results\tree\modelTest\RAxML_GUI_ModelTest_20230115_phylo-aln_modified.log
+  Starting tree: \\wsl.localhost\Ubuntu\home\user\Documents_Ubuntu\CRREST\minda-barcoding\results\tree\modelTest\RAxML_GUI_ModelTest_20230115_phylo-aln_modified.tree
+  Results:       \\wsl.localhost\Ubuntu\home\user\Documents_Ubuntu\CRREST\minda-barcoding\results\tree\modelTest\RAxML_GUI_ModelTest_20230115_phylo-aln_modified.out
+
+Selection options:
+  # dna schemes:      11
+  # dna models:       88
+  include model parameters:
+    Uniform:         true
+    p-inv (+I):      true
+    gamma (+G):      true
+    both (+I+G):     true
+    free rates (+R): false
+    fixed freqs:     true
+    estimated freqs: true
+    #categories:     4
+  gamma rates mode:   mean
+  asc bias:           none
+  epsilon (opt):      0.01
+  epsilon (par):      0.05
+  keep branches:      false
+
+Additional options:
+  verbosity:        very low
+  threads:          10/6
+  RNG seed:         12345
+  subtree repeats:  enabled
+--------------------------------------------------------------------------------
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+I+G4          10    -57433.6394    121153.9551         0.0000    0.9992
+       2  TIM3+I+G4          8    -57447.0130    121168.1414        14.1864    0.0008
+       3  TIM1+I+G4          8    -57454.9212    121183.9579        30.0029    0.0000
+       4  TVM+I+G4           9    -57452.2101    121184.8161        30.8610    0.0000
+       5  TrN+I+G4           7    -57462.4708    121192.7767        38.8216    0.0000
+       6  TPM1uf+I+G4        7    -57464.5946    121197.0243        43.0692    0.0000
+       7  HKY+I+G4           6    -57470.6121    121202.7788        48.8237    0.0000
+       8  TPM2uf+I+G4        7    -57472.7741    121213.3832        59.4281    0.0000
+       9  TPM3uf+I+G4        7    -57776.4018    121820.6387       666.6836    0.0000
+      10  SYM+I+G4           7    -57828.9396    121925.7142       771.7592    0.0000
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              GTR+I+G4
+lnL:                -57433.6394
+Frequencies:        0.3260 0.2838 0.0968 0.2934
+Subst. Rates:       0.3818 8.7039 0.5890 0.6863 5.6938 1.0000 
+Inv. sites prop:    0.4202
+Gamma shape:        0.5390
+Score:              121153.9551
+Weight:             0.9992
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              0.2998
+Alpha-P.Inv:        0.5390
+P.Inv-Alpha:        0.4202
+Frequencies:        0.3260 0.2838 0.0968 0.2934 
+
+Commands:
+  > phyml  -i \\wsl.localhost\Ubuntu\home\user\Documents_Ubuntu\CRREST\minda-barcoding\results\tree\modelTest\20230115_phylo-aln_modified.fas -m 012345 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s \\wsl.localhost\Ubuntu\home\user\Documents_Ubuntu\CRREST\minda-barcoding\results\tree\modelTest\20230115_phylo-aln_modified.fas -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa \\wsl.localhost\Ubuntu\home\user\Documents_Ubuntu\CRREST\minda-barcoding\results\tree\modelTest\20230115_phylo-aln_modified.fas --model GTR+I+G4
+  > paup -s \\wsl.localhost\Ubuntu\home\user\Documents_Ubuntu\CRREST\minda-barcoding\results\tree\modelTest\20230115_phylo-aln_modified.fas
+  > iqtree -s \\wsl.localhost\Ubuntu\home\user\Documents_Ubuntu\CRREST\minda-barcoding\results\tree\modelTest\20230115_phylo-aln_modified.fas -m GTR+I+G4
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+I+G4          10    -57433.6394    116869.2788         0.0000    1.0000
+       2  TIM3+I+G4          8    -57447.0130    116892.0260        22.7472    0.0000
+       3  TVM+I+G4           9    -57452.2101    116904.4202        35.1414    0.0000
+       4  TIM1+I+G4          8    -57454.9212    116907.8425        38.5637    0.0000
+       5  TrN+I+G4           7    -57462.4708    116920.9416        51.6628    0.0000
+       6  TPM1uf+I+G4        7    -57464.5946    116925.1893        55.9104    0.0000
+       7  HKY+I+G4           6    -57470.6121    116935.2242        65.9453    0.0000
+       8  TPM2uf+I+G4        7    -57472.7741    116941.5482        72.2693    0.0000
+       9  TPM3uf+I+G4        7    -57776.4018    117548.8036       679.5248    0.0000
+      10  SYM+I+G4           7    -57828.9396    117653.8792       784.6004    0.0000
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              GTR+I+G4
+lnL:                -57433.6394
+Frequencies:        0.3260 0.2838 0.0968 0.2934
+Subst. Rates:       0.3818 8.7039 0.5890 0.6863 5.6938 1.0000 
+Inv. sites prop:    0.4202
+Gamma shape:        0.5390
+Score:              116869.2788
+Weight:             1.0000
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              0.2996
+Alpha-P.Inv:        0.5390
+P.Inv-Alpha:        0.4202
+Frequencies:        0.3260 0.2838 0.0968 0.2934 
+
+Commands:
+  > phyml  -i \\wsl.localhost\Ubuntu\home\user\Documents_Ubuntu\CRREST\minda-barcoding\results\tree\modelTest\20230115_phylo-aln_modified.fas -m 012345 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s \\wsl.localhost\Ubuntu\home\user\Documents_Ubuntu\CRREST\minda-barcoding\results\tree\modelTest\20230115_phylo-aln_modified.fas -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa \\wsl.localhost\Ubuntu\home\user\Documents_Ubuntu\CRREST\minda-barcoding\results\tree\modelTest\20230115_phylo-aln_modified.fas --model GTR+I+G4
+  > paup -s \\wsl.localhost\Ubuntu\home\user\Documents_Ubuntu\CRREST\minda-barcoding\results\tree\modelTest\20230115_phylo-aln_modified.fas
+  > iqtree -s \\wsl.localhost\Ubuntu\home\user\Documents_Ubuntu\CRREST\minda-barcoding\results\tree\modelTest\20230115_phylo-aln_modified.fas -m GTR+I+G4
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  K80+G4             2    -59246.9885   2094563.9771         0.0000    1.0000
+       2  K80+I+G4           3    -58568.5541   2097185.1082      2621.1311    0.0000
+       3  TrNef+G4           3    -58845.6843   2097739.3685      3175.3914    0.0000
+       4  TPM2+G4            3    -58894.9537   2097837.9074      3273.9303    0.0000
+       5  TPM3+G4            3    -59238.5918   2098525.1835      3961.2065    0.0000
+       6  TPM1+G4            3    -59273.7436   2098595.4871      4031.5101    0.0000
+       7  TrNef+I+G4         4    -58283.7131   2100597.4262      6033.4491    0.0000
+       8  TIM2ef+G4          4    -58465.1659   2100960.3317      6396.3546    0.0000
+       9  TPM2+I+G4          4    -58492.4171   2101014.8341      6450.8571    0.0000
+      10  TPM1+I+G4          4    -58567.0712   2101164.1425      6600.1654    0.0000
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              K80+G4
+lnL:                -59246.9885
+Frequencies:        0.2500 0.2500 0.2500 0.2500
+Subst. Rates:       1.0000 7.1087 1.0000 1.0000 7.1087 1.0000 
+Inv. sites prop:    -
+Gamma shape:        0.3559
+Score:              2094563.9771
+Weight:             1.0000
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              1.0000
+Gamma-Inv:          -
+Frequencies:        -
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              0.3559
+Alpha-P.Inv:        -
+P.Inv-Alpha:        -
+Frequencies:        -
+
+Commands:
+  > phyml  -i \\wsl.localhost\Ubuntu\home\user\Documents_Ubuntu\CRREST\minda-barcoding\results\tree\modelTest\20230115_phylo-aln_modified.fas -m 010010 -f 0.25,0.25,0.25,0.25 -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s \\wsl.localhost\Ubuntu\home\user\Documents_Ubuntu\CRREST\minda-barcoding\results\tree\modelTest\20230115_phylo-aln_modified.fas -m GTRGAMMA -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa \\wsl.localhost\Ubuntu\home\user\Documents_Ubuntu\CRREST\minda-barcoding\results\tree\modelTest\20230115_phylo-aln_modified.fas --model K80+G4
+  > paup -s \\wsl.localhost\Ubuntu\home\user\Documents_Ubuntu\CRREST\minda-barcoding\results\tree\modelTest\20230115_phylo-aln_modified.fas
+  > iqtree -s \\wsl.localhost\Ubuntu\home\user\Documents_Ubuntu\CRREST\minda-barcoding\results\tree\modelTest\20230115_phylo-aln_modified.fas -m K80+G4
+Done

@@ -1,6 +1,0 @@
-The analysis was run using raxmlGUI 2.0 (version 2.0.10) as follows:
-Analysis: ML + rapid bootstrap
-Binary: raxmlHPC-PTHREADS-SSE3.exe version 8.2.12
-Results saved to: \\wsl.localhost\Ubuntu\home\user\Documents_Ubuntu\CRREST\minda-barcoding\results\ml-tree
-RAxML was called with these arguments:
-1.) -T 10 -f a -x 104944 -p 104944 -N 1000 -m GTRGAMMA --K80 -O -n 20231007_minda_alignment.tre -s "\\wsl.localhost\Ubuntu\home\user\Documents_Ubuntu\CRREST\minda-barcoding\results\ml-tree\20231007_minda alignment_modified.fasta" -w "\\wsl.localhost\Ubuntu\home\user\Documents_Ubuntu\CRREST\minda-barcoding\results\ml-tree"
