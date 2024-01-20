@@ -39,9 +39,10 @@ Carangiformes,Coryphaenidae,Coryphaena hippurus,N/A,0,Tylosurus crocodilus,MINDA
 Clupeiformes,Clupeidae,Nematalosa nasus,N/A,0,Monotaxis heterodon,MINDA170-23,19.82
 Gobiiformes,Gobiidae,Exyrias puntang,N/A,0,Thalassoma lunare,MINDA286-23,17.25
 Holocentriformes,Holocentridae,Myripristis adusta,0.15,0.15,Myripristis violacea,MINDA200-23,3.83
-Holocentriformes,Holocentridae,Myripristis berndti,4.97,7.6,Myripristis violacea,MINDA200-23,4.46
+Holocentriformes,Holocentridae,Myripristis berndti,0.3,0.3,Myripristis violacea,MINDA200-23,4.46
 Holocentriformes,Holocentridae,Myripristis hexagona,0.17,0.3,Myripristis adusta,MINDA114-23,6.4
-Holocentriformes,Holocentridae,Myripristis pralinia,N/A,0,Myripristis berndti,MINDA080-23,7.1
+Holocentriformes,Holocentridae,Myripristis kuntee,0.15,0.15,Myripristis violacea,MINDA200-23,7.07
+Holocentriformes,Holocentridae,Myripristis pralinia,N/A,0,Myripristis kuntee,MINDA080-23,7.1
 Holocentriformes,Holocentridae,Myripristis violacea,0.2,0.3,Myripristis adusta,MINDA114-23,3.83
 Holocentriformes,Holocentridae,Neoniphon aurolineatus,N/A,0,Sargocentron punctatissimum,MINDA469-23,12.8
 Holocentriformes,Holocentridae,Neoniphon sammara,N/A,0,Sargocentron punctatissimum,MINDA469-23,12.67
@@ -170,7 +171,7 @@ Perciformes,Chaetodontidae,Heniochus varius,0.3,0.45,Heniochus acuminatus,MINDA0
 Perciformes,Chaetodontidae,Parachaetodon ocellatus,N/A,0,Chaetodon kleinii,MINDA283-23,16.84
 Perciformes,Gerreidae,Gerres erythrourus,N/A,0,Sargocentron cornutum,MINDA468-23,18.62
 Perciformes,Gerreidae,Gerres filamentosus,0.69,0.69,Gerres oyena,MINDA358-23,18.77
-Perciformes,Gerreidae,Gerres oyena,0.26,0.32,Myripristis berndti,MINDA080-23,17.34
+Perciformes,Gerreidae,Gerres oyena,0.26,0.32,Myripristis kuntee,MINDA080-23,17.34
 Perciformes,Haemulidae,Diagramma melanacrum,N/A,0,Diagramma pictum,MINDA082-23,0.3
 Perciformes,Haemulidae,Diagramma pictum,0.16,0.16,Diagramma melanacrum,MINDA081-23,0.3
 Perciformes,Haemulidae,Plectorhinchus albovittatus,0.15,0.15,Plectorhinchus polytaenia,MINDA276-23,10.5
