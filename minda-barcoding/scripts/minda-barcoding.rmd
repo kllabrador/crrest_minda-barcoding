@@ -107,7 +107,7 @@ Prepare species master list (MAF + BOLD)
 ```{r}
 # MAF's appendix table 3
 MAF.species.list <- readxl::read_xlsx(paste0(indir, "MAF_species-list.xlsx"),
-                                      sheet = "species-list") %>% 
+                                      sheet = "species-list_2024-11") %>% 
   clean_names() %>% 
   select (family, scientific_name, data, barcode) %>% 
   distinct() %>% 
@@ -120,7 +120,13 @@ MAF.species.list <- readxl::read_xlsx(paste0(indir, "MAF_species-list.xlsx"),
 
 # BOLD dataset
 BOLD.species.list <- files.csv$`project-metadata_taxonomy.csv` %>% 
-  clean_names() %>% 
+  clean_names() %>%
+  
+  # Add Cymatognathus aureolateralis (this is not yet included in BOLD automated system)
+  mutate (species = case_when (sample_id %in% c("FDP_GOVG_2207_014A","FDP_GOVG_2207_014B") ~ "Cymatognathus aureolateralis",
+                               T ~ species)
+  ) |> 
+
   select (species) %>% 
   
   # Change genus names as appropriate (these cases are when BOLD Systems has not been updated yet)
@@ -128,6 +134,7 @@ BOLD.species.list <- files.csv$`project-metadata_taxonomy.csv` %>%
           species = str_replace(species, "Xiphocheilus", "Choerodon"),
           species = str_replace(species, "Ariomma brevimanum", "Ariomma brevimanus"),
           species = str_replace(species, "Liopropoma sp.", "Liopropoma sp.1"),
+          species = str_replace(species, "Parupeneus heptacantha", "Parupeneus heptacanthus"),
           ) %>% 
   mutate (barcode = "Y",
           source2 = "BOLD") %>% 
@@ -183,7 +190,8 @@ aln.metadata <- data.frame (label = names(aln.fas)) %>%
   mutate (taxa_id = str_replace(taxa_id, "Cromileptes", "Chromileptes"),
           taxa_id = str_replace(taxa_id, "Xiphocheilus", "Choerodon"),
           taxa_id = str_replace(taxa_id, "Ariomma brevimanum", "Ariomma brevimanus"),
-          taxa_id = str_replace(taxa_id, "Liopropoma sp.", "Liopropoma sp.1")
+          taxa_id = str_replace(taxa_id, "Liopropoma sp.", "Liopropoma sp.1"),
+          taxa_id = str_replace(taxa_id, "Parupeneus heptacantha", "Parupeneus heptacanthus"),
   
   ) %>% 
   
@@ -471,6 +479,7 @@ ggplot (data = barcode_gap %>% filter (comp != "mean_intra_sp"),
                  size = 0.25,
                  ) +
   coord_cartesian(expand = F) +
+  lims(x = c(0, 25)) + 
   theme_classic() +
   labs (x = "K2P Genetic Distance (%)", 
         y = "No. of Pairwise Comparison",
@@ -488,8 +497,8 @@ plot_barcode_gap_histogram
 ```{r}
 barcode_gap <- files.csv$barcode_gap_analysis.csv %>% 
   mutate (barcode_gap = ifelse (max_intra_sp <= 2.2 & distance_to_nn > 2.2,
-                                "T", 
-                                "F")
+                                "within RESL\nthreshold", 
+                                "outside RESL\nthreshold")
   )
 
 plot_barcode_gap_scatterplot <- 
@@ -504,14 +513,15 @@ ggplot (data = barcode_gap,
              size = 1.25) +
   theme_classic() +
   coord_cartesian(expand = F) +
-  lims (x = c(-0.5,30), 
-        y = c(-0.5,30)
+  lims (x = c(-0.5,25), 
+        y = c(-0.5,25)
         ) +
   labs (x = "Maximum Intra-specific Distance (%)",
-        y = "Interspecific (NN)\nDistance (%)") +
+        y = "Interspecific (NN)\nDistance (%)",
+        fill = NULL) +
   geom_abline(intercept = 0, lty = 2) +
-  scale_fill_brewer (palette = "Set1")+
-  guides (fill = "none")
+  scale_fill_brewer (palette = "Set1") +
+  theme(legend.text = element_text(size = 7)) 
 
 plot_barcode_gap_scatterplot
 
@@ -524,7 +534,8 @@ plot_grid(
     theme (legend.position = "top"),
   plot_grid (plot_barcode_gap_histogram +
                theme (legend.position = "top"),
-             plot_barcode_gap_scatterplot,
+             plot_barcode_gap_scatterplot +
+               theme (legend.position = "top"),
                labels = c("B", "C")),
   nrow = 2,
   labels = c("A", NA)
@@ -534,7 +545,7 @@ fig3
 ggsave(fig3,
        file = paste0(outdir,
                      "fig3_genetic-distances.png"),
-       height = 5,
+       height = 5.5,
        width = 7,
        units = "in",
        dpi = 330
@@ -568,6 +579,12 @@ discordance_case2 <- OTU_cluster %>%
   ungroup() %>% 
   select (otu, taxon) %>% 
   distinct 
+
+t <- rbind(discordance_case1,
+           discordance_case2) |> 
+  pull(taxon) |> 
+  unique() |> 
+  sort()
 ```
 
 
